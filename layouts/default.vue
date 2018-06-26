@@ -1,8 +1,19 @@
 <template>
   <div>
+    <LayoutHeader/>
     <nuxt/>
   </div>
 </template>
+
+<script>
+import LayoutHeader from '~/components/LayoutHeader.vue';
+
+export default {
+  components: {
+    LayoutHeader,
+  }
+}
+</script>
 
 <style>
 html {
