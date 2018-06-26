@@ -1,10 +1,13 @@
 <template lang="html">
-  <div class="fullpage-wrap">
-    <section class="fullpage-slide">
+  <div class="wrap">
+    <section class="fullpage-slide intro">
       what-is-..?
     </section>
     <section class="fullpage-slide">
       what-is-..2?
+    </section>
+    <section class="fullpage-slide">
+      what-is-..3?
     </section>
   </div>
 </template>
@@ -13,10 +16,21 @@
 
 export default {
   components: {
-    
+
+  },
+  computed: {
+    arrangeMotion() {
+      console.log(this.$store.state.index);
+      return this.$store.state.index;
+    }
   }
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+  .wrap {
+    .intro {
+      color: #eee;
+    }
+  }
 </style>

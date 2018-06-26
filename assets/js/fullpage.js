@@ -1,4 +1,3 @@
-
 import util from '~/assets/js/util.js';
 
 export default {
@@ -6,18 +5,19 @@ export default {
     let body = document.querySelector('body');
     body.style.overflow = `hidden`;
 
-    let windowHeight;
+    let self = this;
+    this.windowHeight;
     util.resize(function(){
-      windowHeight = window.innerHeight;
+      self.windowHeight = window.innerHeight;
 
       let slides = document.querySelectorAll('.fullpage-slide');
       slides.forEach(function(obj, i){
-        obj.style.height = `${windowHeight}px`;
+        obj.style.height = `${self.windowHeight}px`;
         obj.style.background = `white`;
       });
-    });
 
-    // binding
+      self.count = slides.length;
+    });
 
   },
 
