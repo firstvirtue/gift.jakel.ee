@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="gnb">
-    header
+  <div class="sidenav">
+    sidenav
   </div>
 </template>
 
@@ -10,9 +10,9 @@ export default {
 </script>
 
 <style lang="css">
-  .gnb {
+  .sidenav {
     position: absolute;
     top: 0;
-    color: hotpink;
+    right: 0;
   }
 </style>

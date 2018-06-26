@@ -35,12 +35,13 @@ export default {
     AppLogo
   },
   methods: {
-    
+
   },
   mounted() {
     window.addEventListener('scroll', function(){
       console.log(window.scrollY);
     });
+
   }
 }
 </script>
