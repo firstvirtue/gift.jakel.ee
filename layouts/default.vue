@@ -72,7 +72,7 @@ export default {
     self.pos;
 
     window.addEventListener('touchstart', function(e){
-      console.log(e);
+      
       self.pos = e.changedTouches[0].pageY;
     });
 

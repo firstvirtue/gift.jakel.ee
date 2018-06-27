@@ -15,18 +15,18 @@ export default {
 
     const stroke = 4;
     const radius = 40;
-    const progress = 40;
 
     return {
       stroke,
       radius,
-      progress
     }
 
   },
-  // computed: {
-  //
-  // }
+  computed: {
+    progress() {
+      return (this.$store.state.index + 1) / this.$store.state.length * 100;
+    }
+  }
 }
 </script>
 
