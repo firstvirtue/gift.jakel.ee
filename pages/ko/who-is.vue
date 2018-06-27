@@ -9,6 +9,9 @@
     <section class="fullpage-slide">
       3
     </section>
+    <section class="fullpage-slide">
+      4
+    </section>
   </div>
 </template>
 

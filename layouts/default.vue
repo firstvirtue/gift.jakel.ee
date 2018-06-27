@@ -91,6 +91,7 @@ html, body {
   position: fixed;
   overflow: hidden;
   height: 100%;
+  width: 100%;
 }
 
 .fullpage-wrap {
