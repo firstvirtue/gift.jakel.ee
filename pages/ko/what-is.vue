@@ -8,15 +8,17 @@
     </section>
     <section class="fullpage-slide">
       what-is-..3?
+      <SubContent></SubContent>
     </section>
   </div>
 </template>
 
 <script>
+import SubContent from '~/components/SubContent.vue';
 
 export default {
   components: {
-
+    SubContent
   },
   computed: {
     arrangeMotion() {
