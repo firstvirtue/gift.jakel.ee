@@ -10,6 +10,7 @@ const store = () => {
     state: {
       index: 0,
       length: 0,
+      isOpenedSideNav: false,
     },
 
     mutations: {
@@ -23,7 +24,13 @@ const store = () => {
       },
       setLength(state, count) {
         state.length = count;
-      }
+      },
+      openSideNav(state) {
+        state.isOpenedSideNav = true;
+      },
+      closeSideNav(state) {
+        state.isOpenedSideNav = false;
+      },
     }
   })
 }

@@ -7,7 +7,7 @@ export default {
 
     let self = this;
     this.windowHeight;
-    util.resize(function(){
+    util.resize(function() {
       self.windowHeight = window.innerHeight;
 
       let slides = document.querySelectorAll('.fullpage-slide');

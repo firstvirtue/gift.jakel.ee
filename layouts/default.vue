@@ -2,7 +2,6 @@
   <div>
     <LayoutHeader/>
     <SideNav/>
-    <!-- <div class="fullpage-wrap" :style="{ transform: 'translateY(-' + position + 'px)' }"> -->
     <div class="fullpage-wrap">
       <nuxt/>
     </div>
@@ -10,7 +9,7 @@
 </template>
 
 <script>
-import fullpage from '~/assets/js/fullpage.js';
+// import fullpage from '~/assets/js/fullpage.js';
 import LayoutHeader from '~/components/LayoutHeader.vue';
 import SideNav from '~/components/SideNav.vue';
 import util from '~/assets/js/util.js';
@@ -38,12 +37,16 @@ export default {
       if(!this.isPaging) {
         let self = this;
         let wrap = document.querySelector('.fullpage-wrap');
-        // console.log(wrap.style.transform);
 
+        // FIXME: 더 정교하게 ..
         delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
 
         this.isPaging = true;
-        TweenMax.to(wrap, 0.5, { y: -this.position, onComplete: () => { self.isPaging = false } });
+        TweenMax.to(wrap, 0.5, { y: -this.position, onComplete: () => {
+          self.isPaging = false;
+          // TODO: motion trigger -> curView.motion();
+        }
+      });
       }
     }
   },
@@ -54,11 +57,11 @@ export default {
     let body = document.querySelector('body');
     body.style.overflow = `hidden`;
 
-    util.resize(function(){
+    util.resize(function() {
       self.windowHeight = window.innerHeight;
 
       let slides = document.querySelectorAll('.fullpage-slide');
-      slides.forEach(function(obj, i){
+      slides.forEach(function(obj, i) {
         obj.style.height = `${self.windowHeight}px`;
         obj.style.background = `white`;
       });
@@ -72,30 +75,23 @@ export default {
 
       let delta = e.deltaY;
 
-      // delta > 30 ? self.index++ : self.index--;
-      // delta > 30 ? self.$store.commit('increaseIndex') : self.$store.commit('decreaseIndex');
       self.updatePosition(delta);
 
       // FIXME: 유틸 함수 작동 안함
-      // util.debounced(1000, function(){
-      //   delta > 30 ? self.index++ : self.index--;
-      //   console.log(self.index);
-      // });
 
     });
 
     self.pos;
 
-    window.addEventListener('touchstart', function(e){
+    window.addEventListener('touchstart', function(e) {
 
       self.pos = e.changedTouches[0].pageY;
     });
 
-    window.addEventListener('touchend', function(e){
+    window.addEventListener('touchend', function(e) {
       let yPos = e.changedTouches[0].pageY;
 
       let delta = self.pos - yPos;
-      // delta > 30 ? self.$store.commit('increaseIndex') : self.$store.commit('decreaseIndex');
       self.updatePosition(delta);
     });
   },
@@ -109,8 +105,4 @@ html, body {
   height: 100%;
   width: 100%;
 }
-
-/* .fullpage-wrap {
-  transition: all 0.5s;
-} */
 </style>
