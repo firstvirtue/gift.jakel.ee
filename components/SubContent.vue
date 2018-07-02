@@ -1,3 +1,4 @@
+<!-- TODO: SideContent -->
 <template lang="html">
   <aside class="">
     <component :is="comp[0].tag">
