@@ -36,24 +36,26 @@ export default {
           display: 'block'
         });
 
-        TweenMax.to(self.dimmed, 0.5, {
+        TweenMax.to(self.dimmed, 0.3, {
           opacity: 0.6,
         });
 
-        TweenMax.to(self.menuContainer, 0.4, {
+        TweenMax.to(self.menuContainer, 0.3, {
           x: '25%',
+          opacity: 1,
         });
       } else {
         TweenMax.to(self.sideNav, 0.5, {
           display: 'none'
         });
 
-        TweenMax.to(self.dimmed, 0.5, {
+        TweenMax.to(self.dimmed, 0.3, {
           opacity: 0,
         });
 
-        TweenMax.to(self.menuContainer, 0.4, {
+        TweenMax.to(self.menuContainer, 0.3, {
           x: '100%',
+          opacity: 0,
         });
       }
 
@@ -83,6 +85,7 @@ export default {
 
     TweenMax.set(self.menuContainer, {
       x: '100%',
+      opacity: 0,
     });
 
   },
