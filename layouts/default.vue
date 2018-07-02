@@ -2,7 +2,8 @@
   <div>
     <LayoutHeader/>
     <SideNav/>
-    <div class="fullpage-wrap" :style="{ transform: 'translateY(-' + position + 'px)' }">
+    <!-- <div class="fullpage-wrap" :style="{ transform: 'translateY(-' + position + 'px)' }"> -->
+    <div class="fullpage-wrap">
       <nuxt/>
     </div>
   </div>
@@ -24,12 +25,26 @@ export default {
   data() {
     return {
       windowHeight: 0,
+      isPaging: false,
     }
   },
   computed: {
     position() {
-
       return this.$store.state.index * this.windowHeight;
+    }
+  },
+  methods: {
+    updatePosition(delta) {
+      if(!this.isPaging) {
+        let self = this;
+        let wrap = document.querySelector('.fullpage-wrap');
+        // console.log(wrap.style.transform);
+
+        delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
+
+        this.isPaging = true;
+        TweenMax.to(wrap, 0.5, { y: -this.position, onComplete: () => { self.isPaging = false } });
+      }
     }
   },
   mounted() {
@@ -58,8 +73,8 @@ export default {
       let delta = e.deltaY;
 
       // delta > 30 ? self.index++ : self.index--;
-      delta > 30 ? self.$store.commit('increaseIndex') : self.$store.commit('decreaseIndex');
-      console.log(self.$store.state.index);
+      // delta > 30 ? self.$store.commit('increaseIndex') : self.$store.commit('decreaseIndex');
+      self.updatePosition(delta);
 
       // FIXME: 유틸 함수 작동 안함
       // util.debounced(1000, function(){
@@ -72,7 +87,7 @@ export default {
     self.pos;
 
     window.addEventListener('touchstart', function(e){
-      
+
       self.pos = e.changedTouches[0].pageY;
     });
 
@@ -80,7 +95,8 @@ export default {
       let yPos = e.changedTouches[0].pageY;
 
       let delta = self.pos - yPos;
-      delta > 30 ? self.$store.commit('increaseIndex') : self.$store.commit('decreaseIndex');
+      // delta > 30 ? self.$store.commit('increaseIndex') : self.$store.commit('decreaseIndex');
+      self.updatePosition(delta);
     });
   },
 }
@@ -94,7 +110,7 @@ html, body {
   width: 100%;
 }
 
-.fullpage-wrap {
+/* .fullpage-wrap {
   transition: all 0.5s;
-}
+} */
 </style>

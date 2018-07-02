@@ -5,7 +5,7 @@
   "author": "jake <jake@iropke.com>",
   "private": true,
   "scripts": {
-    "dev": "cross-env HOST=0.0.0.0 PORT=3000 nuxt",
+    "dev": "cross-env HOST=0.0.0.0 PORT=8080 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "gsap": "^1.20.6",
     "nuxt": "^1.0.0",
     "sass-mq": "^5.0.0"
   },
