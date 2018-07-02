@@ -26,6 +26,14 @@ module.exports = {
   ],
 
   /*
+  ** CSS
+  */
+  css: [
+    'normalize.css/normalize.css',
+    '~/assets/css/base.scss'
+  ],
+
+  /*
    ** Modules
    */
   modules: [

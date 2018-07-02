@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// base style
+// -----------------------------------------------------------------------------
+
+// @import ..
+
+// font-face
+@font-face {
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../font/NotoSansCJKkr-Thin.woff2) format("woff2"), url(../font/NotoSansCJKkr-Thin.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansCJKkr-Light.woff2) format("woff2"), url(../font/NotoSansCJKkr-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NotoSansCJKkr-Medium.woff2) format("woff2"), url(../font/NotoSansCJKkr-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../font/Roboto-Thin.woff2) format("woff2"), url(../font/Roboto-Thin.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/Roboto-Light.woff2) format("woff2"), url(../font/Roboto-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/Roboto-Medium.woff2) format("woff2"), url(../font/Roboto-Medium.woff) format("woff");
+}
+
+// element style
+
+body {
+  font-size: 1em;
+  font-family: $font-main;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+// helper class
+.a11y {
+  position: absolute !important;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}

@@ -1,7 +1,10 @@
 <template lang="html">
   <div class="wrap">
     <section class="fullpage-slide intro">
-      what-is-..?
+      <p class="p-ko">
+        코카콜라는 현대인의 식음료 문화에 깊이 침투해 있습니다.
+      </p>
+      <p class="p-en">essential oils handbook</p>
     </section>
     <section class="fullpage-slide">
       what-is-..2?
@@ -39,6 +42,23 @@ export default {
   .wrap {
     .intro {
       color: #eee;
+    }
+  }
+
+  .p {
+    &-ko {
+      color: #111;
+      font-family: 'NotoSans';
+      font-size: 40px;
+      font-weight: lighter;
+    }
+
+    &-en {
+      color: #111;
+      font-family: 'Roboto';
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: lighter;
     }
   }
 </style>
