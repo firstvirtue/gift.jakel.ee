@@ -44,7 +44,7 @@ export default {
         this.isPaging = true;
         TweenMax.to(wrap, 0.5, { y: -this.position, onComplete: () => {
           self.isPaging = false;
-          // TODO: motion trigger -> curView.motion();
+          
         }
       });
       }

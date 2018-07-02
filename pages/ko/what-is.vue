@@ -20,6 +20,12 @@ export default {
   components: {
     SubContent
   },
+  watch: {
+    '$store.state.index': function() {
+      console.log(this.$store.state.index);
+      console.log('섹션 별 모션, wait 기능 추가 해야함');
+    }
+  },
   computed: {
     arrangeMotion() {
       console.log(this.$store.state.index);
