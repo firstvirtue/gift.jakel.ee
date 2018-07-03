@@ -35,4 +35,8 @@ export default {
     }
   },
 
+  wait: function(dur) {
+    return new Promise(resolve => setTimeout(resolve, dur));
+  },
+
 }

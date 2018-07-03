@@ -44,6 +44,13 @@ module.exports = {
   ],
 
   /*
+  ** Generate configuration
+  */
+  // generate: {
+  //   minify: false,
+  // },
+
+  /*
   ** Build configuration
   */
   build: {

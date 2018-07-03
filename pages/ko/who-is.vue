@@ -16,11 +16,14 @@
 </template>
 
 <script>
+import util from '~/assets/js/util.js';
+
 export default {
   watch: {
-    '$store.state.index': function() {
+    '$store.state.index': async function() {
       console.log(this.$store.state.index);
-      console.log('섹션 별 모션, wait 기능 추가 해야함');
+      await util.wait(1000);
+      console.log('섹션 별 모션');
     }
   },
 }
