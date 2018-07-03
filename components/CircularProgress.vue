@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     strokeDashoffset() {
-      return this.circumference - (this.circumference * (this.progress / 100));
+      return this.progress === Infinity ? this.circumference : this.circumference - (this.circumference * (this.progress / 100));
     }
   }
 }

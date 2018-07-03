@@ -5,7 +5,7 @@
       <p class="p-ko">
         코카콜라는 현대인의 식음료 문화에 깊이 침투해 있습니다.
       </p>
-      <p class="p-en" lang="en">essential oils handbook</p>
+      <p class="p-en" lang="en">essential oils handbook</p> 
     </section>
     <section class="fullpage-slide">
       what-is-..2?
@@ -39,7 +39,7 @@ export default {
     }
   },
   methods: {
-    
+
   },
 }
 </script>
