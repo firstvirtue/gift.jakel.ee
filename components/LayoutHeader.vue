@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="gnb">
+    <h1 class="gnb-title">What is prefer summaries?</h1>
     <button type="button" name="button" class="side-nav-button" @click="openSideNav()">
       <CircularProgress :stroke="stroke" :radius="radius" :progress="progress" />
     </button>
@@ -37,13 +38,20 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .gnb {
     position: absolute;
     top: 0;
     width: 100%;
+    height: 80px;
     z-index: 10;
     color: hotpink;
+
+    &-title {
+      margin: 0;
+      padding: 31px 30px;
+      font-size: 1rem;
+    }
   }
 
   .side-nav-button {
