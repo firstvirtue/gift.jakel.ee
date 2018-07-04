@@ -10,6 +10,7 @@ export default {
     callback();
   },
 
+  // FIXME: 작동 안함
   throttled(delay, fn) {
     let lastCall = 0;
     return function (...args) {
@@ -22,6 +23,7 @@ export default {
     }
   },
 
+  // FIXME: 작동 안함
   debounced(delay, fn) {
     let timerId;
     return function (...args) {
