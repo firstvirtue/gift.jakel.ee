@@ -34,17 +34,19 @@ export default {
   },
   methods: {
     updatePosition(delta) {
+      // FIXME: 더 정교하게 ..
+      if(Math.abs(delta) < 1) return;
+
       if(!this.isPaging) {
         let self = this;
         let wrap = document.querySelector('.fullpage-wrap');
 
-        // FIXME: 더 정교하게 ..
         delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
 
         this.isPaging = true;
         TweenMax.to(wrap, 0.5, { y: -this.position, onComplete: () => {
           self.isPaging = false;
-          
+
         }
       });
       }
