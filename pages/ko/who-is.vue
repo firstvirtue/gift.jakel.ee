@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="wrap">
     <section class="fullpage-slide">
-      1
+      예수란 누구인가?
     </section>
     <section class="fullpage-slide">
       2

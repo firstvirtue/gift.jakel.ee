@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="gnb">
-    <h1 class="gnb-title">What is prefer summaries?</h1>
+    <h1 class="gnb-title">우리 영혼에 대하여</h1>
     <button type="button" name="button" class="side-nav-button" @click="openSideNav()">
       <CircularProgress :stroke="stroke" :radius="radius" :progress="progress" />
     </button>

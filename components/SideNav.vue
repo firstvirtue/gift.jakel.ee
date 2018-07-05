@@ -4,10 +4,10 @@
     <div class="menu-container">
       <ol class="menu-list">
         <li class="menu-item">
-          <a href="/ko/who-is">
+          <a href="/ko/present">
             <span class="menu-icon">1</span>
             <div class="menu-name">
-              who is?
+              우리 영혼에 대하여
             </div>
           </a>
         </li>
@@ -15,7 +15,23 @@
           <a href="/ko/what-is">
             <span class="menu-icon">2</span>
             <div class="menu-name">
-              what is?
+              복음이란 무엇인가?
+            </div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="/ko/who-is">
+            <span class="menu-icon">2</span>
+            <div class="menu-name">
+              예수는 누구인가?
+            </div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="/ko/who-is">
+            <span class="menu-icon">2</span>
+            <div class="menu-name">
+              그렇다면 나는 어떻게 해야 하나요?
             </div>
           </a>
         </li>

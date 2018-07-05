@@ -1,6 +1,6 @@
 <template lang="html">
   <svg :height="radius * 2" :width="radius * 2">
-    <circle :r="normalizedRadius" :cx="radius" :cy="radius" stroke="#999" :stroke-width="stroke" fill="transparent"
+    <circle :r="normalizedRadius" :cx="radius" :cy="radius" stroke="#fff" :stroke-width="stroke" fill="transparent"
             :stroke-dasharray="strokeDasharray" strokeDashoffset="0" :style="{ strokeDashoffset: strokeDashoffset }"/>
   </svg>
 </template>
