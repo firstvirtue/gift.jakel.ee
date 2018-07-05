@@ -5,25 +5,34 @@
       <p class="p-ko">
         코카콜라는 현대인의 식음료 문화에 깊이 침투해 있습니다.
       </p>
-      <p class="p-en" lang="en">essential oils handbook</p> 
+      <p class="p-en" lang="en">essential oils handbook</p>
     </section>
     <section class="fullpage-slide">
       what-is-..2?
     </section>
     <section class="fullpage-slide">
       what-is-..3?
-      <SubContent></SubContent>
+      <SideContent :contents="subContents"></SideContent>
     </section>
   </div>
 </template>
 
 <script>
-import SubContent from '~/components/SubContent.vue';
+import SideContent from '~/components/SideContent.vue';
 import util from '~/assets/js/util.js';
 
 export default {
   components: {
-    SubContent
+    SideContent
+  },
+  data() {
+    return {
+      subContents: [
+        {id:'1', tag: 'h2', content: '선물'},
+        {id:'2', tag: 'p', content: `그럴수가`},
+        {id:'3', tag: 'p', content: '그럴수가2'},
+      ]
+    }
   },
   watch: {
     '$store.state.index': async function() {
