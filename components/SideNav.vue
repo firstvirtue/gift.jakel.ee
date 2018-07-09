@@ -28,10 +28,10 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="/ko/what-should-do">
+          <a href="/ko/what-should-do"> <!-- TODO: whole-life -->
             <span class="menu-icon">4</span>
             <div class="menu-name">
-              그러면 어떻게 해야 하는가?
+              완전한 삶
             </div>
           </a>
         </li>
@@ -76,7 +76,7 @@ export default {
       }
 
       // FIXME: 애니메이션 상태 정리
-      // TODO: timeline을 이용한 메뉴 슬라이드
+      // TODO: timeline delay를 이용한 메뉴 슬라이드
 
     }
   },
