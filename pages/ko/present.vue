@@ -65,7 +65,7 @@
     </section>
 
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading">왜 그럴까요?</h1>
+      <h1 class="h1 heading"><span>여전히 공허함이 느껴집니다.</span> <br> <span>왜 그럴까요?</span></h1>
 
     </section>
 
