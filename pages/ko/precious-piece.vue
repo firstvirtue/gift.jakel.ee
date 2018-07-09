@@ -5,7 +5,6 @@
       <img class="intro-back-img" src="~/assets/img/portrait-3056827.jpg" alt="">
       <h1 class="h1 heading" lang="ko">
         우리에게 가장 소중한 것은 무엇일까요?
-        <!-- 당신에게 가장 소중한 것은 무엇인까요? -->
       </h1>
     </section>
 
@@ -53,7 +52,6 @@
 
     <section class="fullpage-slide white-tone">
       <h1 class="h1 heading">이 모든 것을 가진다면 우리가 원하는 만족스런 삶을 누릴 수 있을까요?</h1>
-      <!-- <SideContent :contents="subContents"></SideContent> -->
     </section>
 
     <section class="fullpage-slide white-tone">
@@ -65,8 +63,7 @@
     </section>
 
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading"><span>여전히 공허함이 느껴집니다.</span> <br> <span>왜 그럴까요?</span></h1>
-
+      <h1 class="h1 heading"><span>여전히 공허함이 느껴진다면..</span> <br> <span>왜 그럴까요?</span></h1>
     </section>
 
   </div>

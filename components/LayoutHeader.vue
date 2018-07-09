@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="gnb">
-    <h1 class="gnb-title">우리 영혼에 대하여</h1>
+    <h1 class="gnb-title">삶의 소중한 부분들</h1>
     <button type="button" name="button" class="side-nav-button" @click="openSideNav()" :style="{borderColor: tone}">
       <CircularProgress class="circular-progress" :stroke="tone" :strokeWidth="strokeWidth" :radius="radius" :progress="progress" />
     </button>
@@ -77,6 +77,6 @@ export default {
   }
 
   .circular-progress {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 </style>

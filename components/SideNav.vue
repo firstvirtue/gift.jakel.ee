@@ -4,34 +4,34 @@
     <div class="menu-container">
       <ol class="menu-list">
         <li class="menu-item">
-          <a href="/ko/present">
+          <a href="/ko/precious-piece">
             <span class="menu-icon">1</span>
             <div class="menu-name">
-              우리 영혼에 대하여
+              삶의 소중한 부분들
             </div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="/ko/what-is">
+          <a href="/ko/our-state">
             <span class="menu-icon">2</span>
             <div class="menu-name">
-              복음이란 무엇인가?
+              우리의 상태
             </div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="/ko/who-is">
-            <span class="menu-icon">2</span>
+          <a href="/ko/good-news">
+            <span class="menu-icon">3</span>
             <div class="menu-name">
-              예수는 누구인가?
+              예수 그리스도의 복음
             </div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="/ko/who-is">
-            <span class="menu-icon">2</span>
+          <a href="/ko/what-should-do">
+            <span class="menu-icon">4</span>
             <div class="menu-name">
-              그렇다면 나는 어떻게 해야 하나요?
+              그러면 어떻게 해야 하는가?
             </div>
           </a>
         </li>
