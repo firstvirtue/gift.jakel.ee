@@ -110,14 +110,14 @@ export default {
 
 <style lang="scss" scoped>
   .sidenav {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: 100;
 
     .dimmed {
-      position: absolute;
+      position: fixed;
       background: #000;
       width: 100%;
       height: 100%;

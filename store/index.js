@@ -11,6 +11,7 @@ const store = () => {
       index: 0,
       length: 0,
       isOpenedSideNav: false,
+      tone: '',
     },
 
     mutations: {
@@ -31,6 +32,9 @@ const store = () => {
       closeSideNav(state) {
         state.isOpenedSideNav = false;
       },
+      setTone(state, tone) {
+        state.tone = tone;
+      }
     }
   })
 }

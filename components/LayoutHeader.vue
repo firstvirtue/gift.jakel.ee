@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="gnb">
     <h1 class="gnb-title">우리 영혼에 대하여</h1>
-    <button type="button" name="button" class="side-nav-button" @click="openSideNav()">
-      <CircularProgress :stroke="stroke" :radius="radius" :progress="progress" />
+    <button type="button" name="button" class="side-nav-button" @click="openSideNav()" :style="{borderColor: tone}">
+      <CircularProgress class="circular-progress" :stroke="tone" :strokeWidth="strokeWidth" :radius="radius" :progress="progress" />
     </button>
   </div>
 </template>
@@ -16,11 +16,11 @@ export default {
   },
   data() {
 
-    const stroke = 4;
-    const radius = 40;
+    const strokeWidth = 4;
+    const radius = 28;
 
     return {
-      stroke,
+      strokeWidth,
       radius,
     }
 
@@ -28,6 +28,9 @@ export default {
   computed: {
     progress() {
       return (this.$store.state.index + 1) / this.$store.state.length * 100;
+    },
+    tone() {
+      return this.$store.state.tone === 'white-tone' ? '#000' : '#fff';
     }
   },
   methods: {
@@ -40,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
   .gnb {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 80px;
@@ -55,15 +58,25 @@ export default {
   }
 
   .side-nav-button {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 5px;
     right: 0;
+    padding: 0;
     border: none;
+    border: 2px solid;
+    border-radius: 50%;
     background: transparent;
+    line-height: 0;
     cursor: pointer;
+
+    transition: all 0.5s;
 
     &:active:enabled {
       transform: scale(0.97);
     }
+  }
+
+  .circular-progress {
+    transform: scale(1.1);
   }
 </style>

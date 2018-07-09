@@ -9,7 +9,7 @@
       </h1>
     </section>
 
-    <section class="fullpage-slide important-thing">
+    <section class="fullpage-slide important-thing white-tone">
 
       <div class="important-item">
         돈
@@ -18,7 +18,7 @@
         명예
       </div>
       <div class="important-item">
-        인정받음
+        다른 사람에게 인정받음
       </div>
       <div class="important-item">
         섹스
@@ -42,7 +42,7 @@
         의미
       </div>
       <div class="important-item">
-        철학
+        아파트
       </div>
 
       <br>
@@ -62,7 +62,6 @@
 
     <section class="fullpage-slide white-tone">
       <h1 class="h1 heading">분명 우리 영혼은 저런 것들 만으로 채울 수 없음에 분명합니다.</h1>
-      <p>공허하고 여전히 만족스럽지 못합니다. 행복은 언제나 일시적이고 유한합니다.</p>
     </section>
 
     <section class="fullpage-slide white-tone">
@@ -93,6 +92,16 @@ export default {
   watch: {
     '$store.state.index': async function() {
       console.log(this.$store.state.index);
+      let slides = document.querySelectorAll('.fullpage-slide');
+      let slide = slides[this.$store.state.index];
+
+      // FIXME: go to util.js
+      if ( (' ' + slide.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' white-tone ') > -1 ) {
+        this.$store.commit('setTone', 'white-tone');
+      } else {
+        this.$store.commit('setTone', '');
+      }
+
       await util.wait(1000);
 
     }

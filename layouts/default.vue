@@ -41,6 +41,7 @@ export default {
         let self = this;
         let wrap = document.querySelector('.fullpage-wrap');
 
+        // FIXME: 더 정교하게 ..
         delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
 
         this.isPaging = true;
@@ -56,8 +57,8 @@ export default {
     let self = this;
 
     // fullpage.init();
-    let body = document.querySelector('body');
-    body.style.overflow = `hidden`;
+    // let body = document.querySelector('body');
+    // body.style.overflow = `hidden`;
 
     util.resize(function() {
       self.windowHeight = window.innerHeight;
