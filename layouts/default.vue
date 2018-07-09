@@ -27,6 +27,19 @@ export default {
       isPaging: false,
     }
   },
+  watch: {
+    '$store.state.index': async function() {
+      let slides = document.querySelectorAll('.fullpage-slide');
+      let slide = slides[this.$store.state.index];
+
+      // FIXME: go to util.js
+      if ( (' ' + slide.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' white-tone ') > -1 ) {
+        this.$store.commit('setTone', 'white-tone');
+      } else {
+        this.$store.commit('setTone', '');
+      }
+    }
+  },
   computed: {
     position() {
       return this.$store.state.index * this.windowHeight;
