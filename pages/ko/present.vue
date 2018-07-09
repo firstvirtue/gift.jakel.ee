@@ -91,10 +91,8 @@ export default {
   },
   watch: {
     '$store.state.index': async function() {
-      console.log(this.$store.state.index);
 
       await util.wait(1000);
-
     }
   },
   computed: {
