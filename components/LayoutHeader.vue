@@ -59,8 +59,8 @@ export default {
 
   .side-nav-button {
     position: fixed;
-    top: 5px;
-    right: 0;
+    top: 10px;
+    right: 10px;
     padding: 0;
     border: none;
     border: 2px solid;

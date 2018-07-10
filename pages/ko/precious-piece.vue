@@ -3,57 +3,46 @@
 
     <section class="fullpage-slide intro">
       <img class="intro-back-img" src="~/assets/img/portrait-3056827.jpg" alt="">
-      <h1 class="h1 heading" lang="ko">
-        우리에게 가장 소중한 것은 무엇일까요?
-      </h1>
+      <div class="l-wrap">
+        <h1 class="h1 heading" lang="ko">
+          우리에게 가장 소중한 것은 무엇일까요?
+        </h1>
+      </div>
     </section>
 
     <section class="fullpage-slide important-thing white-tone">
+      <div class="l-wrap">
+        <div class="important-item">
+          돈
+        </div>
+        <div class="important-item">
+          명예
+        </div>
+        <div class="important-item">
+          다른 사람에게 인정받음
+        </div>
+        <div class="important-item">
+          섹스
+        </div>
+        <div class="important-item">
+          자아실현
+        </div>
+        <div class="important-item">
+          행복
+        </div>
 
-      <div class="important-item">
-        돈
+        <br>
+        <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
+        <h2>그래서 위와 같은 조각들을 삶 속에 채우며 그에 따른 수고를 마다하지 않습니다.</h2>
       </div>
-      <div class="important-item">
-        명예
-      </div>
-      <div class="important-item">
-        다른 사람에게 인정받음
-      </div>
-      <div class="important-item">
-        섹스
-      </div>
-      <div class="important-item">
-        자아실현
-      </div>
-      <div class="important-item">
-        행복
-      </div>
-      <div class="important-item">
-        가족
-      </div>
-      <div class="important-item">
-        꿈
-      </div>
-      <div class="important-item">
-        쾌락
-      </div>
-      <div class="important-item">
-        의미
-      </div>
-      <div class="important-item">
-        아파트
-      </div>
-
-      <br>
-      <h1>우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
-      <h2>그래서 위와 같은 조각들을 삶 속에 채우며 그에 따른 수고를 마다하지 않습니다.</h2>
 
     </section>
 
     <!-- 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
 
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요? 마치 모래성처럼 허무할 뿐입니다.</h1>
+      <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
+      <p>마치 모래성처럼 허무할 뿐입니다.</p>
     </section>
 
     <section class="fullpage-slide white-tone">
@@ -62,7 +51,7 @@
     </section>
 
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading">한 번 들어보시겠어요? 우리의 영혼이 어디로부터 와서 어디로 가는지를</h1>
+      <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가게 될까요?</h1>
     </section>
 
   </div>
@@ -112,20 +101,16 @@ export default {
 
     &-back-img {
       position: absolute;
+      top: 0;
       transform: translateX(-14%) scale(0.66);
       transform-origin: 0 0;
     }
 
-  }
+    .heading {
+      top: 21%;
+      color: $white;
+    }
 
-  .heading {
-    position: relative;
-    top: 32%;
-    margin: 0 1em;
-    font-size: 32px;
-    color: white;
-    font-weight: lighter;
-    line-height: 1.2;
   }
 
   .white-tone {

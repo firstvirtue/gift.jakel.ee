@@ -80,6 +80,10 @@ export default {
       slides.forEach(function(obj, i) {
         obj.style.height = `${self.windowHeight}px`;
         obj.style.background = `white`;
+        let wrap = obj.querySelector('.l-wrap');
+        if(wrap) {
+          wrap.style.height = `${self.windowHeight}px`;
+        }
       });
 
       self.$store.commit('setLength', slides.length);
