@@ -19,7 +19,10 @@
       <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">또 어디선가 살고 있는 그리스도인이 당신에게 예수님을 전해줄 것입니다.</h1>
+      <h1 class="h1 heading">살아가는 가운데 또 어디선가 살고 있는 그리스도인이 당신에게 전해줄 것입니다.</h1>
+    </section>
+    <section class="fullpage-slide">
+      <h1 class="h1 heading">예수님을요</h1>
     </section>
     <section class="fullpage-slide">
       <h1 class="h1 heading">그 때면 좀 더 알게 되지 않을까요? 하나님께서는 당신을 향한 계획이 있으셨고, 항상 사랑하고 계셨다는 것을요.</h1>
