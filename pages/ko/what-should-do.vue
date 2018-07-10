@@ -4,31 +4,25 @@
       <h1 class="h1 heading">그렇다면 우리가 할 수 있는 것은 무엇일까요?</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">그것은 선택하는 것입니다.</h1>
+      <h1 class="h1 heading">그것은 옳은 선택을 하는 것입니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">믿는다고도 하죠. 어렵지 않습니다.</h1>
+      <h1 class="h1 heading">예수님이 내 죄를 위해 죽으시고 다시 사신 일을 믿는 것이 끊어진 하나님과의 관계에서 회복되는 유일한 길이기 때문입니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">하나님이 예수님을 통해 하신 일. 복음을 믿는 것입니다.</h1>
+      <h1 class="h1 heading">믿음으로 하나님과의 관계는 회복되고 다시 영원한 삶도 주어질 것입니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">그러면 하나님을 조금씩 알게 될 것이며</h1>
+      <h1 class="h1 heading">모든 것은 점점 비극 이전으로 되돌아갈 것입니다. 공허함도 불안감도 권태로움도 없었던 그 때로 말이죠.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">전에 없던 충만한 만족감을 느낄 수 있을 것입니다.</h1>
+      <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">그것은 소문난 맛집 음식을 먹는 것처럼, 인생 노래를 듣는 것처럼, 머리로 아는 것이 아닌 감각으로 느끼는 것입니다.</h1>
+      <h1 class="h1 heading">또 어디선가 살고 있는 그리스도인이 당신에게 예수님을 전해줄 것입니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">물론 앞으로 살면서 어렵고 힘든 일은 여전히 많을 것입니다.</h1>
-    </section>
-    <section class="fullpage-slide">
-      <h1 class="h1 heading">하지만 분명 전에 없던 놀라운 일들을 경험할 수 있을 것입니다.</h1>
-    </section>
-    <section class="fullpage-slide">
-      <h1 class="h1 heading">풍성하고 놀랍도록 진하며 다채로운 삶의 숭고함을.</h1>
+      <h1 class="h1 heading">그 때면 좀 더 알게 되지 않을까요? 하나님께서는 당신을 향한 계획이 있으셨고, 항상 사랑하고 계셨다는 것을요.</h1>
     </section>
     <section class="fullpage-slide">
       <h1 class="h1 heading">약속합니다. 예수님의 이름으로</h1>

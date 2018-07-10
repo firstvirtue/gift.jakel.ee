@@ -23,9 +23,6 @@
         섹스
       </div>
       <div class="important-item">
-        쾌락
-      </div>
-      <div class="important-item">
         자아실현
       </div>
       <div class="important-item">
@@ -38,6 +35,9 @@
         꿈
       </div>
       <div class="important-item">
+        쾌락
+      </div>
+      <div class="important-item">
         의미
       </div>
       <div class="important-item">
@@ -46,24 +46,23 @@
 
       <br>
       <h1>우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
-      <h2>그래서 위와 같은 것들을 필요로 합니다.</h2>
+      <h2>그래서 위와 같은 조각들을 삶 속에 채우며 그에 따른 수고를 마다하지 않습니다.</h2>
 
     </section>
 
+    <!-- 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
+
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading">이 모든 것을 가진다면 우리가 원하는 만족스런 삶을 누릴 수 있을까요?</h1>
+      <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요? 마치 모래성처럼 허무할 뿐입니다.</h1>
     </section>
 
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading">우리는 종종 봅니다. 모든 것을 다 가진 것처럼 보이는 사람들도 우울증을 가지고 심지어 자살까지 하는 것을요.</h1>
+      <h1 class="h1 heading">또는 몇몇 가지를 이룬다 한들 지속적인 만족이 있던가요? 우리의 채워지지 않는 욕심과 공허함만 발견할 뿐입니다.</h1>
+      <p>때로는 권태롭기도 합니다.</p>
     </section>
 
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading">분명 우리 영혼은 저런 것들 만으로 채울 수 없음에 분명합니다.</h1>
-    </section>
-
-    <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading"><span>여전히 공허함이 느껴진다면..</span> <br> <span>왜 그럴까요?</span></h1>
+      <h1 class="h1 heading">한 번 들어보시겠어요? 우리의 영혼이 어디로부터 와서 어디로 가는지를</h1>
     </section>
 
   </div>
@@ -80,9 +79,7 @@ export default {
   data() {
     return {
       subContents: [
-        // {id:'1', tag: 'h2', content: '선물'},
-        // {id:'2', tag: 'p', content: `그럴수가`},
-        // {id:'3', tag: 'p', content: '그럴수가2'},
+
       ]
     }
   },
