@@ -2,7 +2,7 @@
   <div class="wrap">
 
     <section class="fullpage-slide intro">
-      <img class="intro-back-img" src="~/assets/img/portrait-3056827.jpg" alt="">
+      <img class="intro-back-img" src="~/assets/img/portrait.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading" lang="ko">
           우리에게 가장 소중한 것은 무엇일까요?
@@ -51,7 +51,10 @@
     </section>
 
     <section class="fullpage-slide white-tone">
-      <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가게 될까요?</h1>
+      <img class="intro-back-img" src="~/assets/img/concrete.jpg" alt="">
+      <div class="l-wrap">
+        <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가게 될까요?</h1>
+      </div>
     </section>
 
   </div>
