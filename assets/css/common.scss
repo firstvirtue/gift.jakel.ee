@@ -1,5 +1,14 @@
-.index {
-  .item {
-    color: hotpink;
+.fullpage-slide {
+  overflow: hidden;
+
+  &-back-img {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.white-tone {
+  .heading {
+    color: $black;
   }
 }

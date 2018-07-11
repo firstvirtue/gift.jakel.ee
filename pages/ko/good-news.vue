@@ -1,9 +1,12 @@
 <template lang="html">
   <div class="wrap">
-    <section class="fullpage-slide">
-      <h1 class="h1 heading">죄로 인하여 관계가 끊어졌다는 말을 기억하시나요?</h1>
-      <p>관계가 끊어져 죽음이 찾아왔다는 것도요.</p>
-      <p>그렇다면 그 죄만 없다면 되겠군요.</p>
+    <section class="fullpage-slide question">
+      <img class="fullpage-slide-back-img question-back-img" src="~/assets/img/question-mark.jpg" alt="">
+      <div class="l-wrap">
+        <h1 class="h1 heading">죄로 인하여 관계가 끊어졌다는 말을 기억하시나요?</h1>
+        <p>관계가 끊어져 죽음이 찾아왔다는 것도요.</p>
+        <p>그렇다면 그 죄만 없다면 되겠군요.</p>
+      </div>
     </section>
     <section class="fullpage-slide">
       <h1 class="h1 heading">하지만 죄는 그냥 없앨 수 없습니다. 누군가는 그 값을 지불해야 합니다.</h1>
@@ -52,5 +55,15 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+  .question {
+    &-back-img {
+      transform: translate(-22%, -14%) scale(0.78);
+      transform-origin: 0 0;
+    }
+
+    .heading {
+      top: 20%;
+    }
+  }
 </style>

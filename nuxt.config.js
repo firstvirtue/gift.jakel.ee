@@ -31,8 +31,7 @@ module.exports = {
   css: [
     'normalize.css/normalize.css',
     '~/assets/css/base.scss',
-    '~/assets/css/layout/_wrapper.scss',
-    '~/assets/css/module/_typography.scss',
+    '~/assets/css/common.scss',
   ],
 
   /*
@@ -43,6 +42,8 @@ module.exports = {
     ['nuxt-sass-resources-loader', [
       '~/assets/css/utils/_variables.scss',
       '~/assets/css/utils/_mixins.scss',
+      '~/assets/css/layout/_wrapper.scss',
+      '~/assets/css/module/_typography.scss',
     ]]
   ],
 
