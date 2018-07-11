@@ -24,7 +24,7 @@
       <h1 class="h1 heading">그 아들을 희생한 너무나 값 비싼 대가였죠.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">우리의 죽음을 대신하여 죽어줄 한 사람이 필요했다면</h1>
+      <h1 class="h1 heading">우리의 죽음을 대신하여 죽어줄 한 사람이 필요했기에</h1>
     </section>
     <section class="fullpage-slide">
       <h1 class="h1 heading">죄 없는 하나님이 직접 그 한 사람이 되시는 방법을 택하셨습니다.</h1>

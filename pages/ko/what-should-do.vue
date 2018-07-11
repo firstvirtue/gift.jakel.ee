@@ -4,10 +4,10 @@
       <h1 class="h1 heading">그렇다면 우리가 할 수 있는 것은 무엇일까요?</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">그것은 옳은 선택을 하는 것입니다.</h1>
+      <h1 class="h1 heading">그것은 선택을 하는 것입니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">예수님이 내 죄를 위해 죽으시고 다시 사신 일을 믿는 것이 끊어진 하나님과의 관계에서 회복되는 유일한 길이기 때문입니다.</h1>
+      <h1 class="h1 heading">예수님이 내 죄를 위해 죽으시고 다시 사신 일을 믿는 것이 끊어진 하나님과의 관계에서 회복되는 유일한 길 입니다.</h1>
     </section>
     <section class="fullpage-slide">
       <h1 class="h1 heading">믿음으로 하나님과의 관계는 회복되고 다시 영원한 삶도 주어질 것입니다.</h1>
@@ -19,7 +19,7 @@
       <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
     </section>
     <section class="fullpage-slide">
-      <h1 class="h1 heading">살아가는 가운데 또 어디선가 살고 있는 그리스도인이 당신에게 전해줄 것입니다.</h1>
+      <h1 class="h1 heading">당신의 삶의 여정 가운데 또 어디선가 살고 있는 그리스도인이 당신에게 전해줄 것입니다.</h1>
     </section>
     <section class="fullpage-slide">
       <h1 class="h1 heading">예수님을요</h1>
