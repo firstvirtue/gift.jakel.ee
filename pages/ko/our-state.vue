@@ -14,7 +14,8 @@
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide disconnect white-tone">
+      <img class="fullpage-slide-back-img disconnect-back-img" src="~/assets/img/chain.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">하지만 한 사람의 죄가 하나님과의 관계를 끊었습니다.</h1>
       </div>
@@ -26,14 +27,16 @@
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide anxiety white-tone">
+      <img class="fullpage-slide-back-img anxiety-back-img" src="~/assets/img/anxiety.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">죽음이 찾아왔죠.</h1>
         <p>마치 꺾여진 꽃이 며칠 내에 시들듯</p>
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide genetic white-tone">
+      <img class="fullpage-slide-back-img genetic-back-img" src="~/assets/img/prairie.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그 죄는 그의 자손 모두에게 유전되었습니다.</h1>
         <p>그리고 그 죄는 여기 있는 우리에게도 영향을 미칩니다.</p>
