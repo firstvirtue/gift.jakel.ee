@@ -114,6 +114,7 @@ export default {
       let delta = self.pos - yPos;
       self.updatePosition(delta);
     });
+    
   },
 }
 </script>

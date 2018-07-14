@@ -58,8 +58,8 @@
         <h1 class="h1 heading">예수님은 십자가에 못 박혀 죽음으로 인간의 죄를 대신하셨죠.</h1>
       </div>
     </section>
-    <section class="fullpage-slide sky">
-      <img class="fullpage-slide-back-img sky-back-img" src="~/assets/img/sky.jpg" alt="">
+    <section class="fullpage-slide beach">
+      <img class="fullpage-slide-back-img beach-back-img" src="~/assets/img/beach.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그리고 나아가 예수님은 부활을 통해 죄로 인한 죽음의 저주를 완전히 끝내셨습니다.</h1>
       </div>
@@ -104,15 +104,14 @@ export default {
     }
   }
 
-  .sky {
+  .beach {
     &-back-img {
-      transform: translate(-22%, -14%) scale(0.78);
+      transform: translate(-24.2%, -10%) scale(0.64);
       transform-origin: 0 0;
     }
 
     .heading {
       top: 63.3%;
-      color: $black;
     }
   }
 </style>

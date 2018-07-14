@@ -6,3 +6,8 @@
   line-height: 1.2;
   @include break-word
 }
+
+.paragraph {
+  position: relative;
+  @include break-word
+}

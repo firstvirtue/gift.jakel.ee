@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="wrap">
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide son white-tone">
+      <img class="fullpage-slide-back-img son-back-img" src="~/assets/img/son.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">하나님은 본래 교제를 나누기 위해 자기 형상대로 인간을 창조하셨습니다.</h1>
       </div>
@@ -39,8 +40,8 @@
       <img class="fullpage-slide-back-img genetic-back-img" src="~/assets/img/prairie.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그 죄는 그의 자손 모두에게 유전되었습니다.</h1>
-        <p>그리고 그 죄는 여기 있는 우리에게도 영향을 미칩니다.</p>
-        <p>우리안에는 .. 죄가 있습니다.</p>
+        <p class="paragraph">그리고 그 죄는 여기 있는 우리에게도 영향을 미칩니다.</p>
+        <p class="paragraph">우리안에는 .. 죄가 있습니다.</p>
       </div>
     </section>
 
@@ -117,6 +118,18 @@ export default {
 </script>
 
 <style lang="scss">
+.son {
+  &-back-img {
+    transform: translate(-16.8%, 7.8%) scale(0.46);
+    transform-origin: 0 0;
+  }
+
+  .heading {
+    top: 3%;
+    color: $white;
+  }
+}
+
 .perfect-state {
   &-back-img {
     // transform: translateX(-23%) scale(0.94);
