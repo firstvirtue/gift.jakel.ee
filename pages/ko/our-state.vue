@@ -3,6 +3,7 @@
 
     <section class="fullpage-slide son white-tone">
       <img class="fullpage-slide-back-img son-back-img" src="~/assets/img/son.jpg" alt="">
+      <!-- TODO: 비누방울이 점점 커지며 퍼지는 모션 -->
       <div class="l-wrap">
         <h1 class="h1 heading">하나님은 본래 교제를 나누기 위해 자기 형상대로 인간을 창조하셨습니다.</h1>
       </div>
