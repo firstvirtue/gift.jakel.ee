@@ -7,8 +7,21 @@
   }
 }
 
+.heading {
+  opacity: 0;
+  transform: translateY(40%);
+  transition: 0.5s all;
+}
+
 .white-tone {
   .heading {
     color: $black;
+  }
+}
+
+.is-current {
+  .heading {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

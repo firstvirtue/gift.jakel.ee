@@ -102,8 +102,13 @@ export default {
   watch: {
     '$store.state.index': async function() {
       console.log(this.$store.state.index);
-      await util.wait(1000);
+      await util.wait(500);
 
+      // FIXME: 어떻게하면 간략하게..
+      let slides = document.querySelectorAll('.fullpage-slide');
+      let slide = slides[this.$store.state.index];
+      console.log(slide);
+      slide.classList.add('is-current');
     }
   },
   computed: {
