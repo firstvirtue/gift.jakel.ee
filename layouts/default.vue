@@ -58,7 +58,7 @@ export default {
         delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
 
         this.isPaging = true;
-        TweenMax.to(wrap, 0.5, { y: -this.position, onComplete: () => {
+        TweenMax.to(wrap, 0.7, { y: -this.position, ease: Sine.easeOut, onComplete: () => {
           self.isPaging = false;
 
         }
@@ -114,7 +114,7 @@ export default {
       let delta = self.pos - yPos;
       self.updatePosition(delta);
     });
-    
+
   },
 }
 </script>

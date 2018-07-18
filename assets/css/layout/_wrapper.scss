@@ -1,5 +1,10 @@
+.fullpage-wrap {
+  height: 100vh;
+}
+
 .fullpage-slide {
   position: relative;
+  overflow: hidden;
 }
 
 .l-wrap {
