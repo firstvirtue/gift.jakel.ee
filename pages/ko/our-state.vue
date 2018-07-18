@@ -65,7 +65,8 @@
       <h1 class="h1 heading">그러나 죽음을 막아주진 못했죠 어느것도 구원에 이르게 하지 못했습니다.</h1>
     </section> -->
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone hole">
+      <img class="fullpage-slide-back-img hole-back-img" src="~/assets/img/hole.png" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">우리는 죽어가고 있습니다.</h1>
       </div>
@@ -105,10 +106,7 @@ export default {
       await util.wait(500);
 
       // FIXME: 어떻게하면 간략하게..
-      let slides = document.querySelectorAll('.fullpage-slide');
-      let slide = slides[this.$store.state.index];
-      console.log(slide);
-      slide.classList.add('is-current');
+      // this.setCurrent();
     }
   },
   computed: {
@@ -117,13 +115,25 @@ export default {
       return this.$store.state.index;
     }
   },
-  methods: {
-
-  },
+  // methods: {
+  //   setCurrent() {
+  //     let slides = document.querySelectorAll('.fullpage-slide');
+  //     let slide = slides[this.$store.state.index];
+  //     console.log(slide);
+  //     slide.classList.add('is-current');
+  //   }
+  // },
+  // mounted() {
+  //   this.setCurrent();
+  // },
 }
 </script>
 
 <style lang="scss">
+.wrap {
+  overflow: hidden;
+}
+
 .son {
   &-back-img {
     transform: translate(-16.8%, 7.8%) scale(0.46);
@@ -157,6 +167,13 @@ export default {
 
   .heading {
     top: 51%;
+  }
+}
+
+.hole {
+  &-back-img {
+    transform: translate(4%, 17%) scale(0.22);
+    transform-origin: 0 0;
   }
 }
 

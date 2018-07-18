@@ -22,7 +22,7 @@
           다른 사람에게 인정받음
         </div>
         <div class="important-item">
-          섹스
+          이성
         </div>
         <div class="important-item">
           자아실현
@@ -33,7 +33,7 @@
 
         <br>
         <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
-        <p>그래서 위와 같은 조각들을 삶 속에 채우며 그에 따른 수고를 마다하지 않습니다.</p>
+        <p class="paragraph">그래서 위와 같은 조각들을 삶 속에 채우며 그에 따른 수고를 마다하지 않습니다.</p>
       </div>
 
     </section>
@@ -43,14 +43,14 @@
     <section class="fullpage-slide white-tone">
       <div class="l-wrap">
         <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
-        <p>마치 모래성처럼 허무할 뿐입니다.</p>
+        <p class="paragraph">마치 모래성처럼 허무할 뿐입니다.</p>
       </div>
     </section>
 
     <section class="fullpage-slide white-tone">
       <div class="l-wrap">
         <h1 class="h1 heading">또는 몇몇 가지를 이룬다 한들 지속적인 만족이 있던가요? 우리의 채워지지 않는 욕심과 공허함만 발견할 뿐입니다.</h1>
-        <p>때로는 권태롭기도 합니다.</p>
+        <p class="paragraph">때로는 권태롭기도 합니다.</p>
       </div>
     </section>
 
@@ -99,6 +99,9 @@ export default {
 
 <style lang="scss">
   .wrap {
+
+    overflow: hidden;
+
     .intro {
       color: #eee;
     }
@@ -126,20 +129,20 @@ export default {
     }
   }
 
-  .p {
-    &-ko {
-      color: #111;
-      font-family: 'NotoSans';
-      font-size: 40px;
-      font-weight: lighter;
-    }
-
-    &-en {
-      color: #111;
-      font-family: 'Roboto';
-      font-size: 40px;
-      text-transform: uppercase;
-      font-weight: lighter;
-    }
-  }
+  // .p {
+  //   &-ko {
+  //     color: #111;
+  //     font-family: 'NotoSans';
+  //     font-size: 40px;
+  //     font-weight: lighter;
+  //   }
+  //
+  //   &-en {
+  //     color: #111;
+  //     font-family: 'Roboto';
+  //     font-size: 40px;
+  //     text-transform: uppercase;
+  //     font-weight: lighter;
+  //   }
+  // }
 </style>

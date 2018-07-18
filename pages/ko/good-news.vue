@@ -73,9 +73,9 @@ import util from '~/assets/js/util.js';
 export default {
   watch: {
     '$store.state.index': async function() {
-      console.log(this.$store.state.index);
+
       await util.wait(1000);
-      console.log('섹션 별 모션');
+
     }
   },
 }

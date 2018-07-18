@@ -37,7 +37,7 @@ export default {
     openSideNav() {
       this.$store.commit('openSideNav');
     },
-  }
+  },
 }
 </script>
 

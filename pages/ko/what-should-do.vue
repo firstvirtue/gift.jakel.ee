@@ -7,7 +7,7 @@
     </section>
     <section class="fullpage-slide white-tone">
       <div class="l-wrap">
-        <h1 class="h1 heading">그것은 선택을 하는 것입니다.</h1>
+        <h1 class="h1 heading">그것은 선택하는 것입니다.</h1>
       </div>
     </section>
     <section class="fullpage-slide white-tone">
@@ -30,7 +30,8 @@
         <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide man white-tone">
+      <img class="fullpage-slide-back-img man-back-img" src="~/assets/img/man.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">당신의 삶의 여정 가운데 또 어디선가 살고 있는 그리스도인이 당신에게 전해줄 것입니다.</h1>
       </div>
@@ -58,5 +59,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+  .man {
+    &-back-img {
+
+    }
+
+
+  }
 </style>

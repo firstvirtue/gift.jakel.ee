@@ -38,6 +38,10 @@ export default {
       } else {
         this.$store.commit('setTone', '');
       }
+
+      await util.wait(500);
+
+      this.setCurrent();
     }
   },
   computed: {
@@ -57,17 +61,30 @@ export default {
         // FIXME: 더 정교하게 ..
         delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
 
-        this.isPaging = true;
-        TweenMax.to(wrap, 0.7, { y: -this.position, ease: Sine.easeOut, onComplete: () => {
-          self.isPaging = false;
-
+        // this.isPaging = true;
+        // TweenMax.to(wrap, 0.8, { y: -this.position, ease: Sine.easeOut, onComplete: () => {
+        //     self.isPaging = false;
+        //   }
+        // });
+        let pos = -this.$store.state.index * window.innerHeight;
+        wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
+      }
+    },
+    setCurrent() {
+      let slides = document.querySelectorAll('.fullpage-slide');
+      slides.forEach((el, i)=> {
+        if(i === this.$store.state.index) {
+          el.classList.add('is-current');
+        } else {
+          el.classList.remove('is-current');
         }
       });
-      }
     }
   },
   mounted() {
     let self = this;
+
+    this.setCurrent();
 
     // fullpage.init();
     // let body = document.querySelector('body');
@@ -125,5 +142,12 @@ html, body {
   overflow: hidden;
   height: 100%;
   width: 100%;
+}
+
+.fullpage-wrap {
+  position: relative;
+  height: 100%;
+
+  transition: all 0.8s ease;
 }
 </style>
