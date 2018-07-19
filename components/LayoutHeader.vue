@@ -48,7 +48,8 @@ export default {
     width: 100%;
     height: 80px;
     z-index: 10;
-    color: hotpink;
+    // color: hotpink;
+    color: $brand;
 
     &-title {
       margin: 0;

@@ -30,13 +30,13 @@
         <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide man white-tone">
+    <section class="fullpage-slide man">
       <img class="fullpage-slide-back-img man-back-img" src="~/assets/img/man.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">당신의 삶의 여정 가운데 또 어디선가 살고 있는 그리스도인이 당신에게 전해줄 것입니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide jesus white-tone">
       <div class="l-wrap">
         <h1 class="h1 heading">예수님을요</h1>
       </div>
@@ -46,7 +46,7 @@
         <h1 class="h1 heading">그 때면 좀 더 알게 되지 않을까요? 하나님께서는 당신을 향한 계획이 있으셨고, 항상 사랑하고 계셨다는 것을요.</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide black-tone">
       <div class="l-wrap">
         <h1 class="h1 heading">약속합니다. <br>예수님의 이름으로</h1>
       </div>
@@ -62,9 +62,20 @@ export default {
 <style lang="scss">
   .man {
     &-back-img {
-
+      transform: translate(-6%, 0) scale(0.50);
+      transform-origin: 0 0;
     }
 
+    .heading {
+      top: 58%;
+    }
 
+  }
+
+  .jesus {
+    .heading {
+      top: 30%;
+      text-align: center;
+    }
   }
 </style>
