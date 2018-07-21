@@ -94,6 +94,10 @@ export default {
   methods: {
 
   },
+  mounted() {
+    this.$store.commit('setTitle', '삶의 소중한 부분들');
+    this.$store.commit('setPage', 1);
+  }
 }
 </script>
 

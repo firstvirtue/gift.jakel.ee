@@ -41,4 +41,24 @@ export default {
     return new Promise(resolve => setTimeout(resolve, dur));
   },
 
+  movePage: function(pageIndex) {
+    console.log(pageIndex);
+    switch (pageIndex) {
+      case 1:
+        location.href = '/ko/precious-piece';
+        break;
+      case 2:
+        location.href = '/ko/our-state';
+        break;
+      case 3:
+        location.href = '/ko/good-news';
+        break;
+      case 4:
+        location.href = '/ko/what-should-do';
+        break;
+      default:
+
+    }
+  }
+
 }

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="gnb">
-    <h1 class="gnb-title">삶의 소중한 부분들</h1>
+    <h1 class="gnb-title">{{this.$store.state.title}}</h1>
     <button type="button" name="button" class="side-nav-button" @click="openSideNav()" :style="{borderColor: tone}">
       <CircularProgress class="circular-progress" :stroke="tone" :strokeWidth="strokeWidth" :radius="radius" :progress="progress" />
     </button>
@@ -38,6 +38,9 @@ export default {
       this.$store.commit('openSideNav');
     },
   },
+  mounted() {
+    console.log(this.$store.state.title);
+  }
 }
 </script>
 

@@ -77,6 +77,10 @@ export default {
 
     }
   },
+  mounted() {
+    this.$store.commit('setTitle', '예수 그리스도의 복음');
+    this.$store.commit('setPage', 3);
+  }
 }
 </script>
 

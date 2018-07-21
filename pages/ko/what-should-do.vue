@@ -58,6 +58,10 @@
 
 <script>
 export default {
+  mounted() {
+    this.$store.commit('setTitle', '완전한 삶');
+    this.$store.commit('setPage', 4);
+  }
 }
 </script>
 

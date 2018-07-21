@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import util from '~/assets/js/util.js';
 
 Vue.use(Vuex);
 
@@ -10,18 +11,26 @@ const store = () => {
     state: {
       index: 0,
       length: 0,
+      page: 0,
       isOpenedSideNav: false,
       tone: '',
+      title: '',
     },
 
     mutations: {
       increaseIndex(state) {
-        if(state.index < state.length - 1)
+        if(state.index < state.length - 1) {
           state.index++;
+        } else {
+          util.movePage(state.page + 1);
+        }
       },
       decreaseIndex(state) {
-        if(state.index > 0)
+        if(state.index > 0) {
           state.index--;
+        } else {
+          util.movePage(state.page - 1);
+        }
       },
       setLength(state, count) {
         state.length = count;
@@ -34,6 +43,12 @@ const store = () => {
       },
       setTone(state, tone) {
         state.tone = tone;
+      },
+      setTitle(state, title) {
+        state.title = title;
+      },
+      setPage(state, page) {
+        state.page = page;
       }
     }
   })

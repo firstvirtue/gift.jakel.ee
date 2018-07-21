@@ -95,7 +95,7 @@ export default {
   },
   watch: {
     '$store.state.index': async function() {
-      console.log(this.$store.state.index);
+
       await util.wait(500);
 
       // FIXME: 어떻게하면 간략하게..
@@ -104,7 +104,7 @@ export default {
   },
   computed: {
     arrangeMotion() {
-      console.log(this.$store.state.index);
+
       return this.$store.state.index;
     }
   },
@@ -116,9 +116,10 @@ export default {
   //     slide.classList.add('is-current');
   //   }
   // },
-  // mounted() {
-  //   this.setCurrent();
-  // },
+  mounted() {
+    this.$store.commit('setTitle', '우리의 상태');
+    this.$store.commit('setPage', 2);
+  }
 }
 </script>
 
