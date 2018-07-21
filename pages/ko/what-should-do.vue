@@ -9,17 +9,18 @@
     <section class="fullpage-slide white-tone">
       <div class="l-wrap">
         <h1 class="h1 heading">그것은 선택하는 것입니다.</h1>
+        <p class="paragraph">예수님이 내 죄를 위해 죽으시고 다시 사신 일을요.</p>
       </div>
     </section>
     <section class="fullpage-slide road white-tone">
       <img class="fullpage-slide-back-img road-back-img" src="~/assets/img/road.jpg" alt="">
       <div class="l-wrap">
-        <h1 class="h1 heading">예수님이 내 죄를 위해 죽으시고 다시 사신 일을 믿는 것이 끊어진 하나님과의 관계에서 회복되는 유일한 길 입니다.</h1>
+        <h1 class="h1 heading">그것이 끊어진 하나님과의 관계에서 회복되는 유일한 길 입니다.</h1>
       </div>
     </section>
     <section class="fullpage-slide white-tone">
       <div class="l-wrap">
-        <h1 class="h1 heading">믿음으로 하나님과의 관계는 회복되고 다시 영원한 삶도 주어질 것입니다.</h1>
+        <h1 class="h1 heading">그를 믿음으로 하나님과의 관계는 회복되고 다시 영원한 삶도 주어질 것입니다.</h1>
       </div>
     </section>
     <section class="fullpage-slide white-tone">
@@ -35,7 +36,7 @@
     <section class="fullpage-slide peoples white-tone">
       <img class="fullpage-slide-back-img peoples-back-img" src="~/assets/img/peoples.jpg" alt="">
       <div class="l-wrap">
-        <h1 class="h1 heading">당신의 삶의 여정 가운데 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해줄 것입니다.</h1>
+        <h1 class="h1 heading">당신의 삶의 여정 가운데 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해 줄 것입니다.</h1>
       </div>
     </section>
     <section class="fullpage-slide jesus white-tone">

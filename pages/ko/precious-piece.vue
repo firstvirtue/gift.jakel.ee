@@ -57,7 +57,7 @@
     <section class="fullpage-slide where-we">
       <img class="fullpage-slide-back-img where-we-back-img" src="~/assets/img/concrete.jpg" alt="">
       <div class="l-wrap">
-        <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가게 될까요?</h1>
+        <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가는 걸까요?</h1>
       </div>
     </section>
 

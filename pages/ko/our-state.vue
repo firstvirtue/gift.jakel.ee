@@ -52,6 +52,8 @@
       </div>
     </section>
 
+    <!-- TODO: 우리 영혼의 어두운 부분 -> 빛이 비춰짐을 표현하고 싶다 -->
+
     <!-- <section class="fullpage-slide">
       <h1 class="h1 heading">역사적으로 인간은 구원, 즉 신에 다다르고자 종교를 만들기도 하고</h1>
     </section>
