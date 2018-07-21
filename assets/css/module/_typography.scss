@@ -9,5 +9,6 @@
 
 .paragraph {
   position: relative;
+  color: $white;
   @include break-word
 }

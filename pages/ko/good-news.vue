@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="wrap">
-    <section class="fullpage-slide question">
-      <img class="fullpage-slide-back-img question-back-img" src="~/assets/img/question-mark.jpg" alt="">
+    <section class="fullpage-slide despair">
+      <img class="fullpage-slide-back-img despair-back-img" src="~/assets/img/despair.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">죄로 인하여 관계가 끊어졌다는 말을 기억하시나요?</h1>
-        <p>관계가 끊어져 죽음이 찾아왔다는 것도요.</p>
-        <p>그렇다면 그 죄만 없다면 되겠군요.</p>
+        <p class="paragraph">관계가 끊어져 죽음이 찾아왔다는 것도요.</p>
+        <p class="paragraph">그렇다면 그 죄만 없다면 되겠군요.</p>
       </div>
     </section>
     <section class="fullpage-slide boy">
@@ -82,13 +82,17 @@ export default {
 </script>
 
 <style lang="scss">
-  .question {
+  .despair {
     &-back-img {
-      transform: translate(-22%, -14%) scale(0.78);
+      transform: translate(-22%, -14%) scale(0.7);
       transform-origin: 0 0;
     }
 
     .heading {
+      top: 20%;
+    }
+
+    .paragraph {
       top: 20%;
     }
   }

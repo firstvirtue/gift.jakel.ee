@@ -78,12 +78,6 @@
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone">
-      <div class="l-wrap">
-        <h1 class="h1 heading">바로 하나님의 아들 예수 그리스도를 통해서 말이죠.</h1>
-      </div>
-    </section>
-
   </div>
 </template>
 
@@ -142,6 +136,7 @@ export default {
 
   .heading {
     top: 3%;
+    left: 3%;
     color: $white;
   }
 }

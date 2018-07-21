@@ -9,7 +9,7 @@
 
 .heading {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(20%);
   transition: 0.7s all cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -21,7 +21,7 @@
 }
 
 .white-tone {
-  .heading {
+  .heading, .paragraph {
     color: $black;
   }
 }

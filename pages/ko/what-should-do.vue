@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="wrap">
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide us">
+      <img class="fullpage-slide-back-img us-back-img" src="~/assets/img/us.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그렇다면 우리가 할 수 있는 것은 무엇일까요?</h1>
       </div>
@@ -10,7 +11,8 @@
         <h1 class="h1 heading">그것은 선택하는 것입니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide road white-tone">
+      <img class="fullpage-slide-back-img road-back-img" src="~/assets/img/road.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">예수님이 내 죄를 위해 죽으시고 다시 사신 일을 믿는 것이 끊어진 하나님과의 관계에서 회복되는 유일한 길 입니다.</h1>
       </div>
@@ -30,10 +32,10 @@
         <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide man">
-      <img class="fullpage-slide-back-img man-back-img" src="~/assets/img/man.jpg" alt="">
+    <section class="fullpage-slide peoples white-tone">
+      <img class="fullpage-slide-back-img peoples-back-img" src="~/assets/img/peoples.jpg" alt="">
       <div class="l-wrap">
-        <h1 class="h1 heading">당신의 삶의 여정 가운데 또 어디선가 살고 있는 그리스도인이 당신에게 전해줄 것입니다.</h1>
+        <h1 class="h1 heading">당신의 삶의 여정 가운데 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해줄 것입니다.</h1>
       </div>
     </section>
     <section class="fullpage-slide jesus white-tone">
@@ -60,21 +62,46 @@ export default {
 </script>
 
 <style lang="scss">
-  .man {
+  .us {
     &-back-img {
-      transform: translate(-6%, 0) scale(0.50);
+      transform: translate(-8%, 0) scale(0.63);
       transform-origin: 0 0;
     }
 
     .heading {
-      top: 58%;
+      top: 50%;
+      margin-top: -30px;
+    }
+  }
+
+  .road {
+    &-back-img {
+      width: 100%;
+      transform: translate3d(0, 36%, 0);
+    }
+
+    .heading {
+      top: 64%;
+    }
+
+  }
+
+  .peoples {
+    &-back-img {
+      width: 100%;
+      transform: translate3d(0, 40%, 0);
+    }
+
+    .heading {
+      top: 68%;
     }
 
   }
 
   .jesus {
     .heading {
-      top: 30%;
+      top: 50%;
+      margin-top: -30px;
       text-align: center;
     }
   }
