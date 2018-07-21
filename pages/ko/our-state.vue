@@ -29,20 +29,19 @@
       </div>
     </section>
 
-    <section class="fullpage-slide anxiety white-tone">
+    <section class="fullpage-slide anxiety">
       <img class="fullpage-slide-back-img anxiety-back-img" src="~/assets/img/anxiety.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">죽음이 찾아왔죠.</h1>
-        <p>마치 꺾여진 꽃이 며칠 내에 시들듯</p>
+        <p class="paragraph">마치 꺾여진 꽃이 며칠 내에 시들듯</p>
       </div>
     </section>
 
-    <section class="fullpage-slide genetic white-tone">
+    <section class="fullpage-slide genetic">
       <img class="fullpage-slide-back-img genetic-back-img" src="~/assets/img/prairie.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그 죄는 그의 자손 모두에게 유전되었습니다.</h1>
-        <p class="paragraph">그리고 그 죄는 여기 있는 우리에게도 영향을 미칩니다.</p>
-        <p class="paragraph">우리안에는 .. 죄가 있습니다.</p>
+        <p class="paragraph">그리고 그 죄는 여기 있는 우리에게도 영향을 미칩니다. <br> 우리안에는.. 죄가 있습니다.</p>
       </div>
     </section>
 
@@ -151,6 +150,49 @@ export default {
   .heading {
     // top: 82%;
     top: 73%;
+  }
+}
+
+.disconnect {
+  &-back-img {
+    transform: translate(-10%, -2%) scale(0.36);
+    transform-origin: 0 0;
+  }
+
+  .heading {
+    // top: 82%;
+    top: 75%;
+  }
+}
+
+.anxiety {
+  &-back-img {
+    transform: translate(-14%, 0) scale(0.56);
+    transform-origin: 0 0;
+  }
+
+  .heading {
+    top: 35%;
+  }
+
+  .paragraph {
+    top: 35%;
+  }
+}
+
+.genetic {
+  &-back-img {
+    transform: translate(-9%, 0) scale(0.66);
+    transform-origin: 0 0;
+  }
+
+  .heading {
+    top: 25%;
+  }
+
+  .paragraph {
+    top: 25%;
+    width: 60%;
   }
 }
 

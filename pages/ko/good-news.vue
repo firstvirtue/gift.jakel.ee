@@ -4,8 +4,7 @@
       <img class="fullpage-slide-back-img despair-back-img" src="~/assets/img/despair.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">죄로 인하여 관계가 끊어졌다는 말을 기억하시나요?</h1>
-        <p class="paragraph">관계가 끊어져 죽음이 찾아왔다는 것도요.</p>
-        <p class="paragraph">그렇다면 그 죄만 없다면 되겠군요.</p>
+        <p class="paragraph">관계가 끊어져 죽음이 찾아왔다는 것도요. <br> 그렇다면 그 죄만 없다면 되겠군요.</p>
       </div>
     </section>
     <section class="fullpage-slide boy">
@@ -14,7 +13,7 @@
         <h1 class="h1 heading">하지만 죄는 그냥 없앨 수 없습니다. 누군가는 그 값을 지불해야 합니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide broken-window">
+    <section class="fullpage-slide broken-window white-tone">
       <img class="fullpage-slide-back-img broken-window-back-img" src="~/assets/img/broken-window.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">어린아이가 장난을 치다가 창문을 깼다면, 용서해 줄 수는 있지만 누군가 창문을 고쳐야 하지 않을까요?</h1>
@@ -97,6 +96,17 @@ export default {
     }
   }
 
+  .boy {
+    &-back-img {
+      transform: translate(-21%, 0) scale(0.5);
+      transform-origin: 0 0;
+    }
+
+    .heading {
+      top: 29%;
+    }
+  }
+
   .wooden-cross {
     &-back-img {
       transform: translate(-10%, 0) scale(0.48);
@@ -105,6 +115,39 @@ export default {
 
     .heading {
       top: 36.3%;
+    }
+  }
+
+  .broken-window {
+    &-back-img {
+      top: 20%;
+      width: 100%;
+    }
+
+    .heading {
+      top: 54.3%;
+    }
+  }
+
+  .father-and-son {
+    &-back-img {
+      width: 100%;
+    }
+
+    .heading {
+      top: 88%;
+      color: $black;
+    }
+  }
+
+  .baby-feet {
+    &-back-img {
+      transform: translate(-13.2%, -2%) scale(0.64);
+      transform-origin: 0 0;
+    }
+
+    .heading {
+      top: 38%;
     }
   }
 

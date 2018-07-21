@@ -49,8 +49,8 @@
 
     <section class="fullpage-slide white-tone">
       <div class="l-wrap">
-        <h1 class="h1 heading">또는 몇몇 가지를 이룬다 한들 지속적인 만족이 있던가요? 우리의 채워지지 않는 욕심과 공허함만 발견할 뿐입니다.</h1>
-        <p class="paragraph">때로는 권태롭기도 합니다.</p>
+        <h1 class="h1 heading">또는 몇몇 가지를 이룬다 한들 지속적인 만족이 있던가요?</h1>
+        <p class="paragraph">우리의 채워지지 않는 욕심과 공허함만 발견할 뿐입니다. <br>때로는 권태롭기도 합니다.</p>
       </div>
     </section>
 
