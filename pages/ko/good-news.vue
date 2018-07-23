@@ -130,7 +130,7 @@ export default {
     }
 
     .heading {
-      top: 54.3%;
+      top: 58.3%;
     }
   }
 

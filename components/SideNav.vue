@@ -5,7 +5,7 @@
       <ol class="menu-list">
         <li class="menu-item">
           <a href="/ko/precious-piece">
-            <span class="menu-icon">1</span>
+            <span class="menu-icon">1.</span>
             <div class="menu-name">
               삶의 소중한 부분들
             </div>
@@ -13,7 +13,7 @@
         </li>
         <li class="menu-item">
           <a href="/ko/our-state">
-            <span class="menu-icon">2</span>
+            <span class="menu-icon">2.</span>
             <div class="menu-name">
               우리의 상태
             </div>
@@ -21,7 +21,7 @@
         </li>
         <li class="menu-item">
           <a href="/ko/good-news">
-            <span class="menu-icon">3</span>
+            <span class="menu-icon">3.</span>
             <div class="menu-name">
               예수 그리스도의 복음
             </div>
@@ -29,7 +29,7 @@
         </li>
         <li class="menu-item">
           <a href="/ko/what-should-do"> <!-- TODO: whole-life -->
-            <span class="menu-icon">4</span>
+            <span class="menu-icon">4.</span>
             <div class="menu-name">
               완전한 삶
             </div>
@@ -131,6 +131,36 @@ export default {
         width: 80%;
         height: 100%;
         background: #fff;
+      }
+
+      &-list {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      &-item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(183, 183, 183);
+        font-size: 28px;
+
+        > a {
+          display: inline-block;
+          width: 100%;
+          text-decoration: none;
+        }
+      }
+
+      &-icon {
+        color: $brand;
+        font-family: $en;
+        margin-right: 12px;
+      }
+
+      &-name {
+        display: inline-block;
+        color: rgb(153, 153, 153);
+        font-size: 18px;
       }
     }
   }
