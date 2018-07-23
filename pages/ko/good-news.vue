@@ -19,7 +19,8 @@
         <h1 class="h1 heading">어린아이가 장난을 치다가 창문을 깼다면, 용서해 줄 수는 있지만 누군가 창문을 고쳐야 하지 않을까요?</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide family">
+      <img class="fullpage-slide-back-img family-back-img" src="~/assets/img/family.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">아마도 그 부모님이 대신 창문 값을 지불할 것입니다.</h1>
       </div>
@@ -130,6 +131,17 @@ export default {
 
     .heading {
       top: 54.3%;
+    }
+  }
+
+  .family {
+    &-back-img {
+      transform: translate(-13%, 0) scale(0.49);
+      transform-origin: 0 0;
+    }
+
+    .heading {
+      top: 34.3%;
     }
   }
 
