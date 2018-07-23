@@ -54,14 +54,14 @@ export default {
       // FIXME: 더 정교하게 ..
       if(Math.abs(delta) < 1) return;
 
-      if(!this.isPaging) {
+      if(!this.isPaging && !this.$store.state.isModal) {
         let self = this;
         let wrap = document.querySelector('.fullpage-wrap');
 
         // FIXME: 더 정교하게 ..
         delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
 
-        
+
         let pos = -this.$store.state.index * window.innerHeight;
         wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
       }

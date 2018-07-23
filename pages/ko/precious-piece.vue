@@ -33,7 +33,7 @@
 
         <br>
         <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
-        <p class="paragraph">그래서 위와 같은 조각들을 삶 속에 채우며 그에 따른 수고를 마다하지 않습니다.</p>
+        <p class="paragraph">그래서 삶의 조각들을 채우며 그에 따른 수고를 마다하지 않습니다.</p>
       </div>
 
     </section>

@@ -130,10 +130,10 @@ export default {
       .f, .l {
         opacity: 1;
         transform: translateY(0);
-        transition-delay: 0.3s;
+        transition-delay: 0.2s;
       }
       .l {
-        transition-delay: 1.5s;
+        transition-delay: 1.1s;
       }
     }
   }

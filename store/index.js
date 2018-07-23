@@ -15,6 +15,7 @@ const store = () => {
       isOpenedSideNav: false,
       tone: '',
       title: '',
+      isModal: false,
     },
 
     mutations: {
@@ -49,7 +50,10 @@ const store = () => {
       },
       setPage(state, page) {
         state.page = page;
-      }
+      },
+      setModal(state, isModal) {
+        state.isModal = isModal;
+      },
     }
   })
 }
