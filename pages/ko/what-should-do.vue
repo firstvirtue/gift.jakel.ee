@@ -1,57 +1,57 @@
 <template lang="html">
   <div class="wrap">
-    <section class="fullpage-slide us">
+    <section class="fullpage-slide us base">
       <img class="fullpage-slide-back-img us-back-img" src="~/assets/img/us.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그렇다면 우리가 할 수 있는 것은 무엇일까요?</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">그것은 선택하는 것입니다.</h1>
         <p class="paragraph">예수님이 내 죄를 위해 죽으시고 다시 사신 일을요.</p>
       </div>
     </section>
-    <section class="fullpage-slide road white-tone">
+    <section class="fullpage-slide road white-tone base">
       <img class="fullpage-slide-back-img road-back-img" src="~/assets/img/road.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그것이 끊어진 하나님과의 관계에서 회복되는 유일한 길 입니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">그를 믿음으로 하나님과의 관계는 회복되고 다시 영원한 삶도 주어질 것입니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">모든 것은 점점 비극 이전으로 되돌아갈 것입니다. 공허함도 불안감도 권태로움도 없었던 그 때로 말이죠.</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide peoples white-tone">
+    <section class="fullpage-slide peoples white-tone base">
       <img class="fullpage-slide-back-img peoples-back-img" src="~/assets/img/peoples.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">당신의 삶의 여정 가운데 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해 줄 것입니다.</h1>
       </div>
     </section>
-    <section class="fullpage-slide jesus white-tone">
+    <section class="fullpage-slide jesus white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">예수님을요</h1>
       </div>
     </section>
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">그 때면 좀 더 알게 되지 않을까요? 하나님께서는 당신을 향한 계획이 있으셨고, 항상 사랑하고 계셨다는 것을요.</h1>
       </div>
     </section>
-    <section class="fullpage-slide black-tone">
+    <section class="fullpage-slide promise black-tone">
       <div class="l-wrap">
-        <h1 class="h1 heading">약속합니다. <br>예수님의 이름으로</h1>
+        <h1 class="h1 heading"><span class="f">약속합니다.</span> <br><span class="l">예수님의 이름으로</span></h1>
       </div>
     </section>
   </div>
@@ -110,4 +110,32 @@ export default {
       text-align: center;
     }
   }
+
+  .promise {
+    .heading {
+      top: 50%;
+      text-align: center;
+      margin-top: -30px;
+
+      .f, .l {
+        opacity: 0;
+        transform: translateY(20%);
+        transition: 1.5s all cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+  }
+
+  .is-current.promise {
+    .heading {
+      .f, .l {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.3s;
+      }
+      .l {
+        transition-delay: 1.5s;
+      }
+    }
+  }
+
 </style>

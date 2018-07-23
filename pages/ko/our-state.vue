@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="wrap">
 
-    <section class="fullpage-slide son white-tone">
+    <section class="fullpage-slide son white-tone base">
       <img class="fullpage-slide-back-img son-back-img" src="~/assets/img/son.jpg" alt="">
       <!-- TODO: 비누방울이 점점 커지며 퍼지는 모션 -->
       <div class="l-wrap">
@@ -9,27 +9,27 @@
       </div>
     </section>
 
-    <section class="fullpage-slide perfect-state">
+    <section class="fullpage-slide perfect-state base">
       <img class="fullpage-slide-back-img perfect-state-back-img" src="~/assets/img/tree-origin.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">영원히 모든 것을 누리는 완벽한 상태였죠.</h1>
       </div>
     </section>
 
-    <section class="fullpage-slide disconnect white-tone">
+    <section class="fullpage-slide disconnect white-tone base">
       <img class="fullpage-slide-back-img disconnect-back-img" src="~/assets/img/chain.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">하지만 한 사람의 죄가 하나님과의 관계를 끊었습니다.</h1>
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">생명의 근원이신 하나님과의 단절로 영원하던 인간의 삶이 유한해 졌습니다.</h1>
       </div>
     </section>
 
-    <section class="fullpage-slide anxiety">
+    <section class="fullpage-slide anxiety base">
       <img class="fullpage-slide-back-img anxiety-back-img" src="~/assets/img/anxiety.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">죽음이 찾아왔죠.</h1>
@@ -37,7 +37,7 @@
       </div>
     </section>
 
-    <section class="fullpage-slide genetic">
+    <section class="fullpage-slide genetic base">
       <img class="fullpage-slide-back-img genetic-back-img" src="~/assets/img/prairie.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">그 죄는 그의 자손 모두에게 유전되었습니다.</h1>
@@ -45,7 +45,7 @@
       </div>
     </section>
 
-    <section class="fullpage-slide empty-state">
+    <section class="fullpage-slide empty-state base">
       <img class="fullpage-slide-back-img empty-state-back-img" src="~/assets/img/empty.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">공허, 불안.. 하나님과 함께 있을 때는 느껴보지 못했던 감정이 인간을 에워 쌓았습니다.</h1>
@@ -66,14 +66,14 @@
       <h1 class="h1 heading">그러나 죽음을 막아주진 못했죠 어느것도 구원에 이르게 하지 못했습니다.</h1>
     </section> -->
 
-    <section class="fullpage-slide white-tone hole">
+    <section class="fullpage-slide white-tone hole base">
       <img class="fullpage-slide-back-img hole-back-img" src="~/assets/img/hole.png" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">우리는 죽어가고 있습니다.</h1>
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">이에 하나님은 한 가지 방법을 사용했습니다.</h1>
       </div>

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="wrap">
 
-    <section class="fullpage-slide intro">
+    <section class="fullpage-slide intro base">
       <img class="fullpage-slide-back-img intro-back-img" src="~/assets/img/portrait.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading" lang="ko">
@@ -10,7 +10,7 @@
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone important-thing">
+    <section class="fullpage-slide white-tone important-thing base">
       <div class="l-wrap">
         <div class="important-item">
           돈
@@ -40,21 +40,21 @@
 
     <!-- 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
         <p class="paragraph">마치 모래성처럼 허무할 뿐입니다.</p>
       </div>
     </section>
 
-    <section class="fullpage-slide white-tone">
+    <section class="fullpage-slide white-tone base">
       <div class="l-wrap">
         <h1 class="h1 heading">또는 몇몇 가지를 이룬다 한들 지속적인 만족이 있던가요?</h1>
         <p class="paragraph">우리의 채워지지 않는 욕심과 공허함만 발견할 뿐입니다. <br>때로는 권태롭기도 합니다.</p>
       </div>
     </section>
 
-    <section class="fullpage-slide where-we">
+    <section class="fullpage-slide where-we base">
       <img class="fullpage-slide-back-img where-we-back-img" src="~/assets/img/concrete.jpg" alt="">
       <div class="l-wrap">
         <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가는 걸까요?</h1>
