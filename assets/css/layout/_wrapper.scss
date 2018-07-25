@@ -1,3 +1,14 @@
+.wrap {
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.fullpage-wrapper {
+  transition: all 0.8s ease;
+}
+
 .fullpage-slide {
   position: relative;
   overflow: hidden;
@@ -9,4 +20,18 @@
   padding-top: 80px;
   padding-bottom: 80px;
   box-sizing: border-box;
+}
+
+.is-modal {
+  .wrap {
+    position: relative;
+  }
+
+  .fullpage-wrapper {
+    position: absolute;
+  }
+
+  .side-content {
+    position: relative;
+  }
 }

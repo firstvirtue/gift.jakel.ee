@@ -1,37 +1,103 @@
 <template lang="html">
-  <aside class="side-content" :class="asideState">
+  <aside class="side-content" >
 
-    <div class="dimmed"></div>
+    <div class="side-dimmed"></div>
     <div class="container">
       <component v-for="item in contents" :is="item.tag" :key="item.id">
         {{item.content}}
       </component>
-      <button type="button" class="close-btn" @click="closeContainer">닫기</button>
     </div>
-    <button type="button" class="open-btn" @click="openContainer">열기</button>
-
+    <button type="button" class="close-btn" @click="closeContainer">닫기</button>
   </aside>
 </template>
 
 <script>
+import util from '~/assets/js/util.js';
+
 export default {
   props: {
     contents: Array
   },
+  watch: {
+    '$store.state.isModal': function() {
+      let self = this;
+      let html = document.querySelector('html');
+
+      if(this.$store.state.isModal) {
+        TweenMax.to(self.sideContent, 0.5, {
+          display: 'block'
+        });
+
+        TweenMax.to(self.dimmed, 0.5, {
+          opacity: 0.6,
+        });
+
+        TweenMax.to(self.container, 0.5, {
+          y: '0',
+          // opacity: 1,
+          onComplete: ()=>{ html.classList.add('is-modal'); },
+        });
+      } else {
+        html.classList.remove('is-modal');
+        
+        TweenMax.to(self.sideContent, 0.4, {
+          display: 'none'
+        });
+
+        TweenMax.to(self.dimmed, 0.5, {
+          opacity: 0,
+        });
+
+        TweenMax.to(self.container, 0.5, {
+          y: self.containerHeight,
+          // opacity: 0,
+        });
+      }
+
+
+      // if(state.isModal) {
+      //   html.classList.add('is-modal');
+      // } else {
+      //   html.classList.remove('is-modal');
+      // }
+    }
+  },
   data() {
     return {
-      asideState: 'close',
+      containerHeight: '',
     }
   },
   methods: {
     openContainer() {
-      this.asideState = 'open';
       this.$store.commit('setModal', true);
     },
     closeContainer() {
-      this.asideState = 'close';
       this.$store.commit('setModal', false);
     }
+  },
+  mounted() {
+    let self = this;
+    util.resize(function() {
+      self.windowHeight = window.innerHeight;
+      self.containerHeight = `${self.windowHeight}px`;
+    });
+
+    this.sideContent = document.querySelector('.side-content');
+    this.dimmed = document.querySelector('.side-dimmed');
+    this.container = document.querySelector('.container');
+
+    TweenMax.set(self.sideContent, {
+      display: 'none'
+    });
+
+    TweenMax.set(self.dimmed, {
+      opacity: 0,
+    });
+
+    TweenMax.set(self.container, {
+      y: self.containerHeight,
+      // opacity: 0,
+    });
   }
 
 }

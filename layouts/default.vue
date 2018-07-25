@@ -56,7 +56,7 @@ export default {
 
       if(!this.isPaging && !this.$store.state.isModal) {
         let self = this;
-        let wrap = document.querySelector('.fullpage-wrap');
+        let wrap = document.querySelector('.fullpage-wrapper');
 
         // FIXME: 더 정교하게 ..
         delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
@@ -133,17 +133,15 @@ export default {
 </script>
 
 <style>
-html, body {
+/* html, body {
   position: fixed;
   overflow: hidden;
   height: 100%;
   width: 100%;
-}
+} */
 
-.fullpage-wrap {
+/* .fullpage-wrap {
   position: relative;
   height: 100%;
-
-  transition: all 0.8s ease;
-}
+} */
 </style>

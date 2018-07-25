@@ -1,66 +1,66 @@
 <template lang="html">
   <div class="wrap">
-
-    <section class="fullpage-slide intro base">
-      <img class="fullpage-slide-back-img intro-back-img" src="~/assets/img/portrait.jpg" alt="">
-      <div class="l-wrap">
-        <h1 class="h1 heading" lang="ko">
-          우리에게 가장 소중한 것은 무엇일까요?
-        </h1>
-      </div>
-    </section>
-
-    <section class="fullpage-slide white-tone important-thing base">
-      <div class="l-wrap">
-        <div class="important-item">
-          돈
+    <div class="fullpage-wrapper">
+      <section class="fullpage-slide intro base">
+        <img class="fullpage-slide-back-img intro-back-img" src="~/assets/img/portrait.jpg" alt="">
+        <div class="l-wrap">
+          <h1 class="h1 heading" lang="ko">
+            우리에게 가장 소중한 것은 무엇일까요?
+          </h1>
         </div>
-        <div class="important-item">
-          명예
+      </section>
+
+      <section class="fullpage-slide white-tone important-thing base">
+        <div class="l-wrap">
+          <div class="important-item">
+            돈
+          </div>
+          <div class="important-item">
+            명예
+          </div>
+          <div class="important-item">
+            다른 사람에게 인정받음
+          </div>
+          <div class="important-item">
+            이성
+          </div>
+          <div class="important-item">
+            자아실현
+          </div>
+          <div class="important-item">
+            행복
+          </div>
+
+          <br>
+          <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
+          <p class="paragraph">그래서 삶의 조각들을 채우며 그에 따른 수고를 마다하지 않습니다.</p>
         </div>
-        <div class="important-item">
-          다른 사람에게 인정받음
+
+      </section>
+
+      <!-- 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
+
+      <section class="fullpage-slide white-tone base">
+        <div class="l-wrap">
+          <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
+          <p class="paragraph">마치 모래성처럼 허무할 뿐입니다.</p>
         </div>
-        <div class="important-item">
-          이성
+      </section>
+
+      <section class="fullpage-slide white-tone base">
+        <div class="l-wrap">
+          <h1 class="h1 heading">또는 몇몇 가지를 이룬다 한들 지속적인 만족이 있던가요?</h1>
+          <p class="paragraph">우리의 채워지지 않는 욕심과 공허함만 발견할 뿐입니다. <br>때로는 권태롭기도 합니다.</p>
         </div>
-        <div class="important-item">
-          자아실현
+      </section>
+
+      <section class="fullpage-slide where-we base">
+        <img class="fullpage-slide-back-img where-we-back-img" src="~/assets/img/concrete.jpg" alt="">
+        <div class="l-wrap">
+          <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가는 걸까요?</h1>
         </div>
-        <div class="important-item">
-          행복
-        </div>
-
-        <br>
-        <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
-        <p class="paragraph">그래서 삶의 조각들을 채우며 그에 따른 수고를 마다하지 않습니다.</p>
-      </div>
-
-    </section>
-
-    <!-- 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
-
-    <section class="fullpage-slide white-tone base">
-      <div class="l-wrap">
-        <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
-        <p class="paragraph">마치 모래성처럼 허무할 뿐입니다.</p>
-      </div>
-    </section>
-
-    <section class="fullpage-slide white-tone base">
-      <div class="l-wrap">
-        <h1 class="h1 heading">또는 몇몇 가지를 이룬다 한들 지속적인 만족이 있던가요?</h1>
-        <p class="paragraph">우리의 채워지지 않는 욕심과 공허함만 발견할 뿐입니다. <br>때로는 권태롭기도 합니다.</p>
-      </div>
-    </section>
-
-    <section class="fullpage-slide where-we base">
-      <img class="fullpage-slide-back-img where-we-back-img" src="~/assets/img/concrete.jpg" alt="">
-      <div class="l-wrap">
-        <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가는 걸까요?</h1>
-      </div>
-    </section>
-
+      </section>
+    </div>
   </div>
 </template>
 
