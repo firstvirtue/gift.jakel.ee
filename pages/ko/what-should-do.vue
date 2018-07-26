@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="fullpage-wrapper">
       <section class="fullpage-slide us base">
-        <img class="fullpage-slide-back-img us-back-img" src="~/assets/img/us.jpg" alt="">
+        <img class="fullpage-slide-back-img us-back-img" data-src="/img/us.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">그렇다면 우리가 할 수 있는 것은 무엇일까요?</h1>
         </div>
@@ -14,7 +14,7 @@
         </div>
       </section>
       <section class="fullpage-slide road white-tone base">
-        <img class="fullpage-slide-back-img road-back-img" src="~/assets/img/road.jpg" alt="">
+        <img class="fullpage-slide-back-img road-back-img" data-src="/img/road.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">그것이 끊어진 하나님과의 관계에서 회복되는 유일한 길 입니다.</h1>
         </div>
@@ -35,7 +35,7 @@
         </div>
       </section>
       <section class="fullpage-slide peoples white-tone base">
-        <img class="fullpage-slide-back-img peoples-back-img" src="~/assets/img/peoples.jpg" alt="">
+        <img class="fullpage-slide-back-img peoples-back-img" data-src="/img/peoples.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">당신의 삶의 여정 가운데 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해 줄 것입니다.</h1>
         </div>
@@ -60,11 +60,21 @@
 </template>
 
 <script>
+import ResourceLoader from '~/assets/js/ResourceLoader.js';
+
 export default {
   mounted() {
     this.$store.commit('setTitle', '완전한 삶');
     this.$store.commit('setPage', 4);
-  }
+
+    ResourceLoader.load( () => {
+      // load complete!
+      this.$store.commit('setLoading', false);
+    });
+  },
+  created() {
+    this.$store.commit('setLoading', true);
+  },
 }
 </script>
 
@@ -88,7 +98,7 @@ export default {
     }
 
     .heading {
-      top: 64%;
+      top: 67%;
     }
 
   }

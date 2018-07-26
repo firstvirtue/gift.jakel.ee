@@ -5,6 +5,9 @@
     <div class="fullpage-wrap">
       <nuxt/>
     </div>
+    <div class="loading-panel" :style="{ display: isLoadingPanelDisplay }">
+      <h1 class="loading-title">loading..</h1>
+    </div>
   </div>
 </template>
 
@@ -25,6 +28,7 @@ export default {
     return {
       windowHeight: 0,
       isPaging: false,
+      isLoadingPanelDisplay: 'block',
     }
   },
   watch: {
@@ -42,7 +46,14 @@ export default {
       await util.wait(500);
 
       this.setCurrent();
-    }
+    },
+    '$store.state.isLoading': function() {
+      if(this.$store.state.isLoading) {
+        this.isLoadingPanelDisplay = 'block';
+      } else {
+        this.isLoadingPanelDisplay = 'none';
+      }
+    },
   },
   computed: {
     position() {
@@ -132,7 +143,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 /* html, body {
   position: fixed;
   overflow: hidden;
@@ -144,4 +155,22 @@ export default {
   position: relative;
   height: 100%;
 } */
+.loading {
+
+  &-panel {
+    @include full-pos;
+    z-index: 100;
+    background: $white;
+  }
+
+  &-title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: $en;
+    font-weight: lighter;
+  }
+
+}
 </style>

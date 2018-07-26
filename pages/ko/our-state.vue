@@ -137,13 +137,13 @@ export default {
     this.$store.commit('setTitle', '우리의 상태');
     this.$store.commit('setPage', 2);
 
-    ResourceLoader.load( ()=> {
+    ResourceLoader.load( () => {
       // load complete!
+      this.$store.commit('setLoading', false);
     });
   },
   created() {
-
-
+    this.$store.commit('setLoading', true);
   },
 }
 </script>
@@ -187,7 +187,7 @@ export default {
 
   .heading {
     // top: 82%;
-    top: 75%;
+    top: 77.2%;
   }
 }
 

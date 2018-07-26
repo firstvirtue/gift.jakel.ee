@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="fullpage-wrapper">
       <section class="fullpage-slide intro base">
-        <img class="fullpage-slide-back-img intro-back-img" src="~/assets/img/portrait.jpg" alt="">
+        <img class="fullpage-slide-back-img intro-back-img" data-src="/img/portrait.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading" lang="ko">
             우리에게 가장 소중한 것은 무엇일까요?
@@ -55,7 +55,7 @@
       </section>
 
       <section class="fullpage-slide where-we base">
-        <img class="fullpage-slide-back-img where-we-back-img" src="~/assets/img/concrete.jpg" alt="">
+        <img class="fullpage-slide-back-img where-we-back-img" data-src="/img/concrete.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가는 걸까요?</h1>
         </div>
@@ -67,6 +67,7 @@
 <script>
 import SideContent from '~/components/SideContent.vue';
 import util from '~/assets/js/util.js';
+import ResourceLoader from '~/assets/js/ResourceLoader.js';
 
 export default {
   components: {
@@ -97,7 +98,15 @@ export default {
   mounted() {
     this.$store.commit('setTitle', '삶의 소중한 부분들');
     this.$store.commit('setPage', 1);
-  }
+
+    ResourceLoader.load( () => {
+      
+      this.$store.commit('setLoading', false);
+    });
+  },
+  created() {
+    this.$store.commit('setLoading', true);
+  },
 }
 </script>
 

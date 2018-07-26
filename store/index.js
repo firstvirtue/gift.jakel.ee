@@ -16,6 +16,7 @@ const store = () => {
       tone: '',
       title: '',
       isModal: false,
+      isLoading: false,
     },
 
     mutations: {
@@ -54,6 +55,9 @@ const store = () => {
       setModal(state, isModal) {
         state.isModal = isModal;
       },
+      setLoading(state, isLoading) {
+        state.isLoading = isLoading;
+      }
     }
   })
 }
