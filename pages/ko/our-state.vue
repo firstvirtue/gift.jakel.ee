@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="fullpage-wrapper">
       <section class="fullpage-slide son white-tone base">
-        <img class="fullpage-slide-back-img son-back-img" src="~/assets/img/son.jpg" alt="">
+        <img class="fullpage-slide-back-img son-back-img" data-src="/img/son.jpg" alt="">
         <!-- TODO: 비누방울이 점점 커지며 퍼지는 모션 -->
         <div class="l-wrap">
           <h1 class="h1 heading">하나님은 본래 교제를 나누기 위해 자기 형상대로 인간을 창조하셨습니다.</h1>
@@ -11,14 +11,14 @@
       </section>
 
       <section class="fullpage-slide perfect-state base">
-        <img class="fullpage-slide-back-img perfect-state-back-img" src="~/assets/img/tree-origin.jpg" alt="">
+        <img class="fullpage-slide-back-img perfect-state-back-img" data-src="/img/tree-origin.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">영원히 모든 것을 누리는 완벽한 상태였죠.</h1>
         </div>
       </section>
 
       <section class="fullpage-slide disconnect white-tone base">
-        <img class="fullpage-slide-back-img disconnect-back-img" src="~/assets/img/chain.jpg" alt="">
+        <img class="fullpage-slide-back-img disconnect-back-img" data-src="/img/chain.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">하지만 한 사람의 죄가 하나님과의 관계를 끊었습니다.</h1>
         </div>
@@ -31,7 +31,7 @@
       </section>
 
       <section class="fullpage-slide anxiety base">
-        <img class="fullpage-slide-back-img anxiety-back-img" src="~/assets/img/anxiety.jpg" alt="">
+        <img class="fullpage-slide-back-img anxiety-back-img" data-src="/img/anxiety.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">죽음이 찾아왔죠.</h1>
           <p class="paragraph">마치 꺾여진 꽃이 며칠 내에 시들듯</p>
@@ -40,7 +40,7 @@
       </section>
 
       <section class="fullpage-slide genetic base">
-        <img class="fullpage-slide-back-img genetic-back-img" src="~/assets/img/prairie.jpg" alt="">
+        <img class="fullpage-slide-back-img genetic-back-img" data-src="/img/prairie.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">그 죄는 그의 자손 모두에게 유전되었습니다.</h1>
           <p class="paragraph">그리고 그 죄는 여기 있는 우리에게도 영향을 미칩니다. <br> 우리안에는.. 죄가 있습니다.</p>
@@ -48,7 +48,7 @@
       </section>
 
       <section class="fullpage-slide empty-state base">
-        <img class="fullpage-slide-back-img empty-state-back-img" src="~/assets/img/empty.jpg" alt="">
+        <img class="fullpage-slide-back-img empty-state-back-img" data-src="/img/empty.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">공허, 불안.. 하나님과 함께 있을 때는 느껴보지 못했던 감정이 인간을 에워 쌓았습니다.</h1>
         </div>
@@ -69,7 +69,7 @@
       </section> -->
 
       <section class="fullpage-slide white-tone hole base">
-        <img class="fullpage-slide-back-img hole-back-img" src="~/assets/img/hole.png" alt="">
+        <img class="fullpage-slide-back-img hole-back-img" data-src="/img/hole.png" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">우리는 죽어가고 있습니다.</h1>
         </div>
@@ -90,6 +90,7 @@
 <script>
 import SideContent from '~/components/SideContent.vue';
 import util from '~/assets/js/util.js';
+import ResourceLoader from '~/assets/js/ResourceLoader.js';
 
 export default {
   components: {
@@ -135,7 +136,15 @@ export default {
   mounted() {
     this.$store.commit('setTitle', '우리의 상태');
     this.$store.commit('setPage', 2);
-  }
+
+    ResourceLoader.load( ()=> {
+      // load complete!
+    });
+  },
+  created() {
+
+
+  },
 }
 </script>
 
