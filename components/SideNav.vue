@@ -4,36 +4,38 @@
     <div class="menu-container">
       <ol class="menu-list">
         <li class="menu-item">
-          <a href="/ko/precious-piece">
+          <router-link to="/ko/precious-piece">
             <span class="menu-icon">1.</span>
             <div class="menu-name">
               삶의 소중한 부분들
             </div>
-          </a>
+          </router-link>
         </li>
         <li class="menu-item">
-          <a href="/ko/our-state">
+
+          <router-link to="/ko/our-state">
             <span class="menu-icon">2.</span>
             <div class="menu-name">
               우리의 상태
             </div>
-          </a>
+          </router-link>
+
         </li>
         <li class="menu-item">
-          <a href="/ko/good-news">
+          <router-link to="/ko/good-news">
             <span class="menu-icon">3.</span>
             <div class="menu-name">
               예수 그리스도의 복음
             </div>
-          </a>
+          </router-link>
         </li>
         <li class="menu-item">
-          <a href="/ko/what-should-do"> <!-- TODO: whole-life -->
+          <router-link to="/ko/what-should-do"> <!-- TODO: whole-life -->
             <span class="menu-icon">4.</span>
             <div class="menu-name">
               완전한 삶
             </div>
-          </a>
+          </router-link>
         </li>
       </ol>
     </div>
@@ -41,6 +43,8 @@
 </template>
 
 <script>
+import util from '~/assets/js/util.js';
+
 export default {
   watch: {
     '$store.state.isOpenedSideNav': function() {
@@ -77,8 +81,17 @@ export default {
 
       // FIXME: 애니메이션 상태 정리
       // TODO: timeline delay를 이용한 메뉴 슬라이드
-
-    }
+    },
+    // $route: async function (to, from) {
+    //   await util.wait(500);
+    //
+    //   this.$store.commit('closeSideNav');
+    // },
+    '$store.state.isLoading': async function() {
+      if( ! this.$store.state.isLoading) {
+        this.$store.commit('closeSideNav');
+      }
+    },
   },
   methods: {
     clickDimmed() {

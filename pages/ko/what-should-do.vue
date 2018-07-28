@@ -61,15 +61,20 @@
 
 <script>
 import ResourceLoader from '~/assets/js/ResourceLoader.js';
+import util from '~/assets/js/util.js';
 
 export default {
   mounted() {
-    this.$store.commit('setTitle', '완전한 삶');
-    this.$store.commit('setPage', 4);
-
     ResourceLoader.load( () => {
       // load complete!
       this.$store.commit('setLoading', false);
+
+      this.$store.commit('setTitle', '완전한 삶');
+      this.$store.commit('setPage', 4);
+
+      this.$store.commit('setIndex', 0);
+
+      util.initLayout(this);
     });
   },
   created() {

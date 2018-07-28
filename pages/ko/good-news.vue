@@ -82,12 +82,16 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('setTitle', '예수 그리스도의 복음');
-    this.$store.commit('setPage', 3);
-
     ResourceLoader.load( () => {
       // load complete!
       this.$store.commit('setLoading', false);
+
+      this.$store.commit('setTitle', '예수 그리스도의 복음');
+      this.$store.commit('setPage', 3);
+
+      this.$store.commit('setIndex', 0);
+
+      util.initLayout(this);
     });
   },
   created() {
@@ -141,7 +145,7 @@ export default {
     }
 
     .heading {
-      top: 58.3%;
+      top: 62.3%;
     }
   }
 

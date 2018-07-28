@@ -96,12 +96,16 @@ export default {
 
   },
   mounted() {
-    this.$store.commit('setTitle', '삶의 소중한 부분들');
-    this.$store.commit('setPage', 1);
-
     ResourceLoader.load( () => {
-      
+
       this.$store.commit('setLoading', false);
+
+      this.$store.commit('setTitle', '삶의 소중한 부분들');
+      this.$store.commit('setPage', 1);
+
+      this.$store.commit('setIndex', 0);
+
+      util.initLayout(this);
     });
   },
   created() {

@@ -2,9 +2,9 @@
   <div>
     <LayoutHeader/>
     <SideNav/>
-    <div class="fullpage-wrap">
-      <nuxt/>
-    </div>
+
+    <nuxt/>
+
     <div class="loading-panel" :style="{ display: isLoadingPanelDisplay }">
       <h1 class="loading-title">loading..</h1>
     </div>
@@ -12,7 +12,6 @@
 </template>
 
 <script>
-// import fullpage from '~/assets/js/fullpage.js';
 import LayoutHeader from '~/components/LayoutHeader.vue';
 import SideNav from '~/components/SideNav.vue';
 import util from '~/assets/js/util.js';
@@ -32,20 +31,13 @@ export default {
     }
   },
   watch: {
+    $route: async function() {
+      // FIXME: 페이지가 바뀐 상태를 알아 상태 변화를 통해 레이아웃을 업데이트 할 것.
+      await util.wait(50);
+      this.updateLayout();
+    },
     '$store.state.index': async function() {
-      let slides = document.querySelectorAll('.fullpage-slide');
-      let slide = slides[this.$store.state.index];
-
-      // FIXME: go to util.js
-      if ( (' ' + slide.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' white-tone ') > -1 ) {
-        this.$store.commit('setTone', 'white-tone');
-      } else {
-        this.$store.commit('setTone', '');
-      }
-
-      await util.wait(500);
-
-      this.setCurrent();
+      this.updateLayout();
     },
     '$store.state.isLoading': function() {
       if(this.$store.state.isLoading) {
@@ -65,7 +57,7 @@ export default {
       // FIXME: 더 정교하게 ..
       if(Math.abs(delta) < 1) return;
 
-      if(!this.isPaging && !this.$store.state.isModal) {
+      if(!this.isPaging && ! this.$store.state.isModal) {
         let self = this;
         let wrap = document.querySelector('.fullpage-wrapper');
 
@@ -87,9 +79,22 @@ export default {
         }
       });
     },
-    movePage() {
+    async updateLayout() {
 
-    },
+      let slides = document.querySelectorAll('.fullpage-slide');
+      let slide = slides[this.$store.state.index];
+
+      // FIXME: go to util.js
+      if ( (' ' + slide.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' white-tone ') > -1 ) {
+        this.$store.commit('setTone', 'white-tone');
+      } else {
+        this.$store.commit('setTone', '');
+      }
+
+      await util.wait(500);
+
+      this.setCurrent();
+    }
   },
   mounted() {
     let self = this;
@@ -111,7 +116,10 @@ export default {
       });
 
       self.$store.commit('setLength', slides.length);
+
     });
+
+    this.updateLayout();
 
     // TODO: touch
     // TODO: drag
@@ -151,10 +159,6 @@ export default {
   width: 100%;
 } */
 
-/* .fullpage-wrap {
-  position: relative;
-  height: 100%;
-} */
 .loading {
 
   &-panel {

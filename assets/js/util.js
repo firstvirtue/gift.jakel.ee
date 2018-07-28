@@ -42,7 +42,6 @@ export default {
   },
 
   movePage: function(pageIndex) {
-    console.log(pageIndex);
     switch (pageIndex) {
       case 1:
         location.href = '/ko/precious-piece';
@@ -59,6 +58,29 @@ export default {
       default:
 
     }
+  },
+
+  initLayout(vueComponent) {
+    let self = this;
+
+    // FIXME: wait for resource using promise
+    // this.setCurrent();
+
+    this.resize(function() {
+      self.windowHeight = window.innerHeight;
+
+      let slides = document.querySelectorAll('.fullpage-slide');
+      slides.forEach(function(obj, i) {
+        obj.style.height = `${self.windowHeight}px`;
+        // obj.style.background = `white`;
+        let wrap = obj.querySelector('.l-wrap');
+        if(wrap) {
+          wrap.style.height = `${self.windowHeight}px`;
+        }
+      });
+
+      vueComponent.$store.commit('setLength', slides.length);
+    });
   }
 
 }

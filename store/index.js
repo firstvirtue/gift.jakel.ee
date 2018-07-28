@@ -34,6 +34,9 @@ const store = () => {
           util.movePage(state.page - 1);
         }
       },
+      setIndex(state, index) {
+        state.index = index;
+      },
       setLength(state, count) {
         state.length = count;
       },

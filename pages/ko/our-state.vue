@@ -134,12 +134,18 @@ export default {
     },
   },
   mounted() {
-    this.$store.commit('setTitle', '우리의 상태');
-    this.$store.commit('setPage', 2);
 
     ResourceLoader.load( () => {
       // load complete!
       this.$store.commit('setLoading', false);
+
+      this.$store.commit('setTitle', '우리의 상태');
+      this.$store.commit('setPage', 2);
+
+      // TODO: 뒤에서 왔을 때
+      this.$store.commit('setIndex', 0);
+
+      util.initLayout(this);
     });
   },
   created() {
