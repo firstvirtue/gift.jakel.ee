@@ -1,7 +1,7 @@
 .side-content {
   display: block;
   @include full-pos;
-  // position: absolute;
+  z-index: 100;
 
   .side-dimmed {
     position: absolute;

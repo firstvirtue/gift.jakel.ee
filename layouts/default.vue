@@ -99,28 +99,6 @@ export default {
   mounted() {
     let self = this;
 
-    // FIXME: wait for resource using promise
-    this.setCurrent();
-
-    util.resize(function() {
-      self.windowHeight = window.innerHeight;
-
-      let slides = document.querySelectorAll('.fullpage-slide');
-      slides.forEach(function(obj, i) {
-        obj.style.height = `${self.windowHeight}px`;
-        // obj.style.background = `white`;
-        let wrap = obj.querySelector('.l-wrap');
-        if(wrap) {
-          wrap.style.height = `${self.windowHeight}px`;
-        }
-      });
-
-      self.$store.commit('setLength', slides.length);
-
-    });
-
-    this.updateLayout();
-
     // TODO: touch
     // TODO: drag
     window.addEventListener('wheel', function(e) {
@@ -133,8 +111,6 @@ export default {
 
     });
 
-    self.pos;
-
     window.addEventListener('touchstart', function(e) {
 
       self.pos = e.changedTouches[0].pageY;
@@ -146,6 +122,33 @@ export default {
       let delta = self.pos - yPos;
       self.updatePosition(delta);
     });
+
+
+    if(this.$router.history.current.path === '/') {
+      this.$router.push('/ko/precious-piece');
+    } else {
+      this.updateLayout();
+    }
+
+    // FIXME: wait for resource using promise
+    // this.setCurrent();
+
+    // util.resize(function() {
+    //   self.windowHeight = window.innerHeight;
+    //
+    //   let slides = document.querySelectorAll('.fullpage-slide');
+    //   slides.forEach(function(obj, i) {
+    //     obj.style.height = `${self.windowHeight}px`;
+    //     // obj.style.background = `white`;
+    //     let wrap = obj.querySelector('.l-wrap');
+    //     if(wrap) {
+    //       wrap.style.height = `${self.windowHeight}px`;
+    //     }
+    //   });
+    //
+    //   self.$store.commit('setLength', slides.length);
+    //
+    // });
 
   },
 }
