@@ -12,7 +12,7 @@
 
       <section class="fullpage-slide white-tone important-thing base">
         <div class="l-wrap">
-          <div class="important-item">
+          <!-- <div class="important-item">
             돈
           </div>
           <div class="important-item">
@@ -29,11 +29,13 @@
           </div>
           <div class="important-item">
             행복
-          </div>
+          </div> -->
 
-          <br>
+          <!-- <br> -->
           <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
           <p class="paragraph">그래서 삶의 조각들을 채우며 그에 따른 수고를 마다하지 않습니다.</p>
+
+          <LifePiece></LifePiece>
         </div>
 
       </section>
@@ -66,12 +68,15 @@
 
 <script>
 import SideContent from '~/components/SideContent.vue';
+import LifePiece from '~/components/LifePiece.vue';
+
 import util from '~/assets/js/util.js';
 import ResourceLoader from '~/assets/js/ResourceLoader.js';
 
 export default {
   components: {
-    SideContent
+    SideContent,
+    LifePiece
   },
   data() {
     return {
