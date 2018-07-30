@@ -35,16 +35,16 @@
           <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
           <p class="paragraph">그래서 삶의 조각들을 채우며 그에 따른 수고를 마다하지 않습니다.</p>
 
-          <LifePiece></LifePiece>
         </div>
+        <LifePiece ref="lifePiece"></LifePiece>
 
       </section>
 
       <!-- 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
 
-      <section class="fullpage-slide white-tone base">
+      <section class="fullpage-slide white-tone life base">
         <div class="l-wrap">
-          <h1 class="h1 heading">하지만 생명이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
+          <h1 class="h1 heading">하지만 <em>생명</em>이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
           <p class="paragraph">마치 모래성처럼 허무할 뿐입니다.</p>
         </div>
       </section>
@@ -63,6 +63,7 @@
         </div>
       </section>
     </div>
+
   </div>
 </template>
 
@@ -88,7 +89,25 @@ export default {
   watch: {
     '$store.state.index': async function() {
 
-      await util.wait(1000);
+      switch (this.$store.state.index) {
+        case 1:
+          // this.$refs.lifePiece.slideOrigin();
+
+          await util.wait(1000);
+          this.$refs.lifePiece.openPanel();
+          break;
+        // case 2:
+        //   // await util.wait(1000);
+        //   this.$refs.lifePiece.slidePanel();
+        //   break;
+        // case 0:
+        // case 3:
+        // case 4:
+        default:
+          this.$refs.lifePiece.closePanel();
+          break;
+
+      }
     }
   },
   computed: {
@@ -137,6 +156,16 @@ export default {
 
     .heading {
       top: 21%;
+    }
+  }
+
+  .life {
+    .heading {
+      top: 45%;
+    }
+
+    .paragraph {
+      top: 45%;
     }
   }
 
