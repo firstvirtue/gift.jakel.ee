@@ -46,6 +46,7 @@
         </div>
       </section>
       <section class="fullpage-slide white-tone base">
+        <img class="fullpage-slide-back-img old-back-img" data-src="/img/old.jpg" alt="">
         <div class="l-wrap">
           <h1 class="h1 heading">그 때면 좀 더 알게 되지 않을까요? 하나님께서는 당신을 향한 계획이 있으셨고, 항상 사랑하고 계셨다는 것을요.</h1>
         </div>
@@ -114,11 +115,11 @@ export default {
   .peoples {
     &-back-img {
       width: 100%;
-      transform: translate3d(0, 40%, 0);
+      transform: translate(0, 40%);
     }
 
     .heading {
-      top: 68%;
+      top: 69%;
     }
 
   }
