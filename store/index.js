@@ -24,14 +24,14 @@ const store = () => {
         if(state.index < state.length - 1) {
           state.index++;
         } else {
-          util.movePage(state.page + 1);
+          util.routePage(state.page + 1);
         }
       },
       decreaseIndex(state) {
         if(state.index > 0) {
           state.index--;
         } else {
-          util.movePage(state.page - 1);
+          util.routePage(state.page - 1, 'reverse');
         }
       },
       setIndex(state, index) {

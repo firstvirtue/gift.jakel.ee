@@ -76,18 +76,16 @@ import ResourceLoader from '~/assets/js/ResourceLoader.js';
 export default {
   watch: {
     '$store.state.index': async function() {
-
       await util.wait(1000);
-
     }
   },
   mounted() {
     ResourceLoader.load( async () => {
       util.initLayout(this);
+      util.initPagePosition(this);
 
       // load complete!
       this.$store.commit('setLoading', false);
-
       this.$store.commit('setTitle', '예수 그리스도의 복음');
       this.$store.commit('setPage', 3);
 
@@ -95,13 +93,13 @@ export default {
       // this.$store.commit('setIndex', 0);
 
       // TEMP TODO FIXME: 페이지 인덱싱!!
-      let wrap = document.querySelector('.fullpage-wrapper');
-      this.$store.commit('setIndex', this.$store.state.length - 1);
-      let pos = -this.$store.state.index * window.innerHeight;
-      wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
-
-      await util.wait(100);
-      wrap.style.transition = 'all 0.8s ease';
+      // let wrap = document.querySelector('.fullpage-wrapper');
+      // this.$store.commit('setIndex', this.$store.state.length - 1);
+      // let pos = -this.$store.state.index * window.innerHeight;
+      // wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
+      //
+      // await util.wait(100);
+      // wrap.style.transition = 'all 0.8s ease';
 
     });
   },

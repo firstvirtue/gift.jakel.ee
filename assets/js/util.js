@@ -41,22 +41,30 @@ export default {
     return new Promise(resolve => setTimeout(resolve, dur));
   },
 
-  movePage: function(pageIndex) {
+  routePage: function(pageIndex, direction = null) {
+    console.log(direction);
+    if(direction === 'reverse') {
+      sessionStorage.routeDirection = 'reverse';
+    }
+
     switch (pageIndex) {
       case 1:
-        location.href = '/ko/precious-piece';
+        // location.href = '/ko/precious-piece';
+        this.receivedRouter.push('/ko/precious-piece');
         break;
       case 2:
-        location.href = '/ko/our-state';
+        // location.href = '/ko/our-state';
+        this.receivedRouter.push('/ko/our-state');
         break;
       case 3:
-        location.href = '/ko/good-news';
+        // location.href = '/ko/good-news';
+        this.receivedRouter.push('/ko/good-news');
         break;
       case 4:
-        location.href = '/ko/what-should-do';
+        // location.href = '/ko/what-should-do';
+        this.receivedRouter.push('/ko/what-should-do');
         break;
       default:
-
     }
   },
 
@@ -81,6 +89,23 @@ export default {
 
       vueComponent.$store.commit('setLength', slides.length);
     });
+  },
+
+  async initPagePosition(vueComponent) {
+
+    if(sessionStorage.routeDirection && sessionStorage.routeDirection === 'reverse') {
+      sessionStorage.routeDirection = null;
+      vueComponent.$store.commit('setIndex', vueComponent.$store.state.length - 1);
+    } else {
+      vueComponent.$store.commit('setIndex', 0);
+    }
+
+    let wrap = document.querySelector('.fullpage-wrapper');
+    let pos = -(vueComponent.$store.state.index * window.innerHeight);
+    wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
+
+    await this.wait(100);
+    wrap.style.transition = 'all 0.8s ease';
   }
 
 }

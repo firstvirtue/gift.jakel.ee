@@ -40,7 +40,10 @@ export default {
       // TweenMax.to('.life-piece-wrap', 0.3, { autoAlpha:0, onComplete: () => {
       //   TweenMax.set('.important-item', {clearProps: 'all'});
       // } });
-      this.tween.kill();
+      // FIXME: 초기화 방법!!
+      if(this.tween) {
+        // this.tween.pause(0, true);
+      }
       TweenMax.to('.important-item', 0.3, {opacity: 0, clearProps: 'transform'});
     }
   }

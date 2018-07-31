@@ -98,6 +98,7 @@ export default {
   },
   mounted() {
     let self = this;
+    util.receivedRouter = this.$router;
 
     // TODO: touch
     // TODO: drag

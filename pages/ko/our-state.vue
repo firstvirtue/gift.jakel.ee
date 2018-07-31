@@ -137,18 +137,18 @@ export default {
 
     ResourceLoader.load( async () => {
       util.initLayout(this);
+      util.initPagePosition(this);
       // load complete!
       this.$store.commit('setLoading', false);
-
       this.$store.commit('setTitle', '우리의 상태');
       this.$store.commit('setPage', 2);
 
       // TODO: 뒤에서 왔을 때
-      this.$store.commit('setIndex', 0);
-
-      await util.wait(100);
-      let wrap = document.querySelector('.fullpage-wrapper');
-      wrap.style.transition = 'all 0.8s ease';
+      // this.$store.commit('setIndex', 0);
+      //
+      // await util.wait(100);
+      // let wrap = document.querySelector('.fullpage-wrapper');
+      // wrap.style.transition = 'all 0.8s ease';
     });
   },
   created() {
