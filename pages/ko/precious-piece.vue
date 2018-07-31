@@ -120,7 +120,8 @@ export default {
 
   },
   mounted() {
-    ResourceLoader.load( () => {
+    ResourceLoader.load( async () => {
+      util.initLayout(this);
 
       this.$store.commit('setLoading', false);
 
@@ -129,7 +130,9 @@ export default {
 
       this.$store.commit('setIndex', 0);
 
-      util.initLayout(this);
+      await util.wait(100);
+      let wrap = document.querySelector('.fullpage-wrapper');
+      wrap.style.transition = 'all 0.8s ease';
     });
   },
   created() {
