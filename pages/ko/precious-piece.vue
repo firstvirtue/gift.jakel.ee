@@ -57,9 +57,10 @@
       </section>
 
       <section class="fullpage-slide where-we base">
-        <img class="fullpage-slide-back-img where-we-back-img" data-src="/img/concrete.jpg" alt="">
+        <img class="fullpage-slide-back-img where-we-back-img" data-src="/img/baby.jpg" alt="">
         <div class="l-wrap">
-          <h1 class="h1 heading">우리의 영혼은 어디로부터 와서 어디로 가는 걸까요?</h1>
+          <h1 class="h1 heading">우리에게 가장 소중한 것은 무엇일까요?</h1>
+          <!-- <p class="paragraph">우리의 영혼은 어디로부터 와서 어디로 가는 걸까요?</p> -->
         </div>
       </section>
     </div>
@@ -174,12 +175,16 @@ export default {
 
   .where-we {
     &-back-img {
-      transform: translate(-26%, 0) scale(0.71);
+      transform: translate(-5%, 0) scale(0.391);
       transform-origin: 0 0;
     }
 
     .heading {
       top: 21%;
+    }
+
+    .paragraph {
+      top: 8%;
     }
   }
 
