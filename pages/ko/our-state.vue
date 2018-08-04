@@ -49,7 +49,7 @@
 
       <section class="fullpage-slide empty-state base">
         <img class="fullpage-slide-back-img empty-state-back-img" data-src="/img/empty.jpg" alt="">
-        <div class="dimmed-panel 38"></div>
+        <div class="dimmed-panel dark"></div>
         <div class="l-wrap">
           <h1 class="h1 heading">공허, 불안.. 하나님과 함께 있을 때는 느껴보지 못했던 감정이 인간을 에워 쌓았습니다.</h1>
         </div>
