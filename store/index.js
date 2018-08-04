@@ -24,6 +24,7 @@ const store = () => {
         if(state.index < state.length - 1) {
           state.index++;
         } else {
+          // TODO: Max Page Length
           util.routePage(state.page + 1);
         }
       },
@@ -31,7 +32,9 @@ const store = () => {
         if(state.index > 0) {
           state.index--;
         } else {
-          util.routePage(state.page - 1, 'reverse');
+          if(state.page > 1) {
+            util.routePage(state.page - 1, 'reverse');
+          }
         }
       },
       setIndex(state, index) {
