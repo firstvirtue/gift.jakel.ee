@@ -3,7 +3,7 @@
 
     <div class="side-dimmed"></div>
     <div class="container">
-      <component v-for="item in contents" :is="item.tag" :key="item.id">
+      <component v-for="item in contents" :is="item.tag" :key="item.id" :class="item.className">
         {{item.content}}
       </component>
     </div>
@@ -39,7 +39,7 @@ export default {
         });
       } else {
         html.classList.remove('is-modal');
-        
+
         TweenMax.to(self.sideContent, 0.4, {
           display: 'none'
         });

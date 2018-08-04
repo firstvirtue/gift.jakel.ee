@@ -14,9 +14,10 @@
     position: relative;
     // z-index: 10;
     // top: 100%;
-    // min-height: 100vh;
+    min-height: 100vh;
     background: $white;
     // transition: 0.5s all cubic-bezier(0, 0, 0.2, 1);
+    padding: 4%;
   }
 
   .close-btn {
@@ -24,6 +25,49 @@
     bottom: 20px;
     left: 50%;
     margin-left: -23px;
+  }
+
+  .title {
+    margin-top: 1.4em;
+    font-weight: lighter;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  .desc {
+    margin-top: 2em;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .scripture {
+    margin-top: 2em;
+    font-size: 14px;
+    line-height: 1.4;
+
+    &::before, &::after {
+      font-family: $en;
+      font-size: 16px;
+    }
+
+    &::before {
+      content: '\201c';
+    }
+
+    &::after {
+      content: '\201d';
+    }
+  }
+
+  .verse {
+    font-weight: lighter;
+    font-size: 14px;
+    text-align: right;
+
+    &::before {
+      content: '-';
+    }
   }
 
 }

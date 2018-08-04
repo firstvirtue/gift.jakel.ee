@@ -59,6 +59,15 @@
 .dimmed-panel {
   @include full-pos;
   background: rgba($black, 0.28);
+
+  // @for $i from 1 through 100 {
+  //   .font-#{$i} {
+  //     font-size: #{$i}px;
+  //   }
+  // }
+  &.dark {
+    background: rgba($black, 0.38);
+  }
 }
 
 em {

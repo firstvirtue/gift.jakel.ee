@@ -49,6 +49,7 @@
 
       <section class="fullpage-slide empty-state base">
         <img class="fullpage-slide-back-img empty-state-back-img" data-src="/img/empty.jpg" alt="">
+        <div class="dimmed-panel 38"></div>
         <div class="l-wrap">
           <h1 class="h1 heading">공허, 불안.. 하나님과 함께 있을 때는 느껴보지 못했던 감정이 인간을 에워 쌓았습니다.</h1>
         </div>
@@ -102,7 +103,32 @@ export default {
         {
           id: '1',
           tag: 'h1',
-          content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+          className: 'title',
+          content: `죽음이란 무엇인가요?`
+        },
+        {
+          id: '2',
+          tag: 'p',
+          className: 'scripture',
+          content: `그러므로 한 사람으로 말미암아 죄가 세상에 들어오고 죄로 말미암아 사망이 들어왔나니 이와 같이 모든 사람이 죄를 지었으므로 사망이 모든 사람에게 이르렀느니라`
+        },
+        {
+          id: '3',
+          tag: 'div',
+          className: 'verse',
+          content: `로마서 5장 12절`
+        },
+        {
+          id: '4',
+          tag: 'p',
+          className: 'desc',
+          content: `아담과 하와는 뱀에게 속아 하나님께서 금하신 선악과를 범했습니다. 이로 말미암아 죄가 인간에게 들어왔고 그 죄로 인해 사망 즉 죽음이 들어오게 된 것이죠.`
+        },
+        {
+          id: '5',
+          tag: 'p',
+          className: 'desc',
+          content: `그리고 죽음 이후에는 영원한 갈림길이 놓여있습니다.`
         },
       ],
     }
