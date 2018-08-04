@@ -10,6 +10,7 @@
       </section>
       <section class="fullpage-slide boy base">
         <img class="fullpage-slide-back-img boy-back-img" data-src="/img/boy.jpg" alt="">
+        <div class="dimmed-panel"></div>
         <div class="l-wrap">
           <h1 class="h1 heading">하지만 죄는 그냥 없앨 수 없습니다. 누군가는 그 값을 지불해야 합니다.</h1>
         </div>
@@ -55,6 +56,7 @@
       </section>
       <section class="fullpage-slide wooden-cross base">
         <img class="fullpage-slide-back-img wooden-cross-back-img" data-src="/img/wooden-cross.jpg" alt="">
+        <div class="dimmed-panel"></div>
         <div class="l-wrap">
           <h1 class="h1 heading">예수님은 십자가에 못 박혀 죽음으로 인간의 죄를 대신하셨죠.</h1>
         </div>

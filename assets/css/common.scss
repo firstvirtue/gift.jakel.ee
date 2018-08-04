@@ -56,6 +56,11 @@
   // TODO: delay paragraph
 }
 
+.dimmed-panel {
+  @include full-pos;
+  background: rgba($black, 0.28);
+}
+
 em {
   font-style: normal;
   color: $brand;
