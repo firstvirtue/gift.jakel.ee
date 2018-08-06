@@ -33,8 +33,9 @@ export default {
   },
   methods: {
     openPanel() {
+      this.tl = new TimelineMax();
       TweenMax.to('.life-piece-wrap', 0.5, { autoAlpha:1 });
-      this.tween = TweenMax.staggerTo('.important-item', 1, {scale:1, opacity:1, delay:0.5, ease:Elastic.easeOut, force3D:true}, -0.2);
+      this.tl.staggerTo('.important-item', 1, {scale:1, opacity:1, delay:0.5, ease:Elastic.easeOut, force3D:true}, -0.2);
     },
     closePanel() {
       // TweenMax.to('.life-piece-wrap', 0.3, { autoAlpha:0, onComplete: () => {
@@ -44,7 +45,7 @@ export default {
       if(this.tween) {
         // this.tween.pause(0, true);
       }
-      TweenMax.to('.important-item', 0.3, {opacity: 0, clearProps: 'transform'});
+      TweenMax.to('.important-item', 0.3, {opacity: 0, onComplete: ()=>{ this.tl.pause(0, true); }});
     }
   }
 }
