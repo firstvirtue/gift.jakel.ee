@@ -83,7 +83,7 @@
       </section>
     </div>
 
-    <SideContent :contents="anxietyContents"></SideContent>
+    <SideContent :contents="sideContent"></SideContent>
 
   </div>
 </template>
@@ -99,6 +99,7 @@ export default {
   },
   data() {
     return {
+      sideContent: [],
       anxietyContents: [
         {
           id: '1',
@@ -131,6 +132,7 @@ export default {
           content: `그리고 죽음 이후에는 영원한 갈림길이 놓여있습니다.`
         },
       ],
+      newContent: []
     }
   },
   watch: {
@@ -156,6 +158,7 @@ export default {
     //   slide.classList.add('is-current');
     // },
     openContainer() {
+      this.sideContent = this.anxietyContents;
       this.$store.commit('setModal', true);
     },
   },
