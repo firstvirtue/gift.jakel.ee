@@ -7,7 +7,7 @@
         {{item.content}}
       </component>
     </div>
-    <button type="button" class="close-btn" @click="closeContainer">닫기</button>
+    <button type="button" class="close-side--btn" @click="closeContainer">닫기</button>
   </aside>
 </template>
 
