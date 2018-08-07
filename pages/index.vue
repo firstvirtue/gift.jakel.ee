@@ -15,9 +15,11 @@ export default {
 
   },
   mounted() {
-    window.addEventListener('scroll', function(){
-      console.log(window.scrollY);
-    });
+    // window.addEventListener('scroll', function(){
+    //   console.log(window.scrollY);
+    // });
+
+    this.$router.push('/ko/precious-piece');
 
   }
 }

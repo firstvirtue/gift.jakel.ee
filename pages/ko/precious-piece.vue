@@ -89,6 +89,8 @@ export default {
   },
   watch: {
     '$store.state.index': async function() {
+      
+      util.updateLayout(this);
 
       switch (this.$store.state.index) {
         case 1:
@@ -124,6 +126,7 @@ export default {
     ResourceLoader.load( async () => {
       util.initLayout(this);
       util.initPagePosition(this);
+      util.updateLayout(this);
 
       this.$store.commit('setLoading', false);
       this.$store.commit('setTitle', '삶의 소중한 부분들');

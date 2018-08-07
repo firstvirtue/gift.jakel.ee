@@ -39,6 +39,7 @@
       </section>
       <section class="fullpage-slide father-and-son base">
         <img class="fullpage-slide-back-img father-and-son-back-img" data-src="/img/father-and-son.jpg" alt="">
+        <div class="dimmed-panel"></div>
         <div class="l-wrap">
           <h1 class="h1 heading">그 아들을 희생한 너무나 값 비싼 대가였죠.</h1>
         </div>
@@ -78,6 +79,7 @@ import ResourceLoader from '~/assets/js/ResourceLoader.js';
 export default {
   watch: {
     '$store.state.index': async function() {
+      util.updateLayout(this);
       await util.wait(1000);
     }
   },
@@ -85,6 +87,7 @@ export default {
     ResourceLoader.load( async () => {
       util.initLayout(this);
       util.initPagePosition(this);
+      util.updateLayout(this);
 
       // load complete!
       this.$store.commit('setLoading', false);
@@ -178,7 +181,6 @@ export default {
 
     .heading {
       top: 88%;
-      color: $black;
     }
   }
 

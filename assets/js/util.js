@@ -1,5 +1,8 @@
 export default {
 
+  // 라우팅을 위해 앱 초기화 시 여기에 라우터를 넣는다.
+  receivedRouter: null,
+
   resize: function(callback) {
     window.addEventListener('resize', callback);
     callback();
@@ -106,6 +109,29 @@ export default {
 
     await this.wait(100);
     wrap.style.transition = 'all 0.8s ease';
+  },
+
+  async updateLayout(vueComponent) {
+
+    let slides = document.querySelectorAll('.fullpage-slide');
+    let slide = slides[vueComponent.$store.state.index];
+
+    // FIXME: go to util.js
+    if ( (' ' + slide.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' white-tone ') > -1 ) {
+      vueComponent.$store.commit('setTone', 'white-tone');
+    } else {
+      vueComponent.$store.commit('setTone', '');
+    }
+
+    await this.wait(500);
+
+    slides.forEach((el, i)=> {
+      if(i === vueComponent.$store.state.index) {
+        el.classList.add('is-current');
+      } else {
+        el.classList.remove('is-current');
+      }
+    });
   }
 
 }

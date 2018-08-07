@@ -34,10 +34,12 @@ export default {
     $route: async function() {
       // FIXME: 페이지가 바뀐 상태를 알아 상태 변화를 통해 레이아웃을 업데이트 할 것.
       await util.wait(50);
-      this.updateLayout();
+      // console.log('$route');
+      // this.updateLayout();
     },
     '$store.state.index': async function() {
-      this.updateLayout();
+      // console.log('$store.state.index');
+      // this.updateLayout();
     },
     '$store.state.isLoading': function() {
       if(this.$store.state.isLoading) {
@@ -69,32 +71,6 @@ export default {
         wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
       }
     },
-    setCurrent() {
-      let slides = document.querySelectorAll('.fullpage-slide');
-      slides.forEach((el, i)=> {
-        if(i === this.$store.state.index) {
-          el.classList.add('is-current');
-        } else {
-          el.classList.remove('is-current');
-        }
-      });
-    },
-    async updateLayout() {
-
-      let slides = document.querySelectorAll('.fullpage-slide');
-      let slide = slides[this.$store.state.index];
-
-      // FIXME: go to util.js
-      if ( (' ' + slide.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' white-tone ') > -1 ) {
-        this.$store.commit('setTone', 'white-tone');
-      } else {
-        this.$store.commit('setTone', '');
-      }
-
-      await util.wait(500);
-
-      this.setCurrent();
-    }
   },
   mounted() {
     let self = this;
@@ -123,33 +99,6 @@ export default {
       let delta = self.pos - yPos;
       self.updatePosition(delta);
     });
-
-
-    if(this.$router.history.current.path === '/') {
-      this.$router.push('/ko/precious-piece');
-    } else {
-      this.updateLayout();
-    }
-
-    // FIXME: wait for resource using promise
-    // this.setCurrent();
-
-    // util.resize(function() {
-    //   self.windowHeight = window.innerHeight;
-    //
-    //   let slides = document.querySelectorAll('.fullpage-slide');
-    //   slides.forEach(function(obj, i) {
-    //     obj.style.height = `${self.windowHeight}px`;
-    //     // obj.style.background = `white`;
-    //     let wrap = obj.querySelector('.l-wrap');
-    //     if(wrap) {
-    //       wrap.style.height = `${self.windowHeight}px`;
-    //     }
-    //   });
-    //
-    //   self.$store.commit('setLength', slides.length);
-    //
-    // });
 
   },
 }

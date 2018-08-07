@@ -137,7 +137,7 @@ export default {
   },
   watch: {
     '$store.state.index': async function() {
-
+      util.updateLayout(this);
       await util.wait(500);
 
       // FIXME: 어떻게하면 간략하게..
@@ -167,6 +167,7 @@ export default {
     ResourceLoader.load( async () => {
       util.initLayout(this);
       util.initPagePosition(this);
+      util.updateLayout(this);
       // load complete!
       this.$store.commit('setLoading', false);
       this.$store.commit('setTitle', '우리의 상태');

@@ -65,10 +65,16 @@ import ResourceLoader from '~/assets/js/ResourceLoader.js';
 import util from '~/assets/js/util.js';
 
 export default {
+  watch: {
+    '$store.state.index': async function() {
+      util.updateLayout(this);
+    }
+  },
   mounted() {
     ResourceLoader.load( async () => {
       util.initLayout(this);
       util.initPagePosition(this);
+      util.updateLayout(this);
       // load complete!
       this.$store.commit('setLoading', false);
       this.$store.commit('setTitle', '완전한 삶');
