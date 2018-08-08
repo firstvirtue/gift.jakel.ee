@@ -65,22 +65,15 @@
 
 }
 
-.open-side--btn {
-  position: absolute;
+.close-side--btn {
+  position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .close-side--btn {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -23px;
-}
-
-.open-side--btn, .close-side--btn {
-  padding: 8px 16px;
+  padding: 10px 16px;
   border-radius: 25px;
   border: none;
   color: $white;
