@@ -1,5 +1,5 @@
 <template lang="html">
-  <aside class="side-content" >
+  <aside class="side-content">
 
     <div class="side-dimmed"></div>
     <div class="container">
