@@ -15,7 +15,7 @@ export default {
 
   /*
   * 연속적으로 호출되는 함수가 있을 경우 일정 간격(delay 지정 만큼)으로 함수를 호출
-  * 클로저 형태로 구현되어 있어 모듈 패턴으로 구현해야 함.
+  * 클로저 형태로 구현되어 있어 변수에 담아두고 실행해야 함.
   * @param {int} delay, {function} fn
   * @return {function} function
   */
@@ -33,7 +33,7 @@ export default {
 
   /*
   * 연속적으로 호출되는 함수가 있을 경우 가장 마지막 함수만 호출(delay 지정 만큼)
-  * 클로저 형태로 구현되어 있어 모듈 패턴으로 구현해야 함.
+  * 클로저 형태로 구현되어 있어 변수에 담아두고 실행해야 함.
   * @param {int} delay, {function} fn
   * @return {function} function
   */
