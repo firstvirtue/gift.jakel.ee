@@ -36,7 +36,8 @@
           <h1 class="h1 heading">죽음이 찾아왔죠.</h1>
           <p class="paragraph">마치 꺾여진 꽃이 며칠 내에 시들듯</p>
         </div>
-        <button class="open-side--btn" type="button" name="button" @click="openContainer">죽음이란?</button>
+        <!-- <button class="open-side--btn" type="button" name="button" @click="openContainer">죽음이란?</button> -->
+        <ModalButton :content="anxietyBtnContent" @event="openContainer"></ModalButton>
       </section>
 
       <section class="fullpage-slide genetic base">
@@ -90,12 +91,14 @@
 
 <script>
 import SideContent from '~/components/SideContent.vue';
+import ModalButton from '~/components/modal-button.vue';
 import util from '~/assets/js/util.js';
 import ResourceLoader from '~/assets/js/ResourceLoader.js';
 
 export default {
   components: {
-    SideContent
+    SideContent,
+    ModalButton
   },
   data() {
     return {
@@ -132,7 +135,8 @@ export default {
           content: `그리고 죽음 이후에는 영원한 갈림길이 놓여있습니다.`
         },
       ],
-      newContent: []
+      newContent: [],
+      anxietyBtnContent: '죽음이란?'
     }
   },
   watch: {
