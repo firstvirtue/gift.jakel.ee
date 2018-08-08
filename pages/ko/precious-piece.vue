@@ -12,26 +12,7 @@
 
       <section class="fullpage-slide white-tone important-thing base">
         <div class="l-wrap">
-          <!-- <div class="important-item">
-            돈
-          </div>
-          <div class="important-item">
-            명예
-          </div>
-          <div class="important-item">
-            다른 사람에게 인정받음
-          </div>
-          <div class="important-item">
-            이성
-          </div>
-          <div class="important-item">
-            자아실현
-          </div>
-          <div class="important-item">
-            행복
-          </div> -->
 
-          <!-- <br> -->
           <h1 class="h1 heading">우리는 행복하고 의미있는 삶을 살길 원합니다.</h1>
           <p class="paragraph">그래서 삶의 조각들을 채우며 그에 따른 수고를 마다하지 않습니다.</p>
 
@@ -40,7 +21,7 @@
 
       </section>
 
-      <!-- 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
+      <!-- NOTE: 뿅뿅 나타난 오브젝트가 다음 씬에서 생명 라인에 쌓임. 그리고 텍스트 표현 후 생명 라인이 없어지면서 모두 떨어짐 -->
 
       <section class="fullpage-slide white-tone life base">
         <div class="l-wrap">
@@ -89,7 +70,7 @@ export default {
   },
   watch: {
     '$store.state.index': async function() {
-      
+
       util.updateLayout(this);
 
       switch (this.$store.state.index) {

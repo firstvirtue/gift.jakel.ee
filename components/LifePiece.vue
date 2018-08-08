@@ -29,7 +29,7 @@
 <script>
 export default {
   mounted() {
-    // TweenMax.set(".important-item", {scale:1});
+
   },
   methods: {
     openPanel() {
@@ -38,14 +38,14 @@ export default {
       this.tl.staggerTo('.important-item', 1, {scale:1, opacity:1, delay:0.5, ease:Elastic.easeOut, force3D:true}, -0.2);
     },
     closePanel() {
-      // TweenMax.to('.life-piece-wrap', 0.3, { autoAlpha:0, onComplete: () => {
-      //   TweenMax.set('.important-item', {clearProps: 'all'});
-      // } });
-      // FIXME: 초기화 방법!!
-      if(this.tween) {
-        // this.tween.pause(0, true);
-      }
-      TweenMax.to('.important-item', 0.3, {opacity: 0, onComplete: ()=>{ this.tl.pause(0, true); }});
+
+      TweenMax.to('.important-item', 0.3, {opacity: 0,
+        onComplete: ()=>{
+          if(this.tl) {
+            this.tl.pause(0, true);
+          }
+        }
+      });
     }
   }
 }
