@@ -13,7 +13,8 @@ export default {
     callback();
   },
 
-  // FIXME: 작동 안함
+  // NOTE: 해당 함수가 여러번 호출될 경우 기준 변수가 여러개 생성되기 때문에 이를 멤버 변수로 바꿔주어야 함.
+  // 하지만 그것은 좀 구리기 때문에 클로저를 사용할 수 있지 않을까?
   throttled(delay, fn) {
     let lastCall = 0;
     return function (...args) {
@@ -26,7 +27,6 @@ export default {
     }
   },
 
-  // FIXME: 작동 안함
   debounced(delay, fn) {
     let timerId;
     return function (...args) {
