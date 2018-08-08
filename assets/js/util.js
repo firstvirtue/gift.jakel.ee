@@ -13,8 +13,12 @@ export default {
     callback();
   },
 
-  // NOTE: 해당 함수가 여러번 호출될 경우 기준 변수가 여러개 생성되기 때문에 이를 멤버 변수로 바꿔주어야 함.
-  // 하지만 그것은 좀 구리기 때문에 클로저를 사용할 수 있지 않을까?
+  /*
+  * 연속적으로 호출되는 함수가 있을 경우 일정 간격(delay 지정 만큼)으로 함수를 호출
+  * lastCall이 지역변수이기 때문에 이 함수를 사용하는 부분을 클로저 형태로 구현해야 함.
+  * @param {int} delay, {function} fn
+  * @return {function} function
+  */
   throttled(delay, fn) {
     let lastCall = 0;
     return function (...args) {
@@ -27,6 +31,12 @@ export default {
     }
   },
 
+  /*
+  * 연속적으로 호출되는 함수가 있을 경우 가장 마지막 함수만 호출(delay 지정 만큼)
+  * timerId가 지역변수이기 때문에 이 함수를 사용하는 부분을 클로저 형태로 구현해야 함.
+  * @param {int} delay, {function} fn
+  * @return {function} function
+  */
   debounced(delay, fn) {
     let timerId;
     return function (...args) {
