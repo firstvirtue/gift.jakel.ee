@@ -9,8 +9,8 @@
       </section>
       <section class="fullpage-slide white-tone base">
         <div class="l-wrap">
-          <h1 class="h1 heading">그것은 선택하는 것입니다.</h1>
-          <p class="paragraph">예수님이 내 죄를 위해 죽으시고 다시 사신 일을요.</p>
+          <h1 class="h1 heading">그것은 예수님을 <br>믿는 것입니다.</h1>
+          <p class="paragraph">예수님이 내 죄를 위해 죽으시고 다시 사신 일을 믿는 것이죠.</p>
         </div>
       </section>
       <section class="fullpage-slide road white-tone base">
@@ -26,18 +26,18 @@
       </section>
       <section class="fullpage-slide white-tone base">
         <div class="l-wrap">
-          <h1 class="h1 heading">모든 것은 점점 비극 이전으로 되돌아갈 것입니다. 공허함도 불안감도 권태로움도 없었던 그 때로 말이죠.</h1>
+          <h1 class="h1 heading">모든 것은 점점 비극 이전으로 되돌아갈 것입니다. <br>공허함도 불안감도 권태로움도 없었던 그 때로 말이죠.</h1>
         </div>
       </section>
       <section class="fullpage-slide white-tone base">
         <div class="l-wrap">
-          <h1 class="h1 heading">지금 당장 받아들이기 어려우실 수도 있습니다. 하지만 좋습니다.</h1>
+          <h1 class="h1 heading">지금 당장 받아들이기 어려우실 수도 있습니다. <br>하지만 좋습니다.</h1>
         </div>
       </section>
       <section class="fullpage-slide peoples white-tone base">
         <img class="fullpage-slide-back-img peoples-back-img" data-src="/img/peoples.jpg" alt="">
         <div class="l-wrap">
-          <h1 class="h1 heading">당신이 사는 동안 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해 줄 것입니다.</h1>
+          <h1 class="h1 heading">또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해 줄 것입니다. </h1>
         </div>
       </section>
       <section class="fullpage-slide jesus white-tone base">

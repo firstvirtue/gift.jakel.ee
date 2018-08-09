@@ -1,9 +1,13 @@
 <template lang="html">
   <div class="gnb">
     <h1 class="gnb-title">{{this.$store.state.title}}</h1>
-    <button type="button" name="button" class="side-nav-button" @click="openSideNav()" :style="{borderColor: tone}">
-      <CircularProgress class="circular-progress" :stroke="tone" :strokeWidth="strokeWidth" :radius="radius" :progress="progress" />
-    </button>
+    <div class="side-nav">
+      <!-- <span>1</span>
+      <span>2</span> -->
+      <button type="button" name="button" class="side-nav-button" @click="openSideNav()" :style="{borderColor: tone}">
+        <CircularProgress class="circular-progress" :stroke="tone" :strokeWidth="strokeWidth" :radius="radius" :progress="progress" />
+      </button>
+    </div>
   </div>
 </template>
 
@@ -61,22 +65,28 @@ export default {
     }
   }
 
-  .side-nav-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 0;
-    border: none;
-    border: 2px solid;
-    border-radius: 50%;
-    background: transparent;
-    line-height: 0;
-    cursor: pointer;
+  .side-nav {
 
-    transition: all 0.5s;
+    & {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
 
-    &:active:enabled {
-      transform: scale(0.97);
+    &-button {
+      padding: 0;
+      border: none;
+      border: 2px solid;
+      border-radius: 50%;
+      background: transparent;
+      line-height: 0;
+      cursor: pointer;
+
+      transition: all 0.5s;
+
+      &:active:enabled {
+        transform: scale(0.97);
+      }
     }
   }
 
