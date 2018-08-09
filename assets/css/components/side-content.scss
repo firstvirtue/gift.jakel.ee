@@ -71,6 +71,18 @@
   left: 50%;
   transform: translateX(-50%);
 
+  width: 80px;
+  height: 40px;
+
+  z-index: 10;
+}
+
+.close-side--btn-area {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
   width: 40px;
   height: 40px;
   border-radius: 25px;
@@ -93,7 +105,7 @@
 }
 
 .is-modal {
-  .close-side--btn {
+  .close-side--btn-area {
     width: 80px;
   }
 
