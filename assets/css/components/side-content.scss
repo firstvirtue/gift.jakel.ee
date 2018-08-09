@@ -70,12 +70,36 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-}
 
-.close-side--btn {
-  padding: 10px 16px;
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   border: none;
-  color: $white;
   background: $black;
+
+  transition: all 0.5s;
+}
+
+.close-side--btn-content {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  // width: 60px;
+  transform: translateX(50%);
+  opacity: 0;
+  color: $black;
+
+  transition: all 0.5s;
+}
+
+.is-modal {
+  .close-side--btn {
+    width: 80px;
+  }
+
+  .close-side--btn-content {
+    transform: translateX(-50%);
+    opacity: 1;
+    color: $white;
+  }
 }
