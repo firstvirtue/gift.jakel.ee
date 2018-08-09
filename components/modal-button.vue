@@ -37,6 +37,7 @@ export default {
     }
 
     &-desc {
+      margin-bottom: 0.7em;
       color: $white;
     }
   }

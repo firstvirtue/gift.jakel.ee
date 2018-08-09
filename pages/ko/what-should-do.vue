@@ -31,13 +31,13 @@
       </section>
       <section class="fullpage-slide white-tone base">
         <div class="l-wrap">
-          <h1 class="h1 heading">지금 당장 받아들이기 어려우실수도 있습니다. 하지만 좋습니다.</h1>
+          <h1 class="h1 heading">지금 당장 받아들이기 어려우실 수도 있습니다. 하지만 좋습니다.</h1>
         </div>
       </section>
       <section class="fullpage-slide peoples white-tone base">
         <img class="fullpage-slide-back-img peoples-back-img" data-src="/img/peoples.jpg" alt="">
         <div class="l-wrap">
-          <h1 class="h1 heading">당신의 삶의 여정 가운데 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해 줄 것입니다.</h1>
+          <h1 class="h1 heading">당신이 사는 동안 <br> 또 어디선가 살고 있는 그리스도인이 <br>당신에게 전해 줄 것입니다.</h1>
         </div>
       </section>
       <section class="fullpage-slide jesus white-tone base">
