@@ -48,11 +48,16 @@ export default {
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
+      color: $white;
+
+      &.black {
+        color: $black;
+      }
     }
 
     &-desc {
       margin-bottom: 0.7em;
-      color: $white;
+      color: inherit;
     }
   }
 </style>

@@ -23,6 +23,7 @@
         <div class="l-wrap">
           <h1 class="h1 heading">그를 믿음으로 하나님과의 관계는 회복되고 다시 영원한 삶도 주어질 것입니다.</h1>
         </div>
+        <ModalButton class="black" :content="whyGodBtnContent" @event="openWhyGodContainer"></ModalButton>
       </section>
       <section class="fullpage-slide white-tone base">
         <div class="l-wrap">
@@ -57,17 +58,88 @@
         </div>
       </section>
     </div>
+
+    <SideContent :contents="sideContent"></SideContent>
+
   </div>
 </template>
 
 <script>
+import SideContent from '~/components/SideContent.vue';
+import ModalButton from '~/components/ModalButton.vue';
 import ResourceLoader from '~/assets/js/ResourceLoader.js';
 import util from '~/assets/js/util.js';
 
 export default {
+  components: {
+    SideContent,
+    ModalButton
+  },
   watch: {
     '$store.state.index': async function() {
       util.updateLayout(this);
+    }
+  },
+  data() {
+    return {
+      sideContent: [],
+      whyGodContent: [
+        {
+          id: '1',
+          tag: 'h1',
+          className: 'title',
+          content: `하나님의 사랑`
+        },
+        {
+          id: '2',
+          tag: 'p',
+          className: 'desc',
+          content: `하나님은 우리를 사랑하셔서 이 모든 일을 하셨습니다.`
+        },
+        {
+          id: '3',
+          tag: 'p',
+          className: 'desc carry-on',
+          content: `우리를 심판하시기 위함이 아닌 구원하여 영생을 주시기 위함이죠.`
+        },
+        {
+          id: '4',
+          tag: 'p',
+          className: 'scripture',
+          content: `우리가 아직 죄인 되었을 때에 그리스도께서 우리를 위하여 죽으심으로 하나님께서 우리에 대한 자기의 사랑을 확증하셨느니라`
+        },
+        {
+          id: '5',
+          tag: 'span',
+          className: 'verse',
+          content: `로마서 5장 8절`
+        },
+        {
+          id: '6',
+          tag: 'p',
+          className: 'desc',
+          content: `이는 모든 것이 하나님의 선물입니다.`
+        },
+        {
+          id: '7',
+          tag: 'p',
+          className: 'scripture',
+          content: `너희는 그 은혜에 의하여 믿음으로 말미암아 구원을 받았으니 이것은 너희에게서 난 것이 아니요 하나님의 선물이라`
+        },
+        {
+          id: '8',
+          tag: 'span',
+          className: 'verse',
+          content: `에베소서 2장 8절`
+        },
+      ],
+      whyGodBtnContent: '하나님은 왜 그러셨을까요?'
+    }
+  },
+  methods: {
+    openWhyGodContainer() {
+      this.sideContent = this.whyGodContent;
+      this.$store.commit('setModal', true);
     }
   },
   mounted() {
