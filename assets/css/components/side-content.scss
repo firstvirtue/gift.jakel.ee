@@ -80,6 +80,8 @@
 }
 
 .close-side--btn-area {
+  display: flex;
+  align-items: center;
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -92,11 +94,22 @@
   background: $black;
 
   transition: all 0.5s;
+
+  &::before {
+    content: '+';
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: $white;
+    transition: all 0.5s ease;
+  }
 }
 
 .close-side--btn-content {
   position: fixed;
-  bottom: 32px;
+  bottom: 31px;
   left: 50%;
   // width: 60px;
   transform: translateX(50%);
@@ -109,10 +122,15 @@
 .is-modal {
   .close-side--btn-area {
     width: 80px;
+
+    &::before {
+      left: 10%;
+      transform: translateX(0%) rotate(-45deg);
+    }
   }
 
   .close-side--btn-content {
-    transform: translateX(-50%);
+    transform: translateX(-30%);
     opacity: 1;
     color: $white;
   }

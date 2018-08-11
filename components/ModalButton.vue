@@ -20,14 +20,28 @@ export default {
 
 <style lang="scss">
   .modal-btn {
+    & {
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 40px;
+      height: 40px;
+      background: $black;
+      border: none;
+      border-radius: 50%;
 
-    display: block;
-    margin: 0 auto;
-    width: 40px;
-    height: 40px;
-    background: $black;
-    border: none;
-    border-radius: 50%;
+      &::before {
+        content: '+';
+        // display: inline-block;
+        // position: relative;
+        left: 50%;
+        // transform: translateX(-50%);
+        font-size: 32px;
+        color: $white;
+      }
+    }
 
     &-container {
       position: absolute;

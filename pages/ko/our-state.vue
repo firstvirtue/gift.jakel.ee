@@ -91,7 +91,7 @@
 
 <script>
 import SideContent from '~/components/SideContent.vue';
-import ModalButton from '~/components/modal-button.vue';
+import ModalButton from '~/components/ModalButton.vue';
 import util from '~/assets/js/util.js';
 import ResourceLoader from '~/assets/js/ResourceLoader.js';
 
