@@ -43,9 +43,10 @@
       <section class="fullpage-slide genetic base">
         <img class="fullpage-slide-back-img genetic-back-img" data-src="/img/prairie.jpg" alt="">
         <div class="l-wrap">
-          <h1 class="h1 heading">그 죄는 그의 자손 모두에게 유전되었습니다.</h1>
-          <p class="paragraph">그리고 그 죄는 여기 있는 우리에게도 영향을 미칩니다. <br> 우리안에는.. 죄가 있습니다.</p>
+          <h1 class="h1 heading">그 죄는 그의 자손 모두에게 영향을 미치게 되었습니다.</h1>
+          <p class="paragraph">마치 유전된 것처럼 죄는 우리 모두 안에 있습니다.</p>
         </div>
+        <ModalButton :content="sinBtnContent" @event="openSinContainer"></ModalButton>
       </section>
 
       <section class="fullpage-slide empty-state base">
@@ -118,7 +119,7 @@ export default {
         },
         {
           id: '3',
-          tag: 'div',
+          tag: 'span',
           className: 'verse',
           content: `로마서 5장 12절`
         },
@@ -132,11 +133,44 @@ export default {
           id: '5',
           tag: 'p',
           className: 'desc',
-          content: `그리고 죽음 이후에는 영원한 갈림길이 놓여있습니다.`
+          content: `이 죽음은 단지 육체의 죽음에 머무르지 않습니다. 죽음 뒤의 죽음 하나님과의 영원한 분리를 포함합니다. 지옥이라고 부르죠..`
+        },
+      ],
+      sinContents: [
+        {
+          id: '1',
+          tag: 'h1',
+          className: 'title',
+          content: `죄와 죄인이란 무엇인가요?`
+        },
+        {
+          id: '4',
+          tag: 'p',
+          className: 'desc',
+          content: `성경은 모두가 죄인이라고 말합니다. 이 말은 곧 죄를 지어서 죄인이 아니라 죄인이기 때문에 죄를 지을 수 밖에 없음을 나타냅니다`
+        },
+        {
+          id: '2',
+          tag: 'p',
+          className: 'scripture',
+          content: `모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니`
+        },
+        {
+          id: '3',
+          tag: 'span',
+          className: 'verse',
+          content: `로마서 3장 23절`
+        },
+        {
+          id: '5',
+          tag: 'p',
+          className: 'desc',
+          content: `한 번 우리의 죄에 대해 생각해 볼까요? 지금까지 살아오면서 다른 사람들에게 또는 생각으로 지은 죄들을 기억해 봅시다.`
         },
       ],
       newContent: [],
-      anxietyBtnContent: '죽음이란?'
+      anxietyBtnContent: '죽음이란?',
+      sinBtnContent: '죄와 죄인'
     }
   },
   watch: {
@@ -165,6 +199,10 @@ export default {
       this.sideContent = this.anxietyContents;
       this.$store.commit('setModal', true);
     },
+    openSinContainer() {
+      this.sideContent = this.sinContents;
+      this.$store.commit('setModal', true);
+    }
   },
   mounted() {
 

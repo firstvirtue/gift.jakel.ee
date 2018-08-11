@@ -22,22 +22,23 @@
 
   .title {
     margin-top: 1.4em;
+    margin-bottom: 1em;
     font-weight: lighter;
     font-size: 32px;
     line-height: 1.5;
   }
 
   .desc {
-    margin-top: 2em;
+    margin-top: 2rem;
     font-weight: lighter;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .scripture {
     margin-top: 2em;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.5;
 
     &::before, &::after {
       font-family: $en;
@@ -54,8 +55,9 @@
   }
 
   .verse {
+    display: block;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 12px;
     text-align: right;
 
     &::before {
