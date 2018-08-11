@@ -80,7 +80,7 @@
 
       <section class="fullpage-slide white-tone base">
         <div class="l-wrap">
-          <h1 class="h1 heading">이에 하나님은 한 가지 방법을 사용했습니다.</h1>
+          <h1 class="h1 heading">이에 하나님은 한 가지 방법을 사용하셨습니다.</h1>
         </div>
       </section>
     </div>
@@ -144,28 +144,34 @@ export default {
           content: `죄와 죄인이란 무엇인가요?`
         },
         {
-          id: '4',
+          id: '2',
           tag: 'p',
           className: 'desc',
-          content: `성경은 모두가 죄인이라고 말합니다. 이 말은 곧 죄를 지어서 죄인이 아니라 죄인이기 때문에 죄를 지을 수 밖에 없음을 나타냅니다`
+          content: `성경은 모두가 죄인이라고 말합니다. 조금 억울할 수도 있을 말입니다.`
         },
         {
-          id: '2',
+          id: '3',
+          tag: 'p',
+          className: 'desc carry-on',
+          content: `죄를 지어서 죄인이 되었다기 보단 죄인이기 때문에 죄를 짓는 다고 말 할 수 있습니다.`
+        },
+        {
+          id: '4',
           tag: 'p',
           className: 'scripture',
           content: `모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니`
         },
         {
-          id: '3',
+          id: '5',
           tag: 'span',
           className: 'verse',
           content: `로마서 3장 23절`
         },
         {
-          id: '5',
+          id: '6',
           tag: 'p',
           className: 'desc',
-          content: `한 번 우리의 죄에 대해 생각해 볼까요? 지금까지 살아오면서 다른 사람들에게 또는 생각으로 지은 죄들을 기억해 봅시다.`
+          content: `한 번 우리의 지난 날을 되돌아 볼까요? 지금까지 살아오면서 다른 사람들에게 또는 생각으로 지은 죄들을 기억해 봅시다.`
         },
       ],
       newContent: [],
