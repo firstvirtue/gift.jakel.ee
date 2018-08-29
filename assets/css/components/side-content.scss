@@ -33,6 +33,7 @@
     font-weight: lighter;
     font-size: 14px;
     line-height: 1.5;
+    @include break-word;
 
     &.carry-on {
       margin-top: 0;
@@ -60,6 +61,7 @@
 
   .verse {
     display: block;
+    margin-top: -2px;
     font-weight: lighter;
     font-size: 12px;
     text-align: right;

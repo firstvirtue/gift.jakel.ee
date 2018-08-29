@@ -147,14 +147,15 @@ export default {
       }
 
       &-list {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-top: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
       }
 
       &-item {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgb(183, 183, 183);
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px dotted rgb(183, 183, 183);
         font-size: 28px;
 
         > a {
