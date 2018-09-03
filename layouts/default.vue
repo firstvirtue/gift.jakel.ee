@@ -100,6 +100,18 @@ export default {
       self.updatePosition(delta);
     });
 
+    window.addEventListener('touchmove', function(e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+    }, {passive: false});
+
+    // document.addEventListener('touchmove', function(e) {
+    //
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    // }, {passive: false});
+
   },
 }
 </script>
