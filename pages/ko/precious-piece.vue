@@ -149,11 +149,11 @@ export default {
 
   .life {
     .heading {
-      top: 45%;
+      top: 82%;
     }
 
     .paragraph {
-      top: 45%;
+      top: 82%;
     }
   }
 

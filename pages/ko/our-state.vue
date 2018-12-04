@@ -26,7 +26,7 @@
 
       <section class="fullpage-slide white-tone base">
         <div class="l-wrap">
-          <h1 class="h1 heading">생명의 근원이신 하나님과의 단절로 영원하던 인간의 삶이 유한해 졌습니다.</h1>
+          <h1 class="h1 heading"><em>생명</em>의 근원이신 하나님과의 단절로 영원하던 인간의 삶이 유한해 졌습니다.</h1>
         </div>
       </section>
 
