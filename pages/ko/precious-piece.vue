@@ -17,7 +17,6 @@
           <p class="paragraph">그래서 삶의 조각들을 채우며 <br> 그에 따른 수고를 마다하지 않습니다.</p>
 
         </div>
-        <LifePiece ref="lifePiece"></LifePiece>
 
       </section>
 
@@ -45,6 +44,7 @@
         </div>
       </section>
     </div>
+    <LifePiece ref="lifePiece"></LifePiece>
 
   </div>
 </template>
@@ -75,15 +75,16 @@ export default {
 
       switch (this.$store.state.index) {
         case 1:
-          // this.$refs.lifePiece.slideOrigin();
+
+          this.$refs.lifePiece.unslidePanel();
 
           await util.wait(1000);
           this.$refs.lifePiece.openPanel();
           break;
-        // case 2:
-        //   // await util.wait(1000);
-        //   this.$refs.lifePiece.slidePanel();
-        //   break;
+        case 2:
+          // await util.wait(1000);
+          this.$refs.lifePiece.slidePanel();
+          break;
         // case 0:
         // case 3:
         // case 4:
