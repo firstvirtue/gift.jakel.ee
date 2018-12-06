@@ -181,6 +181,7 @@ export default {
                 var vel_y = ball.py - ball.y;
                 ball.y = canvas.height - ball.radius;
                 ball.py = ball.y - vel_y * DAMPING;
+
             }
         }
     };
@@ -266,7 +267,7 @@ export default {
         ctx = canvas.getContext('2d');
 
         canvas.width = 414;
-        canvas.height = 360;
+        canvas.height = 600 * 2;
 
         while (NUM_BALLS--) addBall();
 
@@ -328,18 +329,23 @@ export default {
     },
     closePanel() {
 
-      TweenMax.to('.important-item', 0.3, {opacity: 0,
-        onComplete: ()=>{
-          if(this.tl) {
-            this.tl.pause(0, true);
-          }
-        }
-      });
+      // TweenMax.to('.important-item', 0.3, {opacity: 0,
+      //   onComplete: ()=>{
+      //     if(this.tl) {
+      //       this.tl.pause(0, true);
+      //     }
+      //   }
+      // });
+      let wrap = document.querySelector('.life-piece-wrap');
+      wrap.style.opacity = 0;
+    },
+    breakPanel() {
+
     },
     slidePanel() {
       let canvas = document.getElementById('piece-canvas');
 
-      canvas.style.transform = `translateY(20%)`;
+      canvas.style.transform = `translateY(-50%)`;
     },
     unslidePanel() {
       let canvas = document.getElementById('piece-canvas');

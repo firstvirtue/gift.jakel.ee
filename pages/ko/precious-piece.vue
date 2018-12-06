@@ -76,18 +76,19 @@ export default {
       switch (this.$store.state.index) {
         case 1:
 
+          this.$refs.lifePiece.openPanel();
           this.$refs.lifePiece.unslidePanel();
 
-          await util.wait(1000);
-          this.$refs.lifePiece.openPanel();
           break;
         case 2:
-          // await util.wait(1000);
+          this.$refs.lifePiece.openPanel();
           this.$refs.lifePiece.slidePanel();
+
+          await util.wait(2000);
+          
+          this.$refs.lifePiece.breakPanel();
           break;
-        // case 0:
-        // case 3:
-        // case 4:
+
         default:
           this.$refs.lifePiece.closePanel();
           break;
