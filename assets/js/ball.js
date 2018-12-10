@@ -4,7 +4,7 @@ var GRAVITY = 0.6,
     TWO_PI = Math.PI * 2;
 
 class Ball {
-  constructor(x, y, radius, title) {
+  constructor(x, y, radius, title, color) {
     this.x = x;
     this.y = y;
 
@@ -16,6 +16,7 @@ class Ball {
 
     this.radius = radius;
     this.title = title;
+    this.color = color;
   }
 
   applyForce(delta) {
@@ -45,7 +46,7 @@ class Ball {
 
   draw(ctx) {
     ctx.beginPath();
-    ctx.fillStyle = '#de5458';
+    ctx.fillStyle = this.color || '#de5458';
     ctx.arc(this.x, this.y, this.radius, 0, TWO_PI);
     ctx.fill();
     ctx.font = '10px Comic Sans MS';

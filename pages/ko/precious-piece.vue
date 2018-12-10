@@ -84,9 +84,9 @@ export default {
           this.$refs.lifePiece.openPanel();
           this.$refs.lifePiece.slidePanel();
 
-          await util.wait(2000);
-          
-          this.$refs.lifePiece.breakPanel();
+          // await util.wait(2000);
+          //
+          // this.$refs.lifePiece.breakPanel();
           break;
 
         default:
