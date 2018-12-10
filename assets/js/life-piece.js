@@ -232,11 +232,11 @@ class LifePiece {
 
   setLife() {
     let self = this;
-    this.bottomBoundary = (window.innerHeight * 2);
+    this.bottomBoundary = (window.innerHeight * 2) - (window.innerHeight * 0.1);
 
-    setTimeout(function(){
-      self.bottomBoundary = (window.innerHeight * 2) + 300;
-    }, 2000);
+    this.timeout = setTimeout(function(){
+      self.bottomBoundary = (window.innerHeight * 2) + (window.innerHeight * 0.5);
+    }, 3000);
   }
 
   init() {

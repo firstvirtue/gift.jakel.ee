@@ -1,6 +1,6 @@
 <template>
   <div class='life-piece-wrap'>
-    <canvas id='piece-canvas'></canvas>
+    <canvas id='piece-canvas' class="piece-canvas"></canvas>
   </div>
 </template>
 
@@ -57,6 +57,7 @@ export default {
   transition: all 0.5s;
 
   #piece-canvas {
+    border-bottom: 1px solid #de5458;
     transition: all 0.5s;
   }
 
