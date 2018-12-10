@@ -1,28 +1,5 @@
 <template>
   <div class='life-piece-wrap'>
-    <!-- <div class='slide'>
-      <div class='important-item money'>
-        <span class='important-title'>돈</span>
-      </div>
-      <div class='important-item honor'>
-        <span class='important-title'>명예</span>
-      </div>
-      <div class='important-item acknowledge'>
-        <span class='important-title'>다른 사람에게 인정받음</span>
-      </div>
-      <div class='important-item sex'>
-        <span class='important-title'>이성</span>
-      </div>
-      <div class='important-item realization'>
-        <span class='important-title'>자아실현</span>
-      </div>
-      <div class='important-item happiness'>
-        <span class='important-title'>행복</span>
-      </div>
-      <div class='important-item pleasure'>
-        <span class='important-title'>쾌락</span>
-      </div>
-    </div> -->
     <canvas id='piece-canvas'></canvas>
   </div>
 </template>
@@ -60,6 +37,9 @@ export default {
         SPEED = 1;
 
     var canvas, ctx, TWO_PI = Math.PI * 2, balls = [], mouse = {down:false,x:0,y:0};
+
+    let self = this;
+    this.bottomBoundary = 600;
 
     window.requestAnimFrame =
         window.requestAnimationFrame ||
@@ -176,10 +156,10 @@ export default {
                 ball.y = ball.radius;
                 ball.py = ball.y - vel_y * DAMPING;
 
-            } else if (ball.y + ball.radius > canvas.height) {
+            } else if (ball.y + ball.radius > self.bottomBoundary) {
 
                 var vel_y = ball.py - ball.y;
-                ball.y = canvas.height - ball.radius;
+                ball.y = self.bottomBoundary - ball.radius;
                 ball.py = ball.y - vel_y * DAMPING;
 
             }
@@ -346,11 +326,15 @@ export default {
       let canvas = document.getElementById('piece-canvas');
 
       canvas.style.transform = `translateY(-50%)`;
+
+      this.bottomBoundary = 600 * 2;
     },
     unslidePanel() {
       let canvas = document.getElementById('piece-canvas');
 
       canvas.style.transform = ``;
+
+      this.bottomBoundary = 600;
     },
   }
 }
