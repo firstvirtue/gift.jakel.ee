@@ -31,8 +31,8 @@ class LifePiece {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight * 2 + 300;
 
-        // TEMP
-        while (NUM_BALLS--) this.addBall();
+        // // TEMP
+        // while (NUM_BALLS--) this.addBall();
 
         this.update();
   }
@@ -186,16 +186,16 @@ class LifePiece {
       var i = balls.length;
       while (i--) balls[i].draw(ctx);
 
-      if (mouse.down) {
-
-          ctx.fillStyle   = 'rgba(0,0,0,0.1)';
-          ctx.strokeStyle = 'rgba(0,0,0,0.2)';
-
-          ctx.beginPath();
-          ctx.arc(mouse.x, mouse.y, MOUSE_SIZE, 0, TWO_PI);
-          ctx.fill();
-          ctx.stroke();
-      }
+      // if (mouse.down) {
+      //
+      //     ctx.fillStyle   = 'rgba(0,0,0,0.1)';
+      //     ctx.strokeStyle = 'rgba(0,0,0,0.2)';
+      //
+      //     ctx.beginPath();
+      //     ctx.arc(mouse.x, mouse.y, MOUSE_SIZE, 0, TWO_PI);
+      //     ctx.fill();
+      //     ctx.stroke();
+      // }
 
       requestAnimFrame(this.update.bind(this));
 
@@ -226,7 +226,14 @@ class LifePiece {
       if (s) balls.push(new Ball(x, y, r));
   }
 
-  addBalls() {
+  addBallsSequence() {
+    // TEMP
+    if(NUM_BALLS < 0) return;
+
+    while (NUM_BALLS--) this.addBall();
+  }
+
+  addBallsAll() {
 
   }
 
@@ -241,6 +248,7 @@ class LifePiece {
 
   init() {
     this.bottomBoundary = window.innerHeight;
+    clearTimeout(this.timeout);
   }
 }
 

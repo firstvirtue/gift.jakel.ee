@@ -18,6 +18,8 @@ export default {
 
       let wrap = document.querySelector('.life-piece-wrap');
       wrap.style.opacity = 1;
+
+      this.lifePiece.addBallsSequence();
     },
     closePanel() {
 
