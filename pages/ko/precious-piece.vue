@@ -78,7 +78,7 @@ export default {
 
           this.$refs.lifePiece.openPanel();
           this.$refs.lifePiece.unslidePanel();
-
+          
           break;
         case 2:
           this.$refs.lifePiece.openPanel();

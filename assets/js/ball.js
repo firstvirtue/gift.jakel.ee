@@ -49,7 +49,7 @@ class Ball {
     ctx.fillStyle = this.color || '#de5458';
     ctx.arc(this.x, this.y, this.radius, 0, TWO_PI);
     ctx.fill();
-    ctx.font = '10px Comic Sans MS';
+    ctx.font = '14px Comic Sans MS';
     ctx.fillStyle = 'white';
     ctx.textAlign = 'center';
     ctx.fillText(this.title, this.x, this.y);

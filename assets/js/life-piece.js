@@ -1,6 +1,7 @@
 'use strict'
 
 import Ball from '~/assets/js/ball.js';
+import util from '~/assets/js/util.js';
 
 var NUM_BALLS = 13,
     DAMPING = 0.7,
@@ -205,8 +206,9 @@ class LifePiece {
   addBall(x, y, r) {
 
       var x = x || Math.random() * (canvas.width - 60) + 30,
-          y = y || Math.random() * (canvas.height - 60) + 30,
-          r = r || 20 + Math.random() * 20,
+          // y = y || Math.random() * (canvas.height - 60) + 30,
+          y = 150,
+          r = r || 30 + Math.random() * 30,
           s = true,
           i = balls.length;
 
@@ -226,11 +228,25 @@ class LifePiece {
       if (s) balls.push(new Ball(x, y, r));
   }
 
-  addBallsSequence() {
+  unload() {
+    window.cancelAnimationFrame(this.update);
+  }
+
+  // [TODO] 아래 함수부터는 LifePiece.vue와 합칠 것. 캔버스의 상태인데 이원화되서 코드 작성이 어렵다.
+  async addBallsSequence() {
+    console.log('addBallsSequence');
     // TEMP
     if(NUM_BALLS < 0) return;
 
-    while (NUM_BALLS--) this.addBall();
+    let self = this;
+
+    // await util.wait(1000);
+
+    this.addTime = setTimeout(function(){
+      NUM_BALLS--;
+      self.addBall();
+      self.addBallsSequence();
+    }, 150);
   }
 
   addBallsAll() {
@@ -238,11 +254,14 @@ class LifePiece {
   }
 
   setLife() {
+    console.log('setLife: ' + window.innerHeight);
+
     let self = this;
     this.bottomBoundary = (window.innerHeight * 2) - (window.innerHeight * 0.1);
 
+    clearTimeout(this.timeout);
     this.timeout = setTimeout(function(){
-      self.bottomBoundary = (window.innerHeight * 2) + (window.innerHeight * 0.5);
+      self.bottomBoundary = (window.innerHeight * 2) + (window.innerHeight * 0.7);
     }, 3000);
   }
 

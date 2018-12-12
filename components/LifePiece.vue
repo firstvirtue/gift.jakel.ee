@@ -6,19 +6,24 @@
 
 <script>
 import LifePiece from '~/assets/js/life-piece.js';
+import util from '~/assets/js/util.js';
 
 export default {
   mounted() {
     this.lifePiece = new LifePiece();
   },
+  beforeDestroy() {
+    this.lifePiece.unload();
+  },
   methods: {
-    openPanel() {
+    async openPanel() {
       let canvas = document.getElementById('piece-canvas');
       canvas.style.display = `block`;
 
       let wrap = document.querySelector('.life-piece-wrap');
       wrap.style.opacity = 1;
 
+      await util.wait(3000);
       this.lifePiece.addBallsSequence();
     },
     closePanel() {
