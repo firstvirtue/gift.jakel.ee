@@ -202,6 +202,13 @@ class LifePiece {
       var i = balls.length;
       while (i--) balls[i].draw(ctx);
 
+      ctx.beginPath();
+      ctx.moveTo(10, this.bottomBoundary);
+      ctx.lineTo(window.innerWidth - 10, this.bottomBoundary);
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = '#de5458';
+      ctx.stroke();
+
       // if (mouse.down) {
       //
       //     ctx.fillStyle   = 'rgba(0,0,0,0.1)';

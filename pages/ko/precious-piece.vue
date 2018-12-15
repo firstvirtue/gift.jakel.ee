@@ -24,7 +24,7 @@
 
       <section class="fullpage-slide white-tone life base">
         <div class="l-wrap">
-          <h1 class="h1 heading">하지만 <em>생명</em>이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
+          <h1 class="h1 heading">하지만 <em class="life-word">생명</em>이 없다면 이 모든 것이 무슨 의미가 있을까요?</h1>
           <p class="paragraph">마치 모래성처럼 허무할 뿐입니다.</p>
         </div>
       </section>
@@ -73,24 +73,31 @@ export default {
 
       util.updateLayout(this);
 
+      let life = document.querySelector('.life-word');
+
       switch (this.$store.state.index) {
         case 1:
 
           this.$refs.lifePiece.openPanel();
           this.$refs.lifePiece.unslidePanel();
-          
+          life.classList.remove('is-hide');
+
           break;
         case 2:
           this.$refs.lifePiece.openPanel();
           this.$refs.lifePiece.slidePanel();
 
-          // await util.wait(2000);
+
+          await util.wait(3000);
+          life.classList.add('is-hide');
           //
           // this.$refs.lifePiece.breakPanel();
           break;
 
         default:
           this.$refs.lifePiece.closePanel();
+          life.classList.remove('is-hide');
+          
           break;
 
       }
@@ -156,6 +163,15 @@ export default {
 
     .paragraph {
       top: 82%;
+    }
+
+    &-word {
+      transition: opacity .5s;
+
+      &.is-hide {
+        transition: opacity 2.5s;
+        opacity: 0.12;
+      }
     }
   }
 
