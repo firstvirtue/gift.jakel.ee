@@ -15,8 +15,8 @@ class Ball {
     this.fy = 0;
 
     this.radius = radius;
-    this.title = title;
-    this.color = color;
+    this.title = title || '꿈';
+    this.color = color || '#de5458';
   }
 
   applyForce(delta) {
@@ -44,15 +44,46 @@ class Ball {
     this.y = ny;
   }
 
+  textWrap(ctx, text, x, y, maxWidth, lineHeight = 20) {
+    var words = text.split(' ');
+    var line = '';
+    var lines = [];
+
+    for(var n = 0; n < words.length; n++) {
+      var testLine = line + words[n] + ' ';
+      var metrics = ctx.measureText(testLine);
+      var testWidth = metrics.width;
+      if (testWidth > maxWidth && n > 0) {
+        // ctx.fillText(line, x, y);
+        line = words[n] + ' ';
+        lines.push(line);
+        // y += lineHeight;
+      }
+      else {
+        line = testLine;
+        lines.push(line);
+      }
+    }
+    // ctx.fillText(line, x, y);
+
+    for (var i = 0; i < lines.length; i++) {
+      let py = y - ((lines.length - 1) * (lineHeight / 2)) + (lineHeight * i);
+      ctx.fillText(lines[i], x, py);
+    }
+  }
+
   draw(ctx) {
     ctx.beginPath();
-    ctx.fillStyle = this.color || '#de5458';
+    ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.radius, 0, TWO_PI);
     ctx.fill();
-    ctx.font = '14px Comic Sans MS';
+    // ctx.font = '14px Comic Sans MS';
+    ctx.font = `${this.radius * 0.4}px Comic Sans MS`;
     ctx.fillStyle = 'white';
     ctx.textAlign = 'center';
-    ctx.fillText(this.title, this.x, this.y);
+    ctx.textBaseline = 'middle';
+    // ctx.fillText(this.title, this.x, this.y);
+    this.textWrap(ctx, this.title, this.x, this.y, this.radius);
   }
 }
 

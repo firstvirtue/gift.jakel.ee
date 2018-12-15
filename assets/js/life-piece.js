@@ -3,7 +3,7 @@
 import Ball from '~/assets/js/ball.js';
 import util from '~/assets/js/util.js';
 
-var NUM_BALLS = 3,
+var NUM_BALLS = 0,
     DAMPING = 0.7,
     MOUSE_SIZE = 50,
     SPEED = 1;
@@ -15,6 +15,21 @@ class LifePiece {
     // let self = this;
     this.bottomBoundary = window.innerHeight;
     this.timeout;
+    this.pieces = [
+      {name: '쾌락'},
+      {name: '행복'},
+      {name: '자아실현'},
+      {name: '성(SEX)'},
+      {name: '돈'},
+      {name: '명예'},
+      {name: '다른 사람에게 인정받음'},
+      {name: '꿈'},
+      {name: '즐거움'},
+      {name: '관계'},
+      {name: '잘 산다는 것'},
+    ]
+
+    NUM_BALLS = this.pieces.length;
 
     window.requestAnimFrame =
         window.requestAnimationFrame ||
@@ -203,7 +218,7 @@ class LifePiece {
       //console.log(new Date().getTime() - time);
   }
 
-  addBall(x, y, r) {
+  addBall(title, x, y, r) {
 
       var x = x || Math.random() * (canvas.width - 60) + 30,
           // y = y || Math.random() * (canvas.height - 60) + 30,
@@ -225,7 +240,7 @@ class LifePiece {
           }
       }
 
-      if (s) balls.push(new Ball(x, y, r));
+      if (s) balls.push(new Ball(x, y, r, title));
   }
 
   unload() {
@@ -234,17 +249,16 @@ class LifePiece {
 
   async addBallsSequence() {
     // TEMP
-    if(NUM_BALLS < 0) return;
+    let item = this.pieces[--NUM_BALLS];
+    if(item) {
+      // await util.wait(1000);
+      let self = this;
 
-    let self = this;
-
-    // await util.wait(1000);
-
-    this.addTime = setTimeout(function(){
-      NUM_BALLS--;
-      self.addBall();
-      self.addBallsSequence();
-    }, 150);
+      this.addTime = setTimeout(function(){
+        self.addBall(item.name);
+        self.addBallsSequence();
+      }, 200);
+    }
   }
 
   addBallsAll() {
