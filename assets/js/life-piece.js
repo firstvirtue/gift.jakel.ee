@@ -3,7 +3,7 @@
 import Ball from '~/assets/js/ball.js';
 import util from '~/assets/js/util.js';
 
-var NUM_BALLS = 13,
+var NUM_BALLS = 3,
     DAMPING = 0.7,
     MOUSE_SIZE = 50,
     SPEED = 1;
@@ -198,7 +198,7 @@ class LifePiece {
       //     ctx.stroke();
       // }
 
-      requestAnimFrame(this.update.bind(this));
+      this.animId = requestAnimFrame(this.update.bind(this));
 
       //console.log(new Date().getTime() - time);
   }
@@ -229,12 +229,10 @@ class LifePiece {
   }
 
   unload() {
-    window.cancelAnimationFrame(this.update);
+    window.cancelAnimationFrame(this.animId);
   }
 
-  // [TODO] 아래 함수부터는 LifePiece.vue와 합칠 것. 캔버스의 상태인데 이원화되서 코드 작성이 어렵다.
   async addBallsSequence() {
-    console.log('addBallsSequence');
     // TEMP
     if(NUM_BALLS < 0) return;
 
@@ -253,9 +251,7 @@ class LifePiece {
 
   }
 
-  setLife() {
-    console.log('setLife: ' + window.innerHeight);
-
+  slide() {
     let self = this;
     this.bottomBoundary = (window.innerHeight * 2) - (window.innerHeight * 0.1);
 
@@ -265,7 +261,7 @@ class LifePiece {
     }, 3000);
   }
 
-  init() {
+  unslide() {
     this.bottomBoundary = window.innerHeight;
     clearTimeout(this.timeout);
   }
