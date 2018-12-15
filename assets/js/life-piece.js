@@ -225,7 +225,9 @@ class LifePiece {
           y = 150,
           r = r || 30 + Math.random() * 30,
           s = true,
-          i = balls.length;
+          i = balls.length,
+          colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853'],
+          color = colors[Math.floor(Math.random() * colors.length)];
 
       while (i--) {
 
@@ -240,7 +242,7 @@ class LifePiece {
           }
       }
 
-      if (s) balls.push(new Ball(x, y, r, title));
+      if (s) balls.push(new Ball(x, y, r, title, color));
   }
 
   unload() {

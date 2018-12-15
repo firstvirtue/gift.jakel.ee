@@ -16,7 +16,7 @@ class Ball {
 
     this.radius = radius;
     this.title = title || '꿈';
-    this.color = color || '#de5458';
+    this.color = color || '#fff';
   }
 
   applyForce(delta) {
@@ -54,17 +54,14 @@ class Ball {
       var metrics = ctx.measureText(testLine);
       var testWidth = metrics.width;
       if (testWidth > maxWidth && n > 0) {
-        // ctx.fillText(line, x, y);
         line = words[n] + ' ';
         lines.push(line);
-        // y += lineHeight;
       }
       else {
         line = testLine;
         lines.push(line);
       }
     }
-    // ctx.fillText(line, x, y);
 
     for (var i = 0; i < lines.length; i++) {
       let py = y - ((lines.length - 1) * (lineHeight / 2)) + (lineHeight * i);
@@ -79,7 +76,7 @@ class Ball {
     ctx.fill();
     // ctx.font = '14px Comic Sans MS';
     ctx.font = `${this.radius * 0.4}px Comic Sans MS`;
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = this.color === '#FBBC05' ? 'black' : 'white';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     // ctx.fillText(this.title, this.x, this.y);
