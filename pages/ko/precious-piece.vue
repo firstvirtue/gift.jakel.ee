@@ -88,7 +88,7 @@ export default {
           this.$refs.lifePiece.slidePanel();
 
 
-          await util.wait(3000);
+          await util.wait(500);
           life.classList.add('is-hide');
           //
           // this.$refs.lifePiece.breakPanel();
@@ -97,7 +97,7 @@ export default {
         default:
           this.$refs.lifePiece.closePanel();
           life.classList.remove('is-hide');
-          
+
           break;
 
       }
@@ -169,7 +169,7 @@ export default {
       transition: opacity .5s;
 
       &.is-hide {
-        transition: opacity 2.5s;
+        transition: opacity 3s;
         opacity: 0.12;
       }
     }

@@ -19,14 +19,19 @@ class LifePiece {
       {name: '쾌락'},
       {name: '행복'},
       {name: '자아실현'},
-      {name: '성(SEX)'},
+      {name: '연애'},
       {name: '돈'},
       {name: '명예'},
       {name: '다른 사람에게 인정받음'},
       {name: '꿈'},
+      {name: '결혼'},
+      {name: '행복한 가정'},
       {name: '즐거움'},
       {name: '관계'},
-      {name: '잘 산다는 것'},
+      {name: '친구'},
+      {name: '자아실현'},
+      {name: '직업'},
+      {name: '인기'},
     ]
 
     NUM_BALLS = this.pieces.length;
@@ -50,6 +55,7 @@ class LifePiece {
         // // TEMP
         // while (NUM_BALLS--) this.addBall();
 
+        this.init();
         this.update();
   }
 
@@ -256,18 +262,26 @@ class LifePiece {
     window.cancelAnimationFrame(this.animId);
   }
 
-  async addBallsSequence() {
-    // TEMP
+  async addBallsSequence(limit = 0) {
+
     let item = this.pieces[--NUM_BALLS];
     if(item) {
-      // await util.wait(1000);
-      let self = this;
+      // let self = this;
+      await util.wait(200);
 
-      this.addTime = setTimeout(function(){
-        self.addBall(item.name);
-        self.addBallsSequence();
-      }, 200);
+      this.addBall(item.name);
+
+      console.log(`${limit}, ${NUM_BALLS}`);
+
+      if(limit < NUM_BALLS) {
+        this.addBallsSequence(limit);
+      }
     }
+  }
+
+  init() {
+    // [NOTE] 최초 추가
+    this.addBallsSequence(NUM_BALLS - 5);
   }
 
   addBallsAll() {
