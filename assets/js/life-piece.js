@@ -11,7 +11,7 @@ var NUM_BALLS = 0,
 var canvas, ctx, TWO_PI = Math.PI * 2, balls = [], mouse = {down:false,x:0,y:0};
 
 class LifePiece {
-  constructor() {
+  constructor(cnvs) {
     // let self = this;
     this.bottomBoundary = window.innerHeight;
     this.timeout;
@@ -46,14 +46,11 @@ class LifePiece {
             window.setTimeout(callback, 1000 / 60);
         };
 
-        canvas = document.getElementById('piece-canvas');
+        canvas = cnvs;
         ctx = canvas.getContext('2d');
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight * 2 + 300;
-
-        // // TEMP
-        // while (NUM_BALLS--) this.addBall();
 
         this.init();
         this.update();

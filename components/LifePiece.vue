@@ -9,11 +9,12 @@ import LifePiece from '~/assets/js/life-piece.js';
 import util from '~/assets/js/util.js';
 
 export default {
-  mounted() {
-    this.lifePiece = new LifePiece();
+  created() {
+    let cnvs = document.getElementById('piece-canvas');
+    this.lifePiece = new LifePiece(cnvs);
   },
   beforeDestroy() {
-    this.lifePiece.unload();
+    if(this.lifePiece) this.lifePiece.unload();
   },
   methods: {
     async openPanel() {
