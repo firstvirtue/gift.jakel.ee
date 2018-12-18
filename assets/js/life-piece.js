@@ -13,6 +13,7 @@ var canvas, ctx, TWO_PI = Math.PI * 2, balls = [], mouse = {down:false,x:0,y:0};
 class LifePiece {
   constructor(cnvs) {
     // let self = this;
+    this.isBoundary = false;
     this.bottomBoundary = window.innerHeight;
     this.timeout;
     this.pieces = [
@@ -205,12 +206,14 @@ class LifePiece {
       var i = balls.length;
       while (i--) balls[i].draw(ctx);
 
-      ctx.beginPath();
-      ctx.moveTo(10, this.bottomBoundary);
-      ctx.lineTo(window.innerWidth - 10, this.bottomBoundary);
-      ctx.lineWidth = 5;
-      ctx.strokeStyle = '#de5458';
-      ctx.stroke();
+      if(this.isBoundary) {
+        ctx.beginPath();
+        ctx.moveTo(10, this.bottomBoundary);
+        ctx.lineTo(window.innerWidth - 10, this.bottomBoundary);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = '#de5458';
+        ctx.stroke();
+      }
 
       // if (mouse.down) {
       //
@@ -287,15 +290,17 @@ class LifePiece {
 
   slide() {
     let self = this;
+    this.isBoundary = true;
     this.bottomBoundary = (window.innerHeight * 2) - (window.innerHeight * 0.1);
 
     clearTimeout(this.timeout);
     this.timeout = setTimeout(function(){
-      self.bottomBoundary = (window.innerHeight * 2) + (window.innerHeight * 0.7);
-    }, 3000);
+      self.bottomBoundary = (window.innerHeight * 2) + (window.innerHeight * 0.8);
+    }, 4000);
   }
 
   unslide() {
+    this.isBoundary = false;
     this.bottomBoundary = window.innerHeight;
     clearTimeout(this.timeout);
   }
