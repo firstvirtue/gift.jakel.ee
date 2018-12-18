@@ -3,7 +3,7 @@
 import Ball from '~/assets/js/ball.js';
 import util from '~/assets/js/util.js';
 
-var NUM_BALLS = 0,
+var NUM_BALLS = 16,
     DAMPING = 0.7,
     MOUSE_SIZE = 50,
     SPEED = 1;
@@ -22,20 +22,21 @@ class LifePiece {
       {name: '자아실현'},
       {name: '연애'},
       {name: '돈'},
+
       {name: '명예'},
       {name: '다른 사람에게 인정받음'},
       {name: '꿈'},
       {name: '결혼'},
       {name: '행복한 가정'},
+
       {name: '즐거움'},
       {name: '관계'},
       {name: '친구'},
       {name: '자아실현'},
       {name: '직업'},
-      {name: '인기'},
-    ]
 
-    NUM_BALLS = this.pieces.length;
+      {name: '인기'},
+    ];
 
     window.requestAnimFrame =
         window.requestAnimationFrame ||
@@ -232,11 +233,12 @@ class LifePiece {
   }
 
   addBall(title, x, y, r) {
-
+      let w = window.innerWidth / 14;
       var x = x || Math.random() * (canvas.width - 60) + 30,
           // y = y || Math.random() * (canvas.height - 60) + 30,
           y = 150,
-          r = r || 30 + Math.random() * 30,
+          // r = r || 30 + Math.random() * 30,
+          r = r || w + Math.random() * w,
           s = true,
           i = balls.length,
           colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853'],
@@ -270,8 +272,6 @@ class LifePiece {
       await util.wait(200);
 
       this.addBall(item.name);
-
-      console.log(`${limit}, ${NUM_BALLS}`);
 
       if(limit < NUM_BALLS) {
         this.addBallsSequence(limit);

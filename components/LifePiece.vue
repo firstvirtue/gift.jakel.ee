@@ -9,7 +9,7 @@ import LifePiece from '~/assets/js/life-piece.js';
 import util from '~/assets/js/util.js';
 
 export default {
-  created() {
+  mounted() {
     let cnvs = document.getElementById('piece-canvas');
     this.lifePiece = new LifePiece(cnvs);
   },

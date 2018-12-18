@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="wrap">
+    <LifePiece ref="lifePiece"></LifePiece>
     <div class="fullpage-wrapper">
       <section class="fullpage-slide intro base">
         <img class="fullpage-slide-back-img intro-back-img" data-src="/img/portrait.jpg" alt="">
@@ -44,7 +45,6 @@
         </div>
       </section>
     </div>
-    <LifePiece ref="lifePiece"></LifePiece>
 
   </div>
 </template>
