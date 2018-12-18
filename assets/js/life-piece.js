@@ -293,6 +293,8 @@ class LifePiece {
     this.isBoundary = true;
     this.bottomBoundary = (window.innerHeight * 2) - (window.innerHeight * 0.1);
 
+    canvas.style.transform = `translateY(-50%)`;
+
     clearTimeout(this.timeout);
     this.timeout = setTimeout(function(){
       self.bottomBoundary = (window.innerHeight * 2) + (window.innerHeight * 0.8);
@@ -302,6 +304,9 @@ class LifePiece {
   unslide() {
     this.isBoundary = false;
     this.bottomBoundary = window.innerHeight;
+
+    canvas.style.transform = ``;
+
     clearTimeout(this.timeout);
   }
 }

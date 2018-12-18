@@ -24,6 +24,7 @@ export default {
       let wrap = document.querySelector('.life-piece-wrap');
       wrap.style.opacity = 1;
 
+      // [TODO] wait.timeout, wait.cancel
       await util.wait(3000);
       this.lifePiece.addBallsSequence();
     },
@@ -36,16 +37,16 @@ export default {
       // [TODO] 상태 변화
     },
     slidePanel() {
-      let canvas = document.getElementById('piece-canvas');
-
-      canvas.style.transform = `translateY(-50%)`;
+      // let canvas = document.getElementById('piece-canvas');
+      //
+      // canvas.style.transform = `translateY(-50%)`;
       this.lifePiece.slide();
       // ball.setState('');
     },
     unslidePanel() {
-      let canvas = document.getElementById('piece-canvas');
-
-      canvas.style.transform = ``;
+      // let canvas = document.getElementById('piece-canvas');
+      //
+      // canvas.style.transform = ``;
       this.lifePiece.unslide();
       // ball.setState('');
     },
