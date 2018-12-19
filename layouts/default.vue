@@ -48,6 +48,13 @@ export default {
         this.isLoadingPanelDisplay = 'none';
       }
     },
+    '$store.state.isModal': function() {
+      if(this.$store.state.isModal) {
+        window.removeEventListener('touchmove', this.preventTouch, {passive: false});
+      } else {
+        window.addEventListener('touchmove', this.preventTouch, {passive: false});
+      }
+    }
   },
   computed: {
     position() {
@@ -71,6 +78,11 @@ export default {
         wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
       }
     },
+    preventTouch(e) {
+      // [TODO] 조건에 따른 스크롤 방지
+      e.preventDefault();
+      e.stopPropagation();
+    }
   },
   mounted() {
     let self = this;
@@ -100,12 +112,13 @@ export default {
       self.updatePosition(delta);
     });
 
-    window.addEventListener('touchmove', function(e) {
-      // [TODO] 조건에 따른 스크롤 방지
-      e.preventDefault();
-      e.stopPropagation();
-
-    }, {passive: false});
+    // window.addEventListener('touchmove', function(e) {
+    //   // [TODO] 조건에 따른 스크롤 방지
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    //
+    // }, {passive: false});
+    window.addEventListener('touchmove', this.preventTouch, {passive: false});
 
   },
 }

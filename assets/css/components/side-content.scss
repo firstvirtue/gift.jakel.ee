@@ -2,6 +2,7 @@
   display: block;
   @include full-pos;
   z-index: 100;
+  overflow-y: scroll;
 
   .side-dimmed {
     position: absolute;
