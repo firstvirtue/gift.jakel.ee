@@ -59,7 +59,7 @@ export default {
       // FIXME: 더 정교하게 ..
       if(Math.abs(delta) < 1) return;
 
-      if(!this.isPaging && ! this.$store.state.isModal) {
+      if(!this.isPaging && !this.$store.state.isModal) {
         let self = this;
         let wrap = document.querySelector('.fullpage-wrapper');
 
@@ -101,9 +101,10 @@ export default {
     });
 
     window.addEventListener('touchmove', function(e) {
-
+      // [TODO] 조건에 따른 스크롤 방지
       e.preventDefault();
       e.stopPropagation();
+
     }, {passive: false});
 
   },
