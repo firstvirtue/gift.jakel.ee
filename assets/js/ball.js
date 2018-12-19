@@ -74,8 +74,7 @@ class Ball {
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.radius, 0, TWO_PI);
     ctx.fill();
-    // ctx.font = '14px Comic Sans MS';
-    ctx.font = `${this.radius * 0.4}px Comic Sans MS`;
+    ctx.font = `bold ${this.radius * 0.4}px NotoSans`;
     ctx.fillStyle = this.color === '#FBBC05' ? 'black' : 'white';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
