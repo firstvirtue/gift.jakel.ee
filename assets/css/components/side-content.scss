@@ -75,7 +75,7 @@
 
 }
 
-.close-side--btn {
+.btn--close-side {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -89,7 +89,7 @@
   z-index: 10;
 }
 
-.close-side--btn-area {
+.btn--close-area {
   display: flex;
   align-items: center;
   position: fixed;
@@ -117,7 +117,7 @@
   }
 }
 
-.close-side--btn-content {
+.btn--close-content {
   position: fixed;
   bottom: 31px;
   left: 50%;
@@ -130,7 +130,7 @@
 }
 
 .is-modal {
-  .close-side--btn-area {
+  .btn--close-area {
     width: 80px;
 
     &::before {
@@ -139,7 +139,7 @@
     }
   }
 
-  .close-side--btn-content {
+  .btn--close-content {
     transform: translateX(-30%);
     opacity: 1;
     color: $white;

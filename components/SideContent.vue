@@ -8,9 +8,9 @@
       </component>
     </div>
 
-    <button type="button" class="close-side--btn" @click="closeContainer" title="닫기"></button>
-    <div class="close-side--btn-area"></div>
-    <span class="close-side--btn-content">닫기</span>
+    <button type="button" class="btn--close-side" @click="closeContainer" title="닫기"></button>
+    <div class="btn--close-area"></div>
+    <span class="btn--close-content">닫기</span>
   </aside>
 </template>
 

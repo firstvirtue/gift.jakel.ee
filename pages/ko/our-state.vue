@@ -36,7 +36,6 @@
           <h1 class="h1 heading">죽음이 찾아왔죠.</h1>
           <p class="paragraph">마치 꺾여진 꽃이 며칠 내에 시들듯</p>
         </div>
-        <!-- <button class="open-side--btn" type="button" name="button" @click="openContainer">죽음이란?</button> -->
         <ModalButton :content="anxietyBtnContent" @event="openContainer"></ModalButton>
       </section>
 
