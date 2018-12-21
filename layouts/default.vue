@@ -53,6 +53,8 @@ export default {
         window.removeEventListener('touchmove', this.preventTouch, {passive: false});
       } else {
         window.addEventListener('touchmove', this.preventTouch, {passive: false});
+        util.setLayoutSize();
+        util.setLayoutPosition(this);
       }
     }
   },
