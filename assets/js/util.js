@@ -110,17 +110,9 @@ export default {
     // this.setCurrent();
 
     this.resize(function() {
-      // self.windowHeight = window.innerHeight;
-      //
+
       let slides = document.querySelectorAll('.fullpage-slide');
-      // slides.forEach(function(obj, i) {
-      //   obj.style.height = `${self.windowHeight}px`;
-      //   // obj.style.background = `white`;
-      //   let wrap = obj.querySelector('.l-wrap');
-      //   if(wrap) {
-      //     wrap.style.height = `${self.windowHeight}px`;
-      //   }
-      // });
+
       self.setLayoutSize();
 
       vueComponent.$store.commit('setLength', slides.length);
@@ -136,11 +128,6 @@ export default {
       vueComponent.$store.commit('setIndex', 0);
     }
 
-    // let wrap = document.querySelector('.fullpage-wrapper');
-    // let pos = -(vueComponent.$store.state.index * window.innerHeight);
-    // wrap.style.transform = `translate3d(0, ${pos}px, 0)`;
-    // await this.wait(100);
-    // wrap.style.transition = 'all 0.8s ease';
     this.setLayoutPosition(vueComponent);
   },
 
