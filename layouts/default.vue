@@ -69,11 +69,16 @@ export default {
       if(Math.abs(delta) < 1) return;
 
       if(!this.isPaging && !this.$store.state.isModal) {
+        console.log('delta: ', delta);
+
+        this.isPaging = true;
+        setTimeout(() => this.isPaging = false, 800);
+
         let self = this;
         let wrap = document.querySelector('.fullpage-wrapper');
 
         // FIXME: 더 정교하게 ..
-        delta > 30 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
+        delta > 0 ? this.$store.commit('increaseIndex') : this.$store.commit('decreaseIndex');
 
 
         let pos = -this.$store.state.index * window.innerHeight;
