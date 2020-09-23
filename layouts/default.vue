@@ -5,8 +5,15 @@
 
     <nuxt/>
 
-    <div class="loading-panel" :style="{ display: isLoadingPanelDisplay }">
-      <h1 class="loading-title">loading..</h1>
+    <div class="global-notification" :style="{ display: isLoadingPanelDisplay }">
+      <h1 class="global-notification-title">loading..</h1>
+    </div>
+
+    <div class="global-notification" :style="{ display: isNotifyMobileOnly }">
+      <h1 class="global-notification-title">
+        This page mobile only yet..<br>
+        Please see through mobile.
+      </h1>
     </div>
   </div>
 </template>
@@ -28,6 +35,7 @@ export default {
       windowHeight: 0,
       isPaging: false,
       isLoadingPanelDisplay: 'block',
+      isNotifyMobileOnly: 'none',
     }
   },
   watch: {
@@ -127,6 +135,13 @@ export default {
     // }, {passive: false});
     window.addEventListener('touchmove', this.preventTouch, {passive: false});
 
+    util.resize(() => {
+      if(window.innerWidth > 540) {
+        this.isNotifyMobileOnly = 'block';
+      } else {
+        this.isNotifyMobileOnly = 'none';
+      }
+    });
   },
 }
 </script>
@@ -139,13 +154,10 @@ export default {
   width: 100%;
 } */
 
-.loading {
-
-  &-panel {
-    @include full-pos;
-    z-index: 100;
-    background: $white;
-  }
+.global-notification {
+  @include full-pos;
+  z-index: 100;
+  background: $white;
 
   &-title {
     position: relative;
@@ -154,6 +166,7 @@ export default {
     text-align: center;
     font-family: $en;
     font-weight: lighter;
+    line-height: 1.5;
   }
 
 }
